@@ -29,6 +29,11 @@ public class BinomialCoefficient {
 		
 		return C[n][r];
 	}
+
+	// xc0 = xc0 = 1
+	// 1c1 = 1
+	// 5c1 = 4c0+4c1
+
 	
 	public static void main(String[] args) {
 		int n = 15, r = 6;
