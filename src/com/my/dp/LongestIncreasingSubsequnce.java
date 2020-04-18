@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.my.common.UtilityClass;
-import com.my.sorting.BinarySearch;
+//import com.my.sorting.BinarySearch;
 
 public class LongestIncreasingSubsequnce {
 	
@@ -180,7 +180,7 @@ public class LongestIncreasingSubsequnce {
 				 * New Element replaces the first greater element in the list.
 				 */
 				System.out.print(" len="+len);
-				int newIndex = BinarySearch.equalElementOrFirstGreaterElement(listOfTailElements,0,len,a[i]);
+				int newIndex = 1;//BinarySearch.equalElementOrFirstGreaterElement(listOfTailElements,0,len,a[i]);
 				listOfTailElements[newIndex] = a[i];  
 				System.out.print(" Between Element - listOfTailElements["+newIndex+"]="+listOfTailElements[newIndex]);
 			}

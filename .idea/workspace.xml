@@ -2,15 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43495d30-7a62-4b83-a502-b707aebf34f4" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/my/dp/dp.iml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dp.iml" afterPath="$PROJECT_DIR$/.idea/dp.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/binarysearch/AllocateBooks.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/binarysearch/ArrayMedian.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/binarysearch/BinarySearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/binarysearch/MatrixMedian.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/binarysearch/MatrixSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/binarysearch/PaintersPartition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/binarysearch/PowerFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/binarysearch/RangeSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/binarysearch/RotatedSortedArraySearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/binarysearch/SortedInsertPosition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/binarysearch/SquareRootOfInteger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/bitmanipulation/DivideIntegers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/bitmanipulation/MinXORVal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/bitmanipulation/NumberOfOneBits.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/bitmanipulation/ReverseBits.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/bitmanipulation/SingleNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/my/dp/LongestIncreasingSubsequnce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/dp/LongestIncreasingSubsequnce.java" afterDir="false" />
     </list>
-    <ignored path="dp.iws" />
-    <ignored path=".idea/workspace.xml" />
-    <ignored path=".idea/dataSources.local.xml" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,33 +32,18 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="dp" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="Class" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
@@ -53,67 +51,24 @@
     <option name="height" value="828" />
   </component>
   <component name="ProjectId" id="1aZ7pCAMpuDgMWlq3be8Pi5FYNL" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
-  </component>
-  <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../bkp/dp-master" />
     <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.DivideIntegers">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -320,6 +275,76 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method />
     </configuration>
+    <configuration name="DivideIntegers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.my.bitmanipulation.DivideIntegers" />
+      <module name="dp" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.my.bitmanipulation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MatrixSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.my.binarysearch.MatrixSearch" />
+      <module name="dp" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.my.binarysearch.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NumberOfOneBits" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.my.bitmanipulation.NumberOfOneBits" />
+      <module name="dp" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.my.bitmanipulation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RangeSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.my.binarysearch.RangeSearch" />
+      <module name="dp" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.my.binarysearch.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RotatedSortedArraySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.my.binarysearch.RotatedSortedArraySearch" />
+      <module name="dp" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.my.binarysearch.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -433,9 +458,30 @@
       <envs />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.DivideIntegers" />
+        <item itemvalue="Application.NumberOfOneBits" />
+        <item itemvalue="Application.MatrixSearch" />
+        <item itemvalue="Application.RangeSearch" />
+        <item itemvalue="Application.RotatedSortedArraySearch" />
+      </list>
+    </recent_temporary>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -446,11 +492,10 @@
       <updated>1509387336854</updated>
       <workItem from="1509387338190" duration="462000" />
       <workItem from="1509387808792" duration="102000" />
+      <workItem from="1586931444227" duration="3787000" />
+      <workItem from="1586937220820" duration="52767000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="564000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -461,42 +506,8 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="828" extended-state="6" />
-    <editor active="false" />
-    <layout>
-      <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32957748" sideWeight="0.49713877" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3253012" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32816902" sideWeight="0.37339056" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4493976" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32816902" sideWeight="0.49427754" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Sequence" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8827667" sideWeight="0.4828326" order="12" side_tool="false" content_ui="tabs" x="28" y="106" width="1398" height="737" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32816902" sideWeight="0.49713877" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2832618" sideWeight="0.5807128" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43239436" sideWeight="0.62660944" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.46750525" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37866354" sideWeight="0.69166666" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2832618" sideWeight="0.4192872" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-    </layout>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -506,87 +517,94 @@
       <collection />
     </option>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="614" y="262" key="FileChooserDialogImpl" timestamp="1586931461464">
-      <screen x="0" y="23" width="1680" height="956" />
+    <state x="426" y="166" key="#Project_Structure" timestamp="1586937204270">
+      <screen x="0" y="23" width="1680" height="958" />
+    </state>
+    <state x="426" y="166" key="#Project_Structure/0.23.1680.958@0.23.1680.958" timestamp="1586937204270" />
+    <state x="291" y="162" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586937137784">
+      <screen x="0" y="23" width="1680" height="958" />
+    </state>
+    <state x="291" y="162" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.958@0.23.1680.958" timestamp="1586937137784" />
+    <state x="589" y="212" key="#xdebugger.evaluate" timestamp="1587028005406">
+      <screen x="0" y="23" width="1680" height="958" />
+    </state>
+    <state x="589" y="212" key="#xdebugger.evaluate/0.23.1680.958@0.23.1680.958" timestamp="1587028005406" />
+    <state x="614" y="263" key="FileChooserDialogImpl" timestamp="1586937119688">
+      <screen x="0" y="23" width="1680" height="958" />
     </state>
     <state x="614" y="262" key="FileChooserDialogImpl/0.23.1680.956@0.23.1680.956" timestamp="1586931461464" />
+    <state x="614" y="263" key="FileChooserDialogImpl/0.23.1680.958@0.23.1680.958" timestamp="1586937119688" />
+    <state width="805" height="283" key="GridCell.Tab.0.bottom" timestamp="1587202280300">
+      <screen x="0" y="23" width="1680" height="958" />
+    </state>
+    <state width="805" height="283" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1587117582490" />
+    <state width="805" height="283" key="GridCell.Tab.0.bottom/0.23.1680.958@0.23.1680.958" timestamp="1587202280300" />
+    <state width="805" height="283" key="GridCell.Tab.0.center" timestamp="1587202280299">
+      <screen x="0" y="23" width="1680" height="958" />
+    </state>
+    <state width="805" height="283" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1587117582475" />
+    <state width="805" height="283" key="GridCell.Tab.0.center/0.23.1680.958@0.23.1680.958" timestamp="1587202280299" />
+    <state width="805" height="283" key="GridCell.Tab.0.left" timestamp="1587202280298">
+      <screen x="0" y="23" width="1680" height="958" />
+    </state>
+    <state width="805" height="283" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1587117582475" />
+    <state width="805" height="283" key="GridCell.Tab.0.left/0.23.1680.958@0.23.1680.958" timestamp="1587202280298" />
+    <state width="805" height="283" key="GridCell.Tab.0.right" timestamp="1587202280299">
+      <screen x="0" y="23" width="1680" height="958" />
+    </state>
+    <state width="805" height="283" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1587117582489" />
+    <state width="805" height="283" key="GridCell.Tab.0.right/0.23.1680.958@0.23.1680.958" timestamp="1587202280299" />
+    <state width="1112" height="297" key="GridCell.Tab.1.bottom" timestamp="1587028633984">
+      <screen x="0" y="23" width="1680" height="958" />
+    </state>
+    <state width="1112" height="297" key="GridCell.Tab.1.bottom/0.23.1680.958@0.23.1680.958" timestamp="1587028633984" />
+    <state width="1112" height="297" key="GridCell.Tab.1.center" timestamp="1587028633984">
+      <screen x="0" y="23" width="1680" height="958" />
+    </state>
+    <state width="1112" height="297" key="GridCell.Tab.1.center/0.23.1680.958@0.23.1680.958" timestamp="1587028633984" />
+    <state width="1112" height="297" key="GridCell.Tab.1.left" timestamp="1587028633984">
+      <screen x="0" y="23" width="1680" height="958" />
+    </state>
+    <state width="1112" height="297" key="GridCell.Tab.1.left/0.23.1680.958@0.23.1680.958" timestamp="1587028633984" />
+    <state width="1112" height="297" key="GridCell.Tab.1.right" timestamp="1587028633984">
+      <screen x="0" y="23" width="1680" height="958" />
+    </state>
+    <state width="1112" height="297" key="GridCell.Tab.1.right/0.23.1680.958@0.23.1680.958" timestamp="1587028633984" />
+    <state x="490" y="263" width="673" height="472" key="find.popup" timestamp="1587113220127">
+      <screen x="0" y="23" width="1680" height="954" />
+    </state>
+    <state x="490" y="263" width="673" height="472" key="find.popup/0.23.1680.954@0.23.1680.954" timestamp="1587113220127" />
+    <state x="490" y="263" width="673" height="472" key="find.popup/0.23.1680.956@0.23.1680.956" timestamp="1586932966050" />
+    <state x="490" y="264" width="673" height="473" key="find.popup/0.23.1680.958@0.23.1680.958" timestamp="1586986009793" />
+    <state x="491" y="232" width="670" height="676" key="search.everywhere.popup" timestamp="1587021219567">
+      <screen x="0" y="23" width="1680" height="958" />
+    </state>
+    <state x="491" y="232" width="670" height="676" key="search.everywhere.popup/0.23.1680.958@0.23.1680.958" timestamp="1587021219567" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
-    <watches-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/my/binarysearch/RangeSearch.java</url>
+          <line>119</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/my/binarysearch/RangeSearch.java</url>
+          <line>124</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/my/binarysearch/RangeSearch.java</url>
+          <line>127</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/my/dp/EditOperationsOnTwoStrings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/my/dp/BinomialCoefficient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/my/dp/BridgeBuilding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/my/dp/AllPairsShortestPathFlyodWarshall.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/my/dp/EditOperationsOnTwoStrings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/my/dp/AssemblyLineScheduling.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/my/dp/dp.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>
