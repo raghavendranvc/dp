@@ -2,27 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43495d30-7a62-4b83-a502-b707aebf34f4" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/binarysearch/AllocateBooks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/binarysearch/ArrayMedian.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/binarysearch/BinarySearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/binarysearch/MatrixMedian.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/binarysearch/MatrixSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/binarysearch/PaintersPartition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/binarysearch/PowerFunction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/binarysearch/RangeSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/binarysearch/RotatedSortedArraySearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/binarysearch/SortedInsertPosition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/binarysearch/SquareRootOfInteger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/bitmanipulation/DivideIntegers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/bitmanipulation/MinXORVal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/bitmanipulation/NumberOfOneBits.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/bitmanipulation/ReverseBits.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/bitmanipulation/SingleNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/twopointers/Array3Pointers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/twopointers/ContainerWithMostWater.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/twopointers/CountingTriangles.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/twopointers/DuplicateRemove.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/twopointers/IntersectionOfSortedArrays.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/twopointers/KDiff.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/twopointers/MaxContinuousOnes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/twopointers/MergeTwoSortedArrays.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/twopointers/MinimizeAbsDiff.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/twopointers/RemoveInstances.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/twopointers/ThereeColorSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/twopointers/ThreeSum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/twopointers/ThreeSumZero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/my/dp/LongestIncreasingSubsequnce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/dp/LongestIncreasingSubsequnce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/my/common/UtilityClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/common/UtilityClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +62,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.DivideIntegers">
+  <component name="RunManager" selected="Application.KDiff">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -275,13 +269,13 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method />
     </configuration>
-    <configuration name="DivideIntegers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.my.bitmanipulation.DivideIntegers" />
+    <configuration name="CountingTriangles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.my.twopointers.CountingTriangles" />
       <module name="dp" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.my.bitmanipulation.*" />
+          <option name="PATTERN" value="com.my.twopointers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -289,13 +283,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MatrixSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.my.binarysearch.MatrixSearch" />
+    <configuration name="DuplicateRemove" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.my.twopointers.DuplicateRemove" />
       <module name="dp" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.my.binarysearch.*" />
+          <option name="PATTERN" value="com.my.twopointers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -303,13 +297,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NumberOfOneBits" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.my.bitmanipulation.NumberOfOneBits" />
+    <configuration name="KDiff" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.my.twopointers.KDiff" />
       <module name="dp" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.my.bitmanipulation.*" />
+          <option name="PATTERN" value="com.my.twopointers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -317,13 +311,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RangeSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.my.binarysearch.RangeSearch" />
+    <configuration name="ThereeColorSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.my.twopointers.ThereeColorSort" />
       <module name="dp" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.my.binarysearch.*" />
+          <option name="PATTERN" value="com.my.twopointers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -331,13 +325,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RotatedSortedArraySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.my.binarysearch.RotatedSortedArraySearch" />
+    <configuration name="ThreeSumZero" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.my.twopointers.ThreeSumZero" />
       <module name="dp" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.my.binarysearch.*" />
+          <option name="PATTERN" value="com.my.twopointers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -460,11 +454,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DivideIntegers" />
-        <item itemvalue="Application.NumberOfOneBits" />
-        <item itemvalue="Application.MatrixSearch" />
-        <item itemvalue="Application.RangeSearch" />
-        <item itemvalue="Application.RotatedSortedArraySearch" />
+        <item itemvalue="Application.KDiff" />
+        <item itemvalue="Application.CountingTriangles" />
+        <item itemvalue="Application.ThreeSumZero" />
+        <item itemvalue="Application.DuplicateRemove" />
+        <item itemvalue="Application.ThereeColorSort" />
       </list>
     </recent_temporary>
   </component>
@@ -493,7 +487,7 @@
       <workItem from="1509387338190" duration="462000" />
       <workItem from="1509387808792" duration="102000" />
       <workItem from="1586931444227" duration="3787000" />
-      <workItem from="1586937220820" duration="52767000" />
+      <workItem from="1586937220820" duration="85906000" />
     </task>
     <servers />
   </component>
@@ -535,25 +529,29 @@
     </state>
     <state x="614" y="262" key="FileChooserDialogImpl/0.23.1680.956@0.23.1680.956" timestamp="1586931461464" />
     <state x="614" y="263" key="FileChooserDialogImpl/0.23.1680.958@0.23.1680.958" timestamp="1586937119688" />
-    <state width="805" height="283" key="GridCell.Tab.0.bottom" timestamp="1587202280300">
-      <screen x="0" y="23" width="1680" height="958" />
+    <state width="805" height="281" key="GridCell.Tab.0.bottom" timestamp="1587417502047">
+      <screen x="0" y="23" width="1680" height="956" />
     </state>
     <state width="805" height="283" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1587117582490" />
+    <state width="805" height="281" key="GridCell.Tab.0.bottom/0.23.1680.956@0.23.1680.956" timestamp="1587417502047" />
     <state width="805" height="283" key="GridCell.Tab.0.bottom/0.23.1680.958@0.23.1680.958" timestamp="1587202280300" />
-    <state width="805" height="283" key="GridCell.Tab.0.center" timestamp="1587202280299">
-      <screen x="0" y="23" width="1680" height="958" />
+    <state width="805" height="281" key="GridCell.Tab.0.center" timestamp="1587417502033">
+      <screen x="0" y="23" width="1680" height="956" />
     </state>
     <state width="805" height="283" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1587117582475" />
+    <state width="805" height="281" key="GridCell.Tab.0.center/0.23.1680.956@0.23.1680.956" timestamp="1587417502033" />
     <state width="805" height="283" key="GridCell.Tab.0.center/0.23.1680.958@0.23.1680.958" timestamp="1587202280299" />
-    <state width="805" height="283" key="GridCell.Tab.0.left" timestamp="1587202280298">
-      <screen x="0" y="23" width="1680" height="958" />
+    <state width="805" height="281" key="GridCell.Tab.0.left" timestamp="1587417502032">
+      <screen x="0" y="23" width="1680" height="956" />
     </state>
     <state width="805" height="283" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1587117582475" />
+    <state width="805" height="281" key="GridCell.Tab.0.left/0.23.1680.956@0.23.1680.956" timestamp="1587417502032" />
     <state width="805" height="283" key="GridCell.Tab.0.left/0.23.1680.958@0.23.1680.958" timestamp="1587202280298" />
-    <state width="805" height="283" key="GridCell.Tab.0.right" timestamp="1587202280299">
-      <screen x="0" y="23" width="1680" height="958" />
+    <state width="805" height="281" key="GridCell.Tab.0.right" timestamp="1587417502041">
+      <screen x="0" y="23" width="1680" height="956" />
     </state>
     <state width="805" height="283" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1587117582489" />
+    <state width="805" height="281" key="GridCell.Tab.0.right/0.23.1680.956@0.23.1680.956" timestamp="1587417502041" />
     <state width="805" height="283" key="GridCell.Tab.0.right/0.23.1680.958@0.23.1680.958" timestamp="1587202280299" />
     <state width="1112" height="297" key="GridCell.Tab.1.bottom" timestamp="1587028633984">
       <screen x="0" y="23" width="1680" height="958" />
@@ -577,9 +575,10 @@
     <state x="490" y="263" width="673" height="472" key="find.popup/0.23.1680.954@0.23.1680.954" timestamp="1587113220127" />
     <state x="490" y="263" width="673" height="472" key="find.popup/0.23.1680.956@0.23.1680.956" timestamp="1586932966050" />
     <state x="490" y="264" width="673" height="473" key="find.popup/0.23.1680.958@0.23.1680.958" timestamp="1586986009793" />
-    <state x="491" y="232" width="670" height="676" key="search.everywhere.popup" timestamp="1587021219567">
-      <screen x="0" y="23" width="1680" height="958" />
+    <state x="491" y="232" width="670" height="675" key="search.everywhere.popup" timestamp="1587374433776">
+      <screen x="0" y="23" width="1680" height="956" />
     </state>
+    <state x="491" y="232" width="670" height="675" key="search.everywhere.popup/0.23.1680.956@0.23.1680.956" timestamp="1587374433776" />
     <state x="491" y="232" width="670" height="676" key="search.everywhere.popup/0.23.1680.958@0.23.1680.958" timestamp="1587021219567" />
   </component>
   <component name="XDebuggerManager">

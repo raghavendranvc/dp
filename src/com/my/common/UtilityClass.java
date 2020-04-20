@@ -23,6 +23,13 @@ public class UtilityClass {
         System.out.println();
     }
 
+    public static void print(Long[] a){
+        for(int i=0;i<a.length;i++){
+            System.out.print(a[i]+" ");
+        }
+        System.out.println();
+    }
+
     public static void printArray(int[][] a){
         for(int i=0;i<a.length;i++){
             for(int j=0;j<a[i].length;j++) {
