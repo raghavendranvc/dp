@@ -6,6 +6,8 @@ public class CountingBooleanParantehsis {
 	 * Expression = operand1 op1 operand2 op2 operand3 op3 operand4
 	 */
 
+	//TODO - Read
+
 	public int GetNumberOfBooleanParanthesis(boolean[] operands,String[] operators){
 		int n = operands.length;
 		int[][] TrueValues = new int[n][n];

@@ -25,7 +25,9 @@ public class DiceThrowNumberOfWays {
 		}
 		return numberOfWays;
 	}
-	
+
+	//TODO read
+
 	public int getNumberOfWaysForSumIter(int faces,int dices,int sum){
 		int[][] table = new int[dices+1][sum+1];
 		

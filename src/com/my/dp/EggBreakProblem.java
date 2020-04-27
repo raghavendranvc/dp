@@ -32,11 +32,8 @@ public class EggBreakProblem {
 			// When Egg doesn't break - Try with all the existing eggs from that floor to end
 			
 			int maxValue = Math.max(eggBreak(i-1, eggs-1), eggBreak(floors-i,eggs));
-			
-			if(maxValue < minTries){
-				minTries = maxValue;
-			}
-			
+
+			minTries = Math.min(minTries, maxValue);
 			
 		}
 		// We need to consider the test at current floor. Which is 1.

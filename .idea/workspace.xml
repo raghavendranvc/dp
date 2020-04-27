@@ -2,39 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43495d30-7a62-4b83-a502-b707aebf34f4" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/my/arrays/NumberOfContinuousSequences.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/binarysearch/KthSmallest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/linkedlists/AddTwoNumbers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/linkedlists/FirstLoopNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/linkedlists/IsPalindrome.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/linkedlists/MergeTwoSortedArrays.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/linkedlists/RemoveDup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/linkedlists/RemoveNthNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/linkedlists/ReorderList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/linkedlists/RotateList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/stacksqueues/AbsolutePath.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/strings/AddBinaryStrings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/strings/AmazingSubStrings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/strings/Atoi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/strings/CompareVersionNumbers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/strings/CountAndSay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/strings/IntegerToRomanMapping.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/strings/JustifiedText.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/strings/LengthOfLastWord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/strings/LongestCommonPrefix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/strings/LongestPolindromeSubstring.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/strings/MinCharsForPalindrome.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/strings/Mulitply.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/strings/Palindrome.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/strings/PowerOf2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/strings/ReturnReverseString.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/strings/RomanToInteger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/strings/StrStr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/strings/Stringholics.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/strings/ValidIpAddress.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/strings/ValidNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/arrays/SprialOrderMatrix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/backtracking/Subset.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/hashing/Anagrams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/hashing/ColourfulNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/hashing/CopyList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/hashing/DiffK.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/hashing/EqualKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/hashing/FourSum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/hashing/Fractions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/hashing/LongedZeroContinousSequence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/hashing/LongestSubStringNoRepeat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/hashing/PointsOnLine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/hashing/SubstringConcat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/hashing/TwoSum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/hashing/ValidateSuduku.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/hashing/WindowString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/linkedlists/PartitionLists.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/linkedlists/Substract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/stacksqueues/EvaluatePostfix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/stacksqueues/LargestRecInHisto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/stacksqueues/MinStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/stacksqueues/NearestSmallerElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/stacksqueues/NextGreater.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/stacksqueues/RainWaterTrapped.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/stacksqueues/RedundantBraces.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/stacksqueues/SlidingWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/my/common/UtilityClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/common/UtilityClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/my/dp/BoxStacking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/dp/BoxStacking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/my/dp/CountingBooleanParantehsis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/dp/CountingBooleanParantehsis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/my/dp/DiceThrowNumberOfWays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/dp/DiceThrowNumberOfWays.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/my/dp/EggBreakProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/dp/EggBreakProblem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/my/dp/GetAllCombinationsForNum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/dp/GetAllCombinationsForNum.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +79,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.AbsolutePath">
+  <component name="RunManager" selected="Application.PointsOnLine">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -287,13 +286,13 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method />
     </configuration>
-    <configuration name="AbsolutePath" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.my.stacksqueues.AbsolutePath" />
+    <configuration name="ColourfulNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.my.hashing.ColourfulNumber" />
       <module name="dp" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.my.stacksqueues.*" />
+          <option name="PATTERN" value="com.my.hashing.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -301,13 +300,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddTwoNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.my.linkedlists.AddTwoNumbers" />
+    <configuration name="DiffK" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.my.hashing.DiffK" />
       <module name="dp" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.my.linkedlists.*" />
+          <option name="PATTERN" value="com.my.hashing.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -315,13 +314,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IsPalindrome" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.my.linkedlists.IsPalindrome" />
+    <configuration name="EggBreakProblem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.my.dp.EggBreakProblem" />
       <module name="dp" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.my.linkedlists.*" />
+          <option name="PATTERN" value="com.my.dp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -329,13 +328,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KthSmallest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.my.binarysearch.KthSmallest" />
+    <configuration name="PointsOnLine" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.my.hashing.PointsOnLine" />
       <module name="dp" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.my.binarysearch.*" />
+          <option name="PATTERN" value="com.my.hashing.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -343,13 +342,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RotateList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.my.linkedlists.RotateList" />
+    <configuration name="ValidateSuduku" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.my.hashing.ValidateSuduku" />
       <module name="dp" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.my.linkedlists.*" />
+          <option name="PATTERN" value="com.my.hashing.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -472,11 +471,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AbsolutePath" />
-        <item itemvalue="Application.AddTwoNumbers" />
-        <item itemvalue="Application.RotateList" />
-        <item itemvalue="Application.IsPalindrome" />
-        <item itemvalue="Application.KthSmallest" />
+        <item itemvalue="Application.PointsOnLine" />
+        <item itemvalue="Application.DiffK" />
+        <item itemvalue="Application.ValidateSuduku" />
+        <item itemvalue="Application.ColourfulNumber" />
+        <item itemvalue="Application.EggBreakProblem" />
       </list>
     </recent_temporary>
   </component>
@@ -507,7 +506,8 @@
       <workItem from="1586931444227" duration="3787000" />
       <workItem from="1586937220820" duration="91188000" />
       <workItem from="1587425274752" duration="17980000" />
-      <workItem from="1587626468963" duration="57554000" />
+      <workItem from="1587626468963" duration="110750000" />
+      <workItem from="1587929599688" duration="29631000" />
     </task>
     <servers />
   </component>
@@ -540,6 +540,14 @@
       <screen x="0" y="23" width="1680" height="958" />
     </state>
     <state x="291" y="162" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.958@0.23.1680.958" timestamp="1586937137784" />
+    <state x="639" y="211" key="#com.intellij.ide.util.MemberChooser" timestamp="1587890591427">
+      <screen x="0" y="23" width="1680" height="954" />
+    </state>
+    <state x="639" y="211" key="#com.intellij.ide.util.MemberChooser/0.23.1680.954@0.23.1680.954" timestamp="1587890591427" />
+    <state x="599" y="388" width="455" height="225" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587880962626">
+      <screen x="0" y="23" width="1680" height="954" />
+    </state>
+    <state x="599" y="388" width="455" height="225" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.23.1680.954@0.23.1680.954" timestamp="1587880962626" />
     <state x="589" y="212" key="#xdebugger.evaluate" timestamp="1587028005406">
       <screen x="0" y="23" width="1680" height="958" />
     </state>
@@ -549,64 +557,78 @@
     </state>
     <state x="614" y="262" key="FileChooserDialogImpl/0.23.1680.956@0.23.1680.956" timestamp="1586931461464" />
     <state x="614" y="263" key="FileChooserDialogImpl/0.23.1680.958@0.23.1680.958" timestamp="1586937119688" />
-    <state width="1611" height="287" key="GridCell.Tab.0.bottom" timestamp="1587724394465">
-      <screen x="0" y="23" width="1680" height="952" />
+    <state width="1611" height="321" key="GridCell.Tab.0.bottom" timestamp="1587970307536">
+      <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="1611" height="287" key="GridCell.Tab.0.bottom/0.23.1680.952@0.23.1680.952" timestamp="1587724394465" />
-    <state width="805" height="283" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1587117582490" />
+    <state width="1611" height="287" key="GridCell.Tab.0.bottom/0.23.1680.952@0.23.1680.952" timestamp="1587761748209" />
+    <state width="1611" height="321" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1587970307536" />
     <state width="805" height="287" key="GridCell.Tab.0.bottom/0.23.1680.956@0.23.1680.956" timestamp="1587538442674" />
     <state width="805" height="283" key="GridCell.Tab.0.bottom/0.23.1680.958@0.23.1680.958" timestamp="1587202280300" />
-    <state width="1611" height="287" key="GridCell.Tab.0.center" timestamp="1587724394431">
-      <screen x="0" y="23" width="1680" height="952" />
+    <state width="1611" height="321" key="GridCell.Tab.0.center" timestamp="1587970307534">
+      <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="1611" height="287" key="GridCell.Tab.0.center/0.23.1680.952@0.23.1680.952" timestamp="1587724394431" />
-    <state width="805" height="283" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1587117582475" />
+    <state width="1611" height="287" key="GridCell.Tab.0.center/0.23.1680.952@0.23.1680.952" timestamp="1587761748190" />
+    <state width="1611" height="321" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1587970307534" />
     <state width="805" height="287" key="GridCell.Tab.0.center/0.23.1680.956@0.23.1680.956" timestamp="1587538442674" />
     <state width="805" height="283" key="GridCell.Tab.0.center/0.23.1680.958@0.23.1680.958" timestamp="1587202280299" />
-    <state width="1611" height="287" key="GridCell.Tab.0.left" timestamp="1587724394402">
-      <screen x="0" y="23" width="1680" height="952" />
+    <state width="1611" height="321" key="GridCell.Tab.0.left" timestamp="1587970307534">
+      <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="1611" height="287" key="GridCell.Tab.0.left/0.23.1680.952@0.23.1680.952" timestamp="1587724394402" />
-    <state width="805" height="283" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1587117582475" />
+    <state width="1611" height="287" key="GridCell.Tab.0.left/0.23.1680.952@0.23.1680.952" timestamp="1587761748173" />
+    <state width="1611" height="321" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1587970307534" />
     <state width="805" height="287" key="GridCell.Tab.0.left/0.23.1680.956@0.23.1680.956" timestamp="1587538442673" />
     <state width="805" height="283" key="GridCell.Tab.0.left/0.23.1680.958@0.23.1680.958" timestamp="1587202280298" />
-    <state width="1611" height="287" key="GridCell.Tab.0.right" timestamp="1587724394458">
-      <screen x="0" y="23" width="1680" height="952" />
+    <state width="1611" height="321" key="GridCell.Tab.0.right" timestamp="1587970307535">
+      <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="1611" height="287" key="GridCell.Tab.0.right/0.23.1680.952@0.23.1680.952" timestamp="1587724394458" />
-    <state width="805" height="283" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1587117582489" />
+    <state width="1611" height="287" key="GridCell.Tab.0.right/0.23.1680.952@0.23.1680.952" timestamp="1587761748209" />
+    <state width="1611" height="321" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1587970307535" />
     <state width="805" height="287" key="GridCell.Tab.0.right/0.23.1680.956@0.23.1680.956" timestamp="1587538442674" />
     <state width="805" height="283" key="GridCell.Tab.0.right/0.23.1680.958@0.23.1680.958" timestamp="1587202280299" />
-    <state width="1112" height="297" key="GridCell.Tab.1.bottom" timestamp="1587425262654">
-      <screen x="0" y="23" width="1680" height="956" />
+    <state width="1611" height="297" key="GridCell.Tab.1.bottom" timestamp="1587929591560">
+      <screen x="0" y="23" width="1680" height="954" />
     </state>
+    <state width="1611" height="297" key="GridCell.Tab.1.bottom/0.23.1680.952@0.23.1680.952" timestamp="1587761327296" />
+    <state width="1611" height="297" key="GridCell.Tab.1.bottom/0.23.1680.954@0.23.1680.954" timestamp="1587929591560" />
     <state width="1112" height="297" key="GridCell.Tab.1.bottom/0.23.1680.956@0.23.1680.956" timestamp="1587425262654" />
     <state width="1112" height="297" key="GridCell.Tab.1.bottom/0.23.1680.958@0.23.1680.958" timestamp="1587028633984" />
-    <state width="1112" height="297" key="GridCell.Tab.1.center" timestamp="1587425262654">
-      <screen x="0" y="23" width="1680" height="956" />
+    <state width="1611" height="297" key="GridCell.Tab.1.center" timestamp="1587929591560">
+      <screen x="0" y="23" width="1680" height="954" />
     </state>
+    <state width="1611" height="297" key="GridCell.Tab.1.center/0.23.1680.952@0.23.1680.952" timestamp="1587761327295" />
+    <state width="1611" height="297" key="GridCell.Tab.1.center/0.23.1680.954@0.23.1680.954" timestamp="1587929591560" />
     <state width="1112" height="297" key="GridCell.Tab.1.center/0.23.1680.956@0.23.1680.956" timestamp="1587425262654" />
     <state width="1112" height="297" key="GridCell.Tab.1.center/0.23.1680.958@0.23.1680.958" timestamp="1587028633984" />
-    <state width="1112" height="297" key="GridCell.Tab.1.left" timestamp="1587425262653">
-      <screen x="0" y="23" width="1680" height="956" />
+    <state width="1611" height="297" key="GridCell.Tab.1.left" timestamp="1587929591559">
+      <screen x="0" y="23" width="1680" height="954" />
     </state>
+    <state width="1611" height="297" key="GridCell.Tab.1.left/0.23.1680.952@0.23.1680.952" timestamp="1587761327295" />
+    <state width="1611" height="297" key="GridCell.Tab.1.left/0.23.1680.954@0.23.1680.954" timestamp="1587929591559" />
     <state width="1112" height="297" key="GridCell.Tab.1.left/0.23.1680.956@0.23.1680.956" timestamp="1587425262653" />
     <state width="1112" height="297" key="GridCell.Tab.1.left/0.23.1680.958@0.23.1680.958" timestamp="1587028633984" />
-    <state width="1112" height="297" key="GridCell.Tab.1.right" timestamp="1587425262654">
-      <screen x="0" y="23" width="1680" height="956" />
+    <state width="1611" height="297" key="GridCell.Tab.1.right" timestamp="1587929591560">
+      <screen x="0" y="23" width="1680" height="954" />
     </state>
+    <state width="1611" height="297" key="GridCell.Tab.1.right/0.23.1680.952@0.23.1680.952" timestamp="1587761327295" />
+    <state width="1611" height="297" key="GridCell.Tab.1.right/0.23.1680.954@0.23.1680.954" timestamp="1587929591560" />
     <state width="1112" height="297" key="GridCell.Tab.1.right/0.23.1680.956@0.23.1680.956" timestamp="1587425262654" />
     <state width="1112" height="297" key="GridCell.Tab.1.right/0.23.1680.958@0.23.1680.958" timestamp="1587028633984" />
-    <state x="490" y="262" width="824" height="538" key="find.popup" timestamp="1587719218448">
-      <screen x="0" y="23" width="1680" height="952" />
+    <state x="490" y="263" width="673" height="472" key="find.popup" timestamp="1587958610909">
+      <screen x="0" y="23" width="1680" height="954" />
     </state>
     <state x="490" y="262" width="824" height="538" key="find.popup/0.23.1680.952@0.23.1680.952" timestamp="1587719218448" />
-    <state x="490" y="263" width="673" height="472" key="find.popup/0.23.1680.954@0.23.1680.954" timestamp="1587113220127" />
+    <state x="490" y="263" width="673" height="472" key="find.popup/0.23.1680.954@0.23.1680.954" timestamp="1587958610909" />
     <state x="490" y="263" width="673" height="472" key="find.popup/0.23.1680.956@0.23.1680.956" timestamp="1586932966050" />
     <state x="490" y="264" width="673" height="473" key="find.popup/0.23.1680.958@0.23.1680.958" timestamp="1586986009793" />
-    <state x="491" y="232" width="670" height="675" key="search.everywhere.popup" timestamp="1587374433776">
-      <screen x="0" y="23" width="1680" height="956" />
+    <state x="534" y="125" key="refactoring.ChangeSignatureDialog" timestamp="1587890566797">
+      <screen x="0" y="23" width="1680" height="954" />
     </state>
+    <state x="534" y="125" key="refactoring.ChangeSignatureDialog/0.23.1680.954@0.23.1680.954" timestamp="1587890566797" />
+    <state x="491" y="231" width="670" height="675" key="search.everywhere.popup" timestamp="1587960917315">
+      <screen x="0" y="23" width="1680" height="954" />
+    </state>
+    <state x="491" y="231" width="670" height="673" key="search.everywhere.popup/0.23.1680.952@0.23.1680.952" timestamp="1587762211955" />
+    <state x="491" y="231" width="670" height="675" key="search.everywhere.popup/0.23.1680.954@0.23.1680.954" timestamp="1587960917315" />
     <state x="491" y="232" width="670" height="675" key="search.everywhere.popup/0.23.1680.956@0.23.1680.956" timestamp="1587374433776" />
     <state x="491" y="232" width="670" height="676" key="search.everywhere.popup/0.23.1680.958@0.23.1680.958" timestamp="1587021219567" />
   </component>
