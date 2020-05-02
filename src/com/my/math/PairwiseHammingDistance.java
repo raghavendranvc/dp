@@ -22,7 +22,7 @@ public class PairwiseHammingDistance {
 
     }*/
 
-    //TODO - Just compied. Still need to check
+    //TODO - Just compiled. Still need to check
     public int hammingDistance(final List<Integer> A) {
         int n = A.size();
         int dist = 0;

@@ -10,6 +10,8 @@ import java.util.TreeSet;
 
 public class SortedPermutationRank {
 
+    //TODO recheck this whole thing again
+
     public static int findRankRepeats(String perm) {
         BigInteger rank = BigInteger.ONE;
         BigInteger suffixPermCount = BigInteger.ONE;

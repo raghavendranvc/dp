@@ -1,5 +1,7 @@
 package com.my.common;
 
+import java.util.ArrayList;
+
 public class UtilityClass {
 
     public static void print(boolean[] a){
@@ -51,6 +53,22 @@ public class UtilityClass {
             }
             System.out.println();
         }
+    }
+
+    public static ArrayList<Integer> getList(int[] a){
+        ArrayList<Integer> returnList = new ArrayList<>();
+        for(int i : a){
+            returnList.add(i);
+        }
+        return returnList;
+    }
+
+    public static ArrayList<String> getList(String[] a){
+        ArrayList<String> returnList = new ArrayList<>();
+        for(String i : a){
+            returnList.add(i);
+        }
+        return returnList;
     }
 
 

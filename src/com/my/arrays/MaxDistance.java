@@ -133,13 +133,13 @@ public class MaxDistance {
         int[] a = new int[] {1, 10};
         UtilityClass.print(a);
 
-        ArrayList<Integer> intList = new ArrayList<>(a.length);
+        ArrayList<Integer> A = new ArrayList<>(a.length);
         for (int i : a){
-            intList.add(i);
+            A.add(i);
         }
         MaxDistance maxDistance = new MaxDistance();
 
-        System.out.println("Max Distance="+maxDistance.maximumGap(intList));
+        System.out.println("Max Distance="+maxDistance.maximumGap(A));
     }
 
 }

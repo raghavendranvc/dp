@@ -5,7 +5,9 @@ import java.util.Collections;
 
 public class Subset {
 
-    public ArrayList<ArrayList<Integer>> subsets(ArrayList<Integer> A) {
+    //TODO practice again
+
+    public ArrayList<ArrayList<Integer>> subsetsUsingPowerOf2(ArrayList<Integer> A) {
 
         Collections.sort(A);
 
@@ -35,28 +37,64 @@ public class Subset {
         return result;*/
     }
 
+
+
+    public static void main(String[] args){
+        int a[] = {1,2,3,4};
+        ArrayList<Integer> A = new ArrayList<>(a.length);
+        for (int i : a){
+            A.add(i);
+        }
+
+        Subset s = new Subset();
+        s.subsets(A);
+
+    }
+
+
+    public ArrayList<ArrayList<Integer>> subsets(ArrayList<Integer> A) {
+        ArrayList<ArrayList<Integer>> result = new ArrayList<>();
+        result.add(new ArrayList<>()); //First add the empty List;
+        if(A.size() == 0){
+            return result;
+        }
+        Collections.sort(A);
+        subsetsRecur(A,  0, result, new ArrayList<>());
+        return result;
+
+    }
+
+    public void subsetsRecur(ArrayList<Integer> A, int startIndex, ArrayList<ArrayList<Integer>> result, ArrayList<Integer> tempArray ){
+        for(int i=startIndex;i<A.size();i++){
+            tempArray.add(A.get(i));
+            result.add(new ArrayList<>(tempArray));
+            System.out.println("Before temp ("+i+") ="+tempArray);
+            subsetsRecur(A,i+1,result, tempArray);
+            tempArray.remove(tempArray.size()-1);
+        }
+    }
+
     public ArrayList<ArrayList<Integer>> subsetsCopied(ArrayList<Integer> a) {
-        ArrayList<ArrayList<Integer>> output = new ArrayList<ArrayList<Integer>>();
-        output.add(new ArrayList<Integer>());
+        ArrayList<ArrayList<Integer>> output = new ArrayList<>();
+        output.add(new ArrayList<>());
         if (a.size() == 0) {
             return output;
         }
         Collections.sort(a);
-        generate(a, output, new ArrayList<Integer>(), 0);
+        generate(a, output, new ArrayList<>(), 0);
         return output;
     }
 
-    public void generate(ArrayList<Integer> a, ArrayList<ArrayList<Integer>> output, ArrayList<Integer> temp, int index)
-    {
+    public void generate(ArrayList<Integer> a, ArrayList<ArrayList<Integer>> output, ArrayList<Integer> temp, int index) {
         for (int i = index; i < a.size(); i++) {
-            temp.add(a.get(i));
+            temp.add(a.get(i));     //Adding the first one
             output.add(new ArrayList<Integer>(temp));
+            System.out.println("Before temp ("+i+") ="+temp);
             generate(a, output, temp, i+1);
-            temp.remove(temp.size() - 1);
+            //System.out.println("After recursion temp ("+i+") ="+temp);
+            temp.remove(temp.size() - 1);  //This generally remove the one that got added in the earlier array
         }
     }
-
-
 
 
 

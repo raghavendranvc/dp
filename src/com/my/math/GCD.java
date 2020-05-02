@@ -2,22 +2,24 @@ package com.my.math;
 
 public class GCD {
 
+    public int gcdIter(int A, int B){
 
-
-    public int gcd(int A, int B){
-
-        if( A == 0){
-            return B;
+        while(B !=0 ) {
+            int temp = B;
+            B = A % B;
+            A = temp;
         }
+
+        return A;
+
+    }
+
+    public int gcdRecur(int A, int B){
 
         if( B == 0 ){
             return A;
-        }
-
-        if (A > B){
-            return gcd( B, A%B);
         } else {
-            return gcd(A, B%A);
+            return gcdRecur(B, A%B);
         }
     }
 
