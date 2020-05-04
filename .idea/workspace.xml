@@ -2,57 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43495d30-7a62-4b83-a502-b707aebf34f4" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/my/dp/ibit/LongestIncreasingDecreasingCommonSubsequence.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/greedy/AssignMiceToHoles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/greedy/BulbFlips.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/greedy/ChildrenCandies.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/greedy/GasStation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/greedy/HighestProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/greedy/MajorityElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/greedy/Seats.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/trees/BST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/trees/CountInversions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/trees/FlatternABinaryTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/trees/IdenticalBinaryTrees.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/trees/InOrderTraversalCartesian.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/trees/InOrderTravesal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/trees/InPreOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/trees/InorderPostOrderToBT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/trees/InvertTheBT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/trees/KthSmallestElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/trees/LeastCommonAncestor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/trees/MaxDepthOfBT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/trees/MaxPeopleHeights.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/trees/MinDepthOfBT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/trees/PopulateNextRightPointers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/trees/PostOrderTraversal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/trees/PreOrderTraversal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/trees/RecoverBST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/trees/ReturnPathSum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/trees/RootToLeafPaths.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/trees/RootToLeafSums.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/trees/ShortestUniquePrefix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/trees/Solution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/trees/SortedToBST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/trees/SymmetricTrees.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/trees/TwoSumBST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/trees/ValidBST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/my/trees/ZigZagTravesal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/dp/ibit/EncodingNumbers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/my/arrays/LargestNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/arrays/LargestNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/my/backtracking/CombinationSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/backtracking/CombinationSum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/my/backtracking/NQueens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/backtracking/NQueens.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/my/dp/EditOperationsOnTwoStrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/dp/EditOperationsOnTwoStrings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/my/hashing/Fractions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/hashing/Fractions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/my/linkedlists/AddTwoNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/linkedlists/AddTwoNumbers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/my/linkedlists/IsPalindrome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/linkedlists/IsPalindrome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/my/linkedlists/RotateList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/linkedlists/RotateList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/my/linkedlists/Substract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/linkedlists/Substract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/my/math/FuzzBizz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/math/FuzzBizz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/my/math/KthPermuation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/math/KthPermuation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/my/strings/JustifiedText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/strings/JustifiedText.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/my/strings/ReturnReverseString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/strings/ReturnReverseString.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/my/trees/BalancedBinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/trees/BalancedBinaryTree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -526,7 +477,7 @@
       <workItem from="1586937220820" duration="91188000" />
       <workItem from="1587425274752" duration="17980000" />
       <workItem from="1587626468963" duration="110750000" />
-      <workItem from="1587929599688" duration="182581000" />
+      <workItem from="1587929599688" duration="186556000" />
     </task>
     <servers />
   </component>
