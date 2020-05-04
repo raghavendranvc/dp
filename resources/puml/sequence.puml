@@ -1,0 +1,24 @@
+@startuml
+actor User
+participant "I-Tier / Mobile" as Client
+participant "API Proxy" as Proxy
+participant "API Lazlo" as Lazlo
+participant "Consent Log" as CLS #white
+database "DaaS DB" as DB
+boundary "Message Bus" as MBus
+
+group Store Consent
+  User -> Client: User Registration
+  Client -> Proxy: route to proxy
+  Proxy -> Lazlo: route to lazlo
+  Lazlo -> CLS: POST /consent
+  CLS -> DB: store in pgsql
+  DB -> CLS: return row
+  CLS -> Lazlo: 200 response
+  Lazlo -> Proxy: 200 response
+  Proxy -> Client: 200 response
+  Client -> User: User registered
+  CLS --> MBus: publish janus mesage
+  MBus --> CLS: async
+end
+@end

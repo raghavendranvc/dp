@@ -1,0 +1,47 @@
+@startuml
+
+box Maris
+participant Maris
+database MarisDB
+end box
+
+box EAN
+participant EAN
+end box
+
+participant Kafka
+
+box TravelSearch
+participant TravelSearch
+database RedisCache
+end box
+
+activate Maris
+
+Maris -> MarisDB : Get Hotel List
+activate MarisDB
+MarisDB -> Maris
+deactivate MarisDB
+
+Maris -> EAN : Get Hotel Prices for Hotels
+activate EAN
+EAN -> Maris
+deactivate EAN
+
+loop "For All Hotels"
+    Maris -> Kafka : Price Update
+    activate Kafka
+    Kafka ---> TravelSearch : publish message
+    activate TravelSearch
+    Kafka ->  Maris
+    deactivate Kafka
+    deactivate Maris
+
+    TravelSearch -> RedisCache : Store HotelPrice
+    activate RedisCache
+    RedisCache -> TravelSearch
+    deactivate RedisCache
+    deactivate TravelSearch
+end
+
+@enduml

@@ -1,0 +1,51 @@
+@startuml
+
+box TravelBrowse
+box
+
+
+box EANI
+participant EANImporter as EANI
+database EANDB
+end box
+
+box EAN
+participant EAN
+end box
+
+participant Kafka
+
+box TravelSearch
+participant TravelSearch
+database RedisCache
+end box
+
+activate EANI
+
+EANI -> EANDB : Get Hotel List
+activate EANDB
+EANDB -> EANI
+deactivate EANDB
+
+EANI -> EAN : Get Hotel Prices for Hotels
+activate EAN
+EAN -> EANI
+deactivate EAN
+
+loop "For All Hotels"
+    EANI -> Kafka : Price Update
+    activate Kafka
+    Kafka ---> TravelSearch : publish message
+    activate TravelSearch
+    Kafka ->  EANI
+    deactivate Kafka
+    deactivate EANI
+
+    TravelSearch -> RedisCache : Store HotelPrice
+    activate RedisCache
+    RedisCache -> TravelSearch
+    deactivate RedisCache
+    deactivate TravelSearch
+end
+
+@enduml

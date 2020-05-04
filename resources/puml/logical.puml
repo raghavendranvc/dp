@@ -1,0 +1,48 @@
+@startuml
+actor webuser [
+Web User
+]
+
+actor mobileuser [
+Mobile User
+]
+
+artifact mobileapp [
+Mobile App
+]
+
+frame SNC1/SAC1/DUB1 {
+    artifact itierapp [
+    I-Tier App
+    ]
+    
+    database consentdb [
+    ConsentLog DB
+    ]
+    node proxy [
+    API Proxy
+    ]
+    
+    node lazlo [
+    API Lazlo
+    ]
+    
+    node app [
+    Consent Log
+    Service Apps
+    ]
+    
+    queue mbus [
+    MBus
+    ]
+}
+
+mobileuser -->> mobileapp
+app ->> mbus
+consentdb <<->> app
+proxy -->> lazlo
+lazlo -->> app
+webuser -->> itierapp
+itierapp -->> lazlo
+mobileapp -->> proxy
+@end

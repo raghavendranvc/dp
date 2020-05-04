@@ -1,0 +1,108 @@
+@startuml
+
+
+actor Client
+participant UserService
+participant APILazlo
+boundary MBus
+
+box "RCLS" #LightGrey
+participant RCLSListener
+participant RCLSWorker
+participant RCLS
+participant RaaS
+database DB
+end box
+participant JanusAggregator
+
+group "Erase Message Publish"
+
+  activate Client
+  Client -> UserService: POST /Erase/userUUID
+  activate UserService
+  UserService -> UserService: Erase Personal Data
+  UserService --> MBus: erased topic
+  activate MBus
+  UserService <-- MBus
+  deactivate MBus
+  Client <-- UserService
+  deactivate UserService
+  deactivate Client
+
+end
+
+group "Message Listener"
+
+  activate MBus
+  MBus -> RCLSListener: erased topic
+  activate RCLSListener
+  RCLSListener -> RaaS: Enqueue/userUUID
+  activate RaaS
+  RCLSListener <-- RaaS
+  deactivate RaaS
+  MBus <-- RCLSListener
+  deactivate RCLSListener
+  deactivate MBus
+
+end
+
+group "Erasure Message Processing"
+
+  RCLSWorker -> RCLSWorker: BackgroundJob, RedisQueueListener
+  activate RCLSWorker
+  RCLSWorker -> RaaS: Dequeue/userUUID
+  activate RaaS
+  RCLSWorker <-- RaaS
+  deactivate RaaS
+
+
+  alt
+
+    RCLSWorker -> JanusAggregator: GET Map userBCookie/userUUID
+    activate JanusAggregator
+    RCLSWorker <-- JanusAggregator: List<BCookie>
+    deactivate JanusAggregator
+
+    RCLSWorker -> DB: Store<BCookie,UserUUID>
+    activate DB
+    DB <-- RCLSWorker
+    deactivate DB
+
+    RCLSWorker -> MBus: Publish erased completed
+    activate MBus
+    RCLSWorker <-- MBus
+    deactivate MBus
+
+
+  else "on Exception"
+    RCLSWorker -> RaaS: EqueueFailure/userUUID
+    activate RaaS
+    RCLSWorker <-- RaaS
+    deactivate RaaS
+  end
+
+  deactivate RCLSWorker
+
+end
+
+
+group Cookie Validation
+
+  activate Client
+  Client -> APILazlo: GET /status API
+  activate APILazlo
+  APILazlo -> RCLS: GET /validateBCookie API
+  activate RCLS
+  RCLS -> DB: search
+  activate DB
+  RCLS <-- DB
+  deactivate DB
+  APILazlo <-- RCLS
+  deactivate RCLS
+  Client <-- APILazlo
+  deactivate APILazlo
+  deactivate Client
+
+end
+
+@enduml
