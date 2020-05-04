@@ -14,7 +14,7 @@ public class LargestNumber {
         Collections.sort(aStr, new StringComparator());
         System.out.println(aStr);
 
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         int i = 0;
         for(;i<aStr.size();i++){
             if(!aStr.get(i).equals("0")){

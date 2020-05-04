@@ -9,7 +9,7 @@ public class Fractions {
             return String.valueOf(A/B);
         }
 
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
 
         if( (A > 0 && B < 0) || (A < 0 && B > 0)) {
             sb.append("-");

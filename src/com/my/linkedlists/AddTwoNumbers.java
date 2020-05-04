@@ -70,12 +70,12 @@ public class AddTwoNumbers {
     }
 
     public static void print(ListNode node){
-        StringBuffer stringBuffer = new StringBuffer();
+        StringBuilder StringBuilder = new StringBuilder();
         while(node != null){
-            stringBuffer.append(node.val+" ");
+            StringBuilder.append(node.val+" ");
             node = node.next;
         }
-        System.out.println(stringBuffer.toString());
+        System.out.println(StringBuilder.toString());
     }
 
     public static void main(String[] args){

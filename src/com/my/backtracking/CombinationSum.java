@@ -77,7 +77,7 @@ public class CombinationSum {
         if(A.size() == 0 ){
             return result;
         }
-        HashSet<Integer> h = new HashSet<>(A);
+        HashSet<Integer> h = new HashSet<>(A);//Deduping
         Integer[] a = h.toArray(new Integer[h.size()]);
         List<Integer> A2 = Arrays.asList(a);
         A.clear();

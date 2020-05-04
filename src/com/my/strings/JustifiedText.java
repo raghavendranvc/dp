@@ -33,7 +33,7 @@ public class JustifiedText {
     public String justifyLine(ArrayList<String> A, int startWord, int endWord, int length){
         if(endWord == A.size()-1){
 
-            StringBuffer sb = new StringBuffer();
+            StringBuilder sb = new StringBuilder();
             for(int i=startWord;i<endWord;i++){
                 sb.append(A.get(i));
                 sb.append(' ');
@@ -54,7 +54,7 @@ public class JustifiedText {
         int miniSpaceBetweenWords = (endWord==startWord)? 0: spacesAvailabe/(endWord-startWord);
         int extraSpace = (endWord==startWord)? 0: spacesAvailabe % (endWord-startWord);
         System.out.println("spacesAvailabe="+spacesAvailabe+" miniSpaceBetweenWords="+miniSpaceBetweenWords+" extraSpace="+extraSpace);
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         for(int i=startWord;i<endWord;i++){
             sb.append(A.get(i));
             System.out.println("Appending String="+A.get(i));

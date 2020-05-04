@@ -134,7 +134,7 @@ public class EditOperationsOnTwoStrings {
 		 * When Given string is empty. All Insertions
 		 */
 		for(int j=1;j<=n;j++){  
-			table[0][j] = j*(OPERATION.INSERT.getVal());
+			table[0][j] = j*(OPERATION.INSERT.getVal()); // This is the cost to insert from 1..j. Preparing string of length j
 		}
 		
 		/*

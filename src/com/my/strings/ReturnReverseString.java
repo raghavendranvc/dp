@@ -14,7 +14,7 @@ public class ReturnReverseString {
     public String solve(String A) {
         A = A.trim();
         String[] words = A.split(" ");
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
 
         for(int i=words.length-1;i>=0;i--){
             if(words[i].trim().length()>0){

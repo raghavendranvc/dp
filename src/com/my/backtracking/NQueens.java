@@ -102,11 +102,11 @@ public class NQueens {
         if(queenNumber >= a){
             ArrayList<String> rowString = new ArrayList<>();
             for(int i=0;i<a;i++){
-                StringBuffer stringBuffer = new StringBuffer();
+                StringBuilder StringBuilder = new StringBuilder();
                 for(int j=0;j<a;j++){
-                    stringBuffer.append(nQueens[i][j]? "Q":".");
+                    StringBuilder.append(nQueens[i][j]? "Q":".");
                 }
-                rowString.add(stringBuffer.toString());
+                rowString.add(StringBuilder.toString());
             }
             result.add(rowString);
             return;

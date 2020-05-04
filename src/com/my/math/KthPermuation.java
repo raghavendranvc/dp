@@ -98,7 +98,7 @@ public class KthPermuation {
             System.out.println("quotient="+quotient+" value="+value+" B="+B);
         }
 
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         for(int i=0;i<value.size();i++){
             sb.append(value.get(i));
         }
@@ -122,7 +122,7 @@ public class KthPermuation {
             maxFacto = maxFacto * i;
         }
 
-        StringBuffer stringBuffer = new StringBuffer();
+        StringBuilder StringBuilder = new StringBuilder();
 
         // find sequence
         for (int i = 0; i < A; i++) {
@@ -133,12 +133,12 @@ public class KthPermuation {
             B = B % maxFacto;
 
             // get number according to curIndex
-            stringBuffer.append(integers.get(curIndex));
+            StringBuilder.append(integers.get(curIndex));
             // remove from list
             integers.remove(curIndex);
         }
 
-        return stringBuffer.toString();
+        return StringBuilder.toString();
     }
 
     public String getPermutation(int A, int B) {
@@ -158,7 +158,7 @@ public class KthPermuation {
             return "";
         }
 
-        StringBuffer stringBuffer = new StringBuffer();
+        StringBuilder StringBuilder = new StringBuilder();
 
         for(int i=0;i<A; i++){
             maxFacto = maxFacto/(A-i);
@@ -167,11 +167,11 @@ public class KthPermuation {
 
             B = B % maxFacto; // Next iteration
 
-            stringBuffer.append(integers.get(quotient)); //Get the index of this quotient
+            StringBuilder.append(integers.get(quotient)); //Get the index of this quotient
             integers.remove(quotient); //Then remove that number from the list
         }
 
-        return stringBuffer.toString();
+        return StringBuilder.toString();
 
     }
 

@@ -28,7 +28,7 @@ public class FuzzBizz {
                 resultList.add("Buzz");
             }
 
-            /*StringBuffer sb = new StringBuffer();
+            /*StringBuilder sb = new StringBuilder();
             if( i % 3 == 0){
                 sb.append("Fizz");
             }
