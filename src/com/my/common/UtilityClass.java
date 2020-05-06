@@ -17,6 +17,13 @@ public class UtilityClass {
         }
         System.out.println();
     }
+    
+    public static void print(boolean[] a, int s, int e){
+        for(int i=s;i<=e;i++){
+            System.out.print(a[i]+" ");
+        }
+        System.out.println();
+    }
 
     public static void print(char[] a){
         for(int i=0;i<a.length;i++){

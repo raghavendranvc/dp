@@ -9,8 +9,10 @@ public class MaxConsectiveGap {
     // Size = 9
     // 10   20  24  5   8   34  19  22  16
     //  5   8   10  16  19  20  22  24  34
+	
+	//TODO Not done
 
-    public int maximumGap(final List<Integer> A) { //TODO Not done
+    public int maximumGap(final List<Integer> A) { 
 
         if(A.size() <=2){
             return 0;

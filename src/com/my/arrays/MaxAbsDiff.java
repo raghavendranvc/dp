@@ -16,7 +16,7 @@ public class MaxAbsDiff {
 // 3,0
 // 4,0
 
-
+//TODO recheck this logic. Mathematics
 
     //f(i, j) = |A[i] - A[j]| + |i - j|
     //        =  -(A[i]+i) + (A[j]+j)
