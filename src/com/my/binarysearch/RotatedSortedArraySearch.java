@@ -43,7 +43,7 @@ public class RotatedSortedArraySearch {
                     System.out.println("Reveresed low :: A.get("+low+")="+A.get(low)+" A.get("+mid+")="+A.get(mid)+" A.get("+high+")="+A.get(high));
                 }
             } else { //First half is unsorted. So Second half is sorted
-                if( B >= A.get(mid) && B <= A.get(high)){
+                if( B >= A.get(mid) && B <= A.get(high)){ // Check if element is within the sorted array(2nd half)
                     low = mid+1;
                     System.out.println("normal new low :: A.get("+low+")="+A.get(low)+" A.get("+mid+")="+A.get(mid)+" A.get("+high+")="+A.get(high));
                 } else {

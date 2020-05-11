@@ -7,6 +7,8 @@ public class MaxSumSubArray {
 		int max = a[0];
 		int currentMax = a[0];
 		for(int i=1;i<a.length;i++){
+			
+			//TODO remember this logic
 			/*
 			 * The subMax is useful if the same adds value to the current element
 			 */

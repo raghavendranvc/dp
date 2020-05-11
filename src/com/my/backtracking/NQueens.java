@@ -237,5 +237,38 @@ public class NQueens {
     [., ., ., ., ., Q, ., .],
     [., ., Q, ., ., ., ., .]
      */
+    
+    /*
+     * We are trying to place the queen in a row called "row"
+     * Since we are going serial, we don't need to check beyond "row" rows
+     */
+    
+    private boolean isValidToStore(int N, int currentQueen, int[] columnsPoitionOfEachQueen) {
+    	for(int i=0;i< currentQueen ;i++) {
+    		int diff = Math.abs(columnsPoitionOfEachQueen[i] - columnsPoitionOfEachQueen[currentQueen]);
+    		if(diff == 0 || diff == currentQueen-i) {
+    			return false;
+    		}	
+    	}
+    	return true;
+    }
+    
+    
+    private void printOneNQueen(int N, int currentQueen, int[] columnsPoitionOfEachQueen) {
+    	if(currentQueen == N) {
+    		return; //we have place every queen
+    	}
+    	
+    	// Here i represents columns
+    	for(int i=0;i<N;i++) {
+    		// place queen in the first possible position
+    		columnsPoitionOfEachQueen[currentQueen] = i;
+    		if(isValidToStore(N,currentQueen, columnsPoitionOfEachQueen)) {
+    			printOneNQueen(N, currentQueen+1, columnsPoitionOfEachQueen);
+    		}
+    	}
+    	
+    }
+    
 
 }

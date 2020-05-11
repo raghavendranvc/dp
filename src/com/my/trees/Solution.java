@@ -16,7 +16,7 @@ public class Solution {
 
     private TreeNode currentNode = null;
 
-    private TreeNode inOrderSucc() {
+    private TreeNode inOrderSuccWhenThereIsNoRightNode() {
         if(root == null){
             return null;
         }
