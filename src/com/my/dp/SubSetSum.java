@@ -16,10 +16,6 @@ public class SubSetSum {
 			return false;
 		}
 		
-		if(sum < 0){
-			return false;
-		}
-		
 		/*
 		 *  if(sum < a[n-1]){
 		 *    return (isSubSetHasSum(a, sum,n-1);
@@ -63,6 +59,9 @@ public class SubSetSum {
 				table[i][j] = table[i][j-1];
 				/*
 				 * If current sum is greater than or equal to a[j-1]
+				 * Then check if by including and by excluding
+				 * 
+				 * If that sum
 				 */
 				if(i >= a[j-1]){
 					table[i][j] = table[i][j] || table[i-a[j-1]][j-1];
@@ -87,5 +86,29 @@ public class SubSetSum {
 		System.out.println("val1="+val1);
 
 	}
+	
+	// Call isSubSetRecurPractice(A,A.size()-1,sum)
+	public boolean iSubSetRecurPractice(int[] A, int n, int sum) {
+		if(sum == 0) {
+			return true;
+		}
+		
+		if(sum !=0 && n ==0) {
+			return false;
+		}
+		
+		if(A[n-1] > sum) { 
+			// We should only ignore
+			return iSubSetRecurPractice(A,n-1,sum);
+		}
+		
+		//ignore A[n]
+		//include A[n]
+		
+		return (iSubSetRecurPractice(A,n-1,sum) || iSubSetRecurPractice(A,n-1,sum-A[n-1]));
+		
+		
+	}
+	
 
 }
