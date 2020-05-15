@@ -7,6 +7,9 @@ import java.util.List;
 
 public class NBy3RepeatNumber {
 
+	//TODO GIVEN UP After a while
+	
+	
     public int repeatedNumber(final List<Integer> a) {
         int first = -1;
         int fc = 0;

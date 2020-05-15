@@ -56,12 +56,11 @@ public class Sudoku {
             }
         }
 
-        int size = (int) Math.sqrt(a.size());
-        int rowNum = row-row%3;
+        int rowNum = row-row%3; //(3*row/3,3*col/3)
         int colNum = col-col%3;
 
-        for(int i = rowNum; i< rowNum+size; i++){
-            for(int j = colNum; j < colNum + size; j++){
+        for(int i = rowNum; i< rowNum+3; i++){
+            for(int j = colNum; j < colNum + 3; j++){
                 if (!a.get(i).get(j).equals('.') && a.get(i).get(j).equals(ch)){
                     return false;
                 }

@@ -20,9 +20,9 @@ public class SpiralOrderMatrix {
 
         int[][] elements = new int[A][A];
 
-        for(int i=0,count=1;i<=A/2;i++){
+        for(int i=0,count=1;i<=A/2;i++){ //A/2 is the spirals. So we loop as per spiral
 
-            for(int j=i;    j<A-i;  j++){
+            for(int j=i;    j<A-i;  j++){ //starts at (i,i) diagonal
                 elements[i][j] = count++;
             }
 
@@ -39,8 +39,6 @@ public class SpiralOrderMatrix {
             }
 
         }
-
-
 
         ArrayList<ArrayList<Integer>> returnList = new ArrayList<>(A);
 

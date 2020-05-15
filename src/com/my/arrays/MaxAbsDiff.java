@@ -23,6 +23,31 @@ public class MaxAbsDiff {
 //            = -x + y
 //            = y - x
 
+	
+	/*
+	 * We find 4 values 
+	 * 
+	 * 1) max and min of below
+	 *  A[i]+i
+	 * 
+	 * 2) max and min of below
+	 * A[i]-i
+	 * 
+	 * Now the max becomes the max of (Max1-Min1 OR Max2-Min2)
+	 * 
+	 * 
+	 * We can derive the logic by the 4 relationships between 
+	 * 
+	 * A[i], A[j]  and i & j
+	 * 
+	 * 1) A[i] < A[j] and i < j 
+	 * 2) A[i] > A[j] and i > j
+	 * 
+	 * 3) A[i] < A[j] but i > j
+	 * 4) A[i] > A[j] but i < j
+	 * 
+	 * 
+	 */
 
 
     public int maxArr(ArrayList<Integer> A) {

@@ -61,9 +61,11 @@ i=      0   1   2   3
 
     public static void rotate90Clockwise(int[][] matrix,int n) {
 
-        for(int i=0;i<n/2;i++){
+    	//We make only n/2 rotations so that we reach the center. There are n/2 spirals
+    	
+        for(int i=0;i<n/2;i++){ 
 
-            for(int j=i;j<n-i-1;j++){
+            for(int j=i;j<n-i-1;j++){ //starts at (i) and ends at (n-1)-i. We make 
 
                 int temp = matrix[i][j];  //(0,2) = 2
 

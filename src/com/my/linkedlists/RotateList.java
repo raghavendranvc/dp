@@ -2,237 +2,242 @@ package com.my.linkedlists;
 
 public class RotateList {
 
-    static class ListNode {
-        public int val;
-        public ListNode next;
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-        public String toString(){
-            return ""+val+",";
-        }
+	static class ListNode {
+		public int val;
+		public ListNode next;
 
-    }
+		ListNode(int x) {
+			val = x;
+			next = null;
+		}
 
-    /*
-            1->2->3->4->5->NULL
-            k=3
+		public String toString() {
+			return "" + val + ",";
+		}
 
-            1       2       3       4       5       6       NULL
-                            p                       c
+	}
 
-            c(3)
-                    c(2)
-                            c(1)
-                                    c(0)
-            p
-                    p                       c
-                            p                       c
+	/*
+	 * 1->2->3->4->5->NULL k=3
+	 * 
+	 * 1 2 3 4 5 6 NULL p c
+	 * 
+	 * c(3) c(2) c(1) c(0) p p c p c
+	 * 
+	 * 
+	 * 4 5 6 1 2 3 NULL
+	 * 
+	 * c.next = A; save = p.next; p.next = NULL; return p.next
+	 * 
+	 * 
+	 */
 
+	public ListNode rotateRight(ListNode A, int B) {
 
-            4       5       6       1       2       3       NULL
+		int length = 0;
+		ListNode tempNode = A;
+		while (tempNode != null) {
+			length++;
+			tempNode = tempNode.next;
+		}
+		B = B % length;
 
-            c.next = A;
-            save = p.next;
-            p.next = NULL;
-            return p.next
+		ListNode currentNode = A;
+		ListNode previousNode = null;
 
+		while (currentNode.next != null && B > 0) {
+			currentNode = currentNode.next;
+			B--;
+		}
 
-     */
+		previousNode = A;
 
-    public ListNode rotateRight(ListNode A, int B) {
+		while (currentNode.next != null) {
+			currentNode = currentNode.next;
+			previousNode = previousNode.next;
+		}
 
-        int length = 0;
-        ListNode tempNode = A;
-        while(tempNode != null){
-            length++;
-            tempNode = tempNode.next;
-        }
-        B = B%length;
+		currentNode.next = A;
+		ListNode save = previousNode.next;
+		previousNode.next = null;
+		return save;
 
-        ListNode currentNode = A;
-        ListNode previousNode = null;
+	}
 
-        while(currentNode.next != null && B>0){
-            currentNode = currentNode.next;
-            B--;
-        }
+	/*
+	 * c m n s 1->2->3->4->5->6->7->8
+	 * 
+	 * m s 1->2->3<-4->5->6->7->8 m 1->2->3<-4<-5->6->7->8 m 1->2->3<-4<-5<-6->7->8
+	 * m c.next.next=s; 1->2->6->5->4->3->7->8
+	 * 
+	 * 
+	 */
 
-        previousNode = A;
+	public ListNode reverseBetween(ListNode A, int B, int C) {
+		System.out.print("Initial");
+		print(A);
 
-        while(currentNode.next != null){
-            currentNode = currentNode.next;
-            previousNode = previousNode.next;
-        }
+		if (B == C) {
+			return A;
+		}
 
-        currentNode.next = A;
-        ListNode save = previousNode.next;
-        previousNode.next = null;
-        return save;
+		if (B == 1) {
+			A = reverseNodes(A, C - B);
+			return A;
+		}
 
-    }
+		ListNode nNode = A;
+		ListNode startRevNode;
 
-    /*
-           c  m        n  s
-        1->2->3->4->5->6->7->8
+		B--;
+		C--;
+		while (B > 1 & nNode != null) {
+			nNode = nNode.next;
+			B--;
+			C--;
+		}
+		startRevNode = nNode;
+		/*
+		 * System.out.println("StartRevrse f0r="+nNode.next); print(nNode.next);
+		 */
+		//For this, don't touch C and B. Here both B and C are reduced. B is reduced to 0
+		startRevNode.next = reverseNodes(nNode.next, C - B); 
 
-              m           s
-        1->2->3<-4->5->6->7->8
-                 m
-        1->2->3<-4<-5->6->7->8
-                    m
-        1->2->3<-4<-5<-6->7->8
-                       m
-                      c.next.next=s;
-        1->2->6->5->4->3->7->8
+		/*
+		 * System.out.print("ReverseList="); print(A);
+		 */
+		return A;
+	}
 
+	/*
+	 * 
+	 * A p c s 3->4->5->6->7->8 p c s 3><4 5->6->7->8 s 3<-4<-5<-6 7->8
+	 * 
+	 * 6-<5->4->3->7->8
+	 * 
+	 */
 
-     */
+	public ListNode reverseNodes(ListNode A, int x) {
 
-    public ListNode reverseBetween(ListNode A, int B, int C) {
-        System.out.print("Initial");
-        print(A);
+		ListNode current = A;
+		ListNode prev = null;
 
-        if(B == C){
-            return  A;
-        }
+		System.out.println("current=" + current + " prev=" + prev + " x=" + x);
+		while (current != null && x >= 0) { //This is important. Check currentNode, not current.Next
 
+			ListNode tempNode = current.next;
+			current.next = prev;
+			prev = current;
+			current = tempNode;
+			x--;
+			System.out.println("next=" + tempNode + " current=" + current + " prev=" + prev + " x=" + x);
+		}
 
+		A.next = current;  //Another important two setting. Don't miss
+		print(prev);		// Always use example and do the operation
+		
+		return prev;
+	}
 
-        if(B == 1){
-            A = reverseNodes(A,C-B);
-            return A;
-        }
+	public void print(ListNode node) {
+		StringBuilder StringBuilder = new StringBuilder();
+		while (node != null) {
+			StringBuilder.append(node.val + " ");
+			node = node.next;
+		}
+		System.out.println(StringBuilder.toString());
+	}
 
-        ListNode nNode = A;
-        ListNode startRevNode;
+	public static void main(String[] args) {
+		ListNode first = new ListNode(1);
 
-        B--;
-        C--;
-        while(B>1 & nNode!=null){
-            nNode = nNode.next;
-            B--;
-            C--;
-        }
-        startRevNode = nNode;
-        /*System.out.println("StartRevrse f0r="+nNode.next);
-        print(nNode.next);*/
+		ListNode n2 = new ListNode(2);
+		first.next = n2;
+		ListNode n3 = new ListNode(3);
+		n2.next = n3;
+		/*
+		 * ListNode n4 = new ListNode(4); n3.next=n4; ListNode n5 = new ListNode(5);
+		 * n4.next=n5; ListNode n6 = new ListNode(6); n5.next=n6; ListNode n7 = new
+		 * ListNode(7); n6.next=n7; ListNode n8 = new ListNode(8); n7.next=n8;
+		 */
 
-        startRevNode.next = reverseNodes(nNode.next,C-B);
+		// ListNode n4 = new ListNode(1); n3.next=n4;
+		int B = 2;
+		int C = 3;
 
-        /*System.out.print("ReverseList=");
-        print(A);*/
-        return A;
-    }
+		RotateList rotateList = new RotateList();
+		rotateList.reverseBetween(first, B, C);
 
-    /*
+	}
 
-    A
-    p  c  s
-    3->4->5->6->7->8
-       p  c  s
-    3><4  5->6->7->8
-                s
-    3<-4<-5<-6  7->8
+	public ListNode reverseBetweenCopied(ListNode A, int B, int C) {
+		if (A == null)
+			return A;
+		if (B == C)
+			return A;
 
-    6-<5->4->3->7->8
+		ListNode curr = A, nxt = curr.next, p1 = A, p2 = A, temp;
+		int count = 1;
 
-     */
+		while (true) {
+			if (count < B) {
+				if (B > 1 && count == B - 1) {
+					p1 = curr;
+				}
+				count++;
+				curr = curr.next;
+				nxt = nxt.next;
+				continue;
+			}
+			if (count == B)
+				p2 = curr;
 
-    public ListNode reverseNodes(ListNode A, int x){
+			temp = nxt;
+			nxt = nxt.next;
+			temp.next = curr;
+			curr = temp;
+			count++;
+			if (count == C) {
+				if (B == 1) {
+					p2.next = nxt;
+					return curr;
+				}
+				p1.next = curr;
+				p2.next = nxt;
+				return A;
+			}
 
-        ListNode current = A;
-        ListNode prev = null;
-        ListNode next = null;
+		}
+	}
 
-        System.out.println("next="+next+" current="+current+" prev="+prev+ " x="+x);
-        while(current != null && x>=0){
+	public ListNode reverserList(ListNode A, int k) {
 
-            next = current.next;
-            current.next = prev;
-            prev = current;
-            current = next;
-            x--;
-            System.out.println("next="+next+" current="+current+" prev="+prev+ " x="+x);
-        }
+		/*
+		 * 1 2 3 4 5 4 3 2 1
+		 */
 
-        A.next = current;
+		ListNode current = A;
+		while (current.next != null && k > 0) {
+			current = current.next;
+			k--;
+		}
 
-        print(prev);
-        return prev;
-    }
+		/*
+		 * 5 6 7 8 9 10 NULL 1 2 3 4 5 6
+		 */
 
-    public void print(ListNode node){
-        StringBuilder StringBuilder = new StringBuilder();
-        while(node != null){
-            StringBuilder.append(node.val+" ");
-            node = node.next;
-        }
-        System.out.println(StringBuilder.toString());
-    }
+		ListNode newEndingNode = A;
+		while (current.next != null) {
+			current = current.next;
+			newEndingNode = newEndingNode.next;
+		}
 
-    public static void main(String[] args){
-        ListNode first = new ListNode(1);
+		current.next = A;
+		A = newEndingNode.next;
+		newEndingNode.next = null;
 
-        ListNode n2 = new ListNode(2); first.next=n2;
-        ListNode n3 = new ListNode(3); n2.next=n3;
-        /*ListNode n4 = new ListNode(4); n3.next=n4;
-        ListNode n5 = new ListNode(5); n4.next=n5;
-        ListNode n6 = new ListNode(6); n5.next=n6;
-        ListNode n7 = new ListNode(7); n6.next=n7;
-        ListNode n8 = new ListNode(8); n7.next=n8;*/
+		return A;
 
-        //ListNode n4 = new ListNode(1); n3.next=n4;
-        int B=2;
-        int C=3;
-
-        RotateList rotateList = new RotateList();
-        rotateList.reverseBetween(first,B,C);
-
-    }
-
-    public ListNode reverseBetweenCopied(ListNode A, int B, int C) {
-        if(A==null)
-            return A;
-        if(B==C)
-            return A;
-
-        ListNode curr=A,nxt=curr.next,p1=A,p2=A,temp;
-        int count=1;
-
-        while(true){
-            if(count<B){
-                if(B>1 && count==B-1){
-                    p1=curr;
-                }
-                count++;
-                curr=curr.next;
-                nxt=nxt.next;
-                continue;
-            }
-            if(count==B)
-                p2=curr;
-
-
-            temp=nxt;
-            nxt=nxt.next;
-            temp.next=curr;
-            curr=temp;
-            count++;
-            if(count==C){
-                if(B==1){
-                    p2.next=nxt;
-                    return curr;
-                }
-                p1.next=curr;
-                p2.next=nxt;
-                return A;
-            }
-
-        }
-    }
-
-
+	}
 
 }

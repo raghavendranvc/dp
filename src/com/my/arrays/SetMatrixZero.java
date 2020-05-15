@@ -10,6 +10,14 @@ public class SetMatrixZero {
 
         int r = a.size();
         int c = a.get(0).size();
+        
+        
+        /*
+         * Try to store the result of first row and first matrix in 2 flags
+         * Use the first row for row result
+         * Use the second row for row result.
+         * At the end process first row and first column
+         */
         int[] row = new int[r];
         int[] col = new int[c];
 
@@ -20,6 +28,8 @@ public class SetMatrixZero {
             }
         }
 
+        
+        
         UtilityClass.print(row);
         UtilityClass.print(col);
 

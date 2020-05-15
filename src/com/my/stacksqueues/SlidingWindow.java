@@ -37,6 +37,27 @@ public class SlidingWindow {
         }
         return result;
     }
+    
+    //TODO, THe Trick is to store indexes rather than numbers in Dequeue
+    // Since Deque orders, we will always know whether the index is 
+    // outside the range of window
+    // We always add last
+    // We always make sure that deque contains the greatest element first
+    
+    /* 0  1  2    3  4  5  6  7
+     * 1, 3, -1, -3, 5, 3, 6, 7
+     * 
+     * 1
+     * 3 
+     * 3 -1 (next input to process -3)
+     * "At the end of first for loop", we take the frontElement
+     * 
+     * 3 -1 -3 (next to process 5) we take frontElement
+     * 5 (nex to process 3) we take FrontElement
+     * 5 (next to proess 3) we take FrontEement
+     * 6 (next to process 7) we take Front
+     * 7 
+     */
 
     public ArrayList<Integer> slidingMaximum(final List<Integer> A, int B) {
 

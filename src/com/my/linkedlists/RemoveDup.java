@@ -33,6 +33,23 @@ public class RemoveDup {
         }
         return A;
     }
+    
+    public ListNode deleteDuplicatesOneVariable(ListNode A) {
+    	if(A == null) {
+    		return null;
+    	}
+    	
+    	ListNode currentNode = A;
+    	
+    	while(currentNode.next != null) {
+    		if(currentNode.val == currentNode.next.val) {
+    			currentNode.next = currentNode.next.next;
+    		}else {
+    			currentNode = currentNode.next;
+    		}
+    	}
+    	return A;
+    }
 
     /**
      *

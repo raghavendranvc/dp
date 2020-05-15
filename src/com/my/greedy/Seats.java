@@ -1,6 +1,20 @@
 package com.my.greedy;
 
 public class Seats {
+	
+	/*
+	 * 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5
+	 * . . . . x . . x x . . . x . .
+	 * 			
+	 * Total = 4
+	 * 
+	 * count=0
+	 * 0 0 0 0 1 - - 2 3 - - - 4 0 0      (count again from left)
+	 * 4 4 4 4 3 3 3 2 1 1 1 1 0          (Total--)
+	 * 		     1 1     1 1 1 T          (moves = min(totalRemaining,leftCount))
+	 * 		   	
+	 * 
+	 */
 
 
     //TODO practice this again and remember this approach

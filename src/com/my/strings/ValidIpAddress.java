@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public class ValidIpAddress {
 
+	//TODO Practice again
+	
     public ArrayList<String> restoreIpAddresses(String A) {
         ArrayList<String> result = new ArrayList<>();
         restoreIpAddresses(A, 4, "", result);

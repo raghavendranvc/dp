@@ -132,6 +132,23 @@ public class RomanToInteger {
         RomanToInteger romanToInteger = new RomanToInteger();
         System.out.println("Integer="+romanToInteger.romanToInt(roman));
     }
+    
+    /*
+     * 		
+     * MMM CM XC IX
+     * Stack grows like this
+     * 1000
+     * 1000 1000
+     * 1000 1000 1000
+     * 1000 1000 1000 100
+     * 1000 1000 1000 900
+     * 1000 1000 1000 900 10
+     * 1000 1000 1000 900 90
+     * 1000 1000 1000 900 90 1
+     * 1000 1000 1000 900 90 9
+     * 
+     * 3999
+     */
 
     public int romanToInt(String A) {
 

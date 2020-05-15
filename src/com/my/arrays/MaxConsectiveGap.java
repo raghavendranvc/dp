@@ -10,7 +10,7 @@ public class MaxConsectiveGap {
     // 10   20  24  5   8   34  19  22  16
     //  5   8   10  16  19  20  22  24  34
 	
-	//TODO Not done
+	// TODO Not done. Need to be revised. GIVEN UP AFTER A WHILE
 
     public int maximumGap(final List<Integer> A) { 
 

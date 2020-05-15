@@ -4,70 +4,64 @@ import java.util.ArrayList;
 
 public class ContainerWithMostWater {
 
-    /**
-     * 1    5   4   3
-     *
-     * 1    4   3
-     *
-     * 1    1   1   =3
-     *      3   3   =6
-     *      0   3   =3
-     *
-     * 1    1   1   1
-     * 0    5   4   3
-     * 0    0   4   3
-     * 0    0   0   3
-     *
-     *
-     * 1    3   3   3
-     * 1    4   4   0
-     * 1    5   0   0
-     * 1    1   1   1
-     */
+	/**
+	 * 1 5 4 3
+	 *
+	 * 1 4 3
+	 *
+	 * 1 1 1 =3 3 3 =6 0 3 =3
+	 *
+	 * 1 1 1 1 0 5 4 3 0 0 4 3 0 0 0 3
+	 *
+	 *
+	 * 1 3 3 3 1 4 4 0 1 5 0 0 1 1 1 1
+	 */
 
-    public int maxArea(ArrayList<Integer> A) {
+	public int maxArea(ArrayList<Integer> A) {
 
-        if(A == null || A.size() < 2){
-            return 0;
-        }
+		if (A == null || A.size() < 2) {
+			return 0;
+		}
 
-        int maxArea = Integer.MIN_VALUE;
+		int maxArea = Integer.MIN_VALUE;
 
-        for(int start=0, end = A.size()-1; start<end;){
-            maxArea = Math.max(maxArea, Math.min(A.get(start),A.get(end))* (end-start));
+		for (int start = 0, end = A.size() - 1; start < end;) {
+			maxArea = Math.max(maxArea, Math.min(A.get(start), A.get(end)) * (end - start));
 
-            if(A.get(start) < A.get(end)){
-                start++;
-            } else {
-                end--;
-            }
-        }
+			if (A.get(start) < A.get(end)) {
+				start++;
+			} else {
+				end--;
+			}
+		}
 
-        return maxArea;
-    }
+		return maxArea;
+	}
 
+	// TODO Practice again. Logic is essential
 
+	public int maxAreaCopied(ArrayList<Integer> A) {
+		long max = Integer.MIN_VALUE;
+		if (A == null || A.size() < 2) {
+			return 0;
+		}
 
+		int start = 0;
+		int end = A.size() - 1;
 
-    public int maxAreaCopied(ArrayList<Integer> A) {
-        long max = Integer.MIN_VALUE;
-        if (A == null || A.size()<2)
-            return 0;
+		while (start < end) {
+			long water = (end - start) * Math.min(A.get(start), A.get(end));
 
-        int start = 0;
-        int end = A.size()-1;
+			max = Math.max(water, max);
 
-        while (start<end){
-            long water = (end-start)*Math.min(A.get(start), A.get(end));
-            max = Math.max (water,max);
+			if (A.get(start) < A.get(end)) {
+				start++;
+			} else {
+				end--;
+			}
+		}
 
-            if (A.get(start)<A.get(end))
-                start++;
-            else
-                end--;
-        }
-
-        return (int) max;
-    }
+		return (int) max;
+	}
 
 }

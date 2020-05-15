@@ -6,8 +6,8 @@ import java.util.List;
 public class AddOneToNumber {
 
     // 123 solved
-    // 192 sovled
-    // 900 sovled
+    // 192 solved
+    // 900 solved
     // 199 solved
     // 999
     public ArrayList<Integer> plusOne(ArrayList<Integer> A) {
@@ -16,7 +16,8 @@ public class AddOneToNumber {
 
             if(A.get(i) == 9) {
                 A.set(i,0);
-            } else {
+            } else { 
+            	// We stop as soon was we find a non zero. Will increment it and send it
                 A.set(i,A.get(i)+1);
                 System.out.println("A1="+A);
                 A = removeStartingZeroes(A);

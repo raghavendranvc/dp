@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.Stack;
 
 public class LargestRecInHisto {
+	
+	
+	//TODO GIVEN UP
+	//Store indexes in stack - is generally the missing idea
 
     public int largestRectangleArea(ArrayList<Integer> A) {
 

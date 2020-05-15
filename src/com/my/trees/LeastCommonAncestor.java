@@ -63,5 +63,61 @@ public class LeastCommonAncestor {
         }
         return false;
     }
+    
+    /***
+     * Better approach
+     */
+    
+    class Node{
+        boolean foundB = false, foundC = false;
+        int ans = -1;
+        
+        public Node(){
+            foundB = false;
+            foundC = false;
+            ans = -1;
+        }
+     }
+     
+     
+    public class Solution {
+        
+        public Node helper(TreeNode A, int B, int C) {
+            
+            // If A is Null then LCA is Not Present
+            if(A == null)
+                return new Node();
+            
+            Node pair = new Node();
+            
+            
+            Node leftNode = helper(A.left, B, C);
+            
+            if(leftNode.foundB && leftNode.foundC)  // If B and C both found in the left Subtree then return leftNode
+                return leftNode;
+            
+            Node rightNode = helper(A.right, B, C);   // If B and C both found in the right Subtree then return rightNode
+            
+            if(rightNode.foundB && rightNode.foundC)
+                return rightNode;
+                
+            // if B ans C are found in left Subtree or right Subtree or root.val == b or root.val == c
+            pair.foundB = (A.val == B) || leftNode.foundB || rightNode.foundB;
+            pair.foundC = (A.val == C) || leftNode.foundC || rightNode.foundC;
+            
+            if(pair.foundB && pair.foundC) // If both B and C are found the update the ans
+                pair.ans = A.val;
+            
+            return pair;
+            
+            
+        }
+        
+        public int lca(TreeNode A, int B, int C) {
+            
+            Node res = helper(A, B, C);
+            return res.ans;
+        }
+    }
 
 }

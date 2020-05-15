@@ -81,6 +81,21 @@ public class ChildrenCandies {
             if(A.get(i) < A.get(i+1))
                 candies[i+1]=candies[i]+1;
         }
+        
+        for(int i=1;i<n;i++){
+            if(A.get(i)>A.get(i-1))
+                candies[i]=candies[i-1]+1;
+        }
+        
+        for(int i=n-1;i>0;i--){
+            if(A.get(i-1)>A.get(i) && candies[i-1]<=candies[i])
+                candies[i-1]=candies[i]+1;
+        }
+        
+        for(int i=n-2;i>=0;i--){
+            if(A.get(i)>A.get(i+1) && candies[i]<=candies[i+1])
+                candies[i]=candies[i+1]+1;
+        }
 
         /*
             We might have missed the scenario where i-1 rank is greater than i rank.
@@ -92,7 +107,7 @@ public class ChildrenCandies {
             2. Just give one extra compared to the right guy.
          */
         for(int i=n-1;i>0;i--){
-            if(A.get(i-1) < A.get(i)   && candies[i-1]<=candies[i])
+            if(A.get(i-1) > A.get(i)   && candies[i-1]<=candies[i])
                 candies[i-1] = candies[i]+1;
         }
 

@@ -17,6 +17,13 @@ public class MaxDistance {
     // 2 (3,4)
     //   0 0  0
 
+	//TODO . Understand the idea behind this again
+	// We get the minSofar (from start). min of the array will be at nth element
+	// We get the maxSofar (from end). max of the array will be at 0th element
+	// We now work on these arrays observing the diff
+	// 		We increment maxSoFar if we see max is increasing. 
+	// 		But if we see minSoFar has higher value then we increase it.
+	
     public int maximumGap(final List<Integer> A) {
 
         int[] min = new int[A.size()];
@@ -105,11 +112,16 @@ public class MaxDistance {
 
         for(int i=0;i<A.size();i++) {
 
-            if(maxDistance > A.size() -i){
+        	//optimising condition to terminate. We will not find better distance
+            if(maxDistance > A.size() -i){ 
                 break;
             }
 
-            if(i>1 && A.get(i) > A.get(i-1)){
+            // This is also another optimisation.
+            // If the previous number was less, and if there is a distance
+            // we would have found earlier. So we can discard this number as 
+            // it does not add any value now.
+            if(i>1 && A.get(i-1) < A.get(i)){
                 continue;
             }
 

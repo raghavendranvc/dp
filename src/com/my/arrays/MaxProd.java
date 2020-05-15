@@ -84,7 +84,7 @@ public class MaxProd {
         int[] left = new int[n];
         int[] right = new int[n];
 
-        Deque<Integer> q = new ArrayDeque<>();
+        Deque<Integer> q = new ArrayDeque<>(); //Stack version
         q.addLast(0);
 
         for(int i = 1; i < n; i++){

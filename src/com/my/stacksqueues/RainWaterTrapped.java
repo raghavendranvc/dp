@@ -4,7 +4,7 @@ import java.util.List;
 
 public class RainWaterTrapped {
 
-	//TODO 
+	//TODO Pracice this again. We can also do in a different way
 	
     public int trap(final List<Integer> A) {
 
