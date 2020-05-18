@@ -1,4 +1,4 @@
-package com.my.dp;
+package com.my.dp.ibit;
 
 import com.my.common.UtilityClass;
 

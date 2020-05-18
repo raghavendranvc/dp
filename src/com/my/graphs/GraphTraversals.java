@@ -86,6 +86,7 @@ public class GraphTraversals {
 		while(iterator.hasNext()) {
 			int nVertex = iterator.next();
 			if(!visited[nVertex]) {
+				visited[nVertex] = true;
 				DFS(nVertex);
 			}		
 		}

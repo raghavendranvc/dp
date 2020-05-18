@@ -29,10 +29,10 @@ public class Solution {
         TreeNode succNode = null;
 
         while(tempNode != null){
-            if(currentNode.val < root.val){
+            if(currentNode.val < tempNode.val){
                 succNode = tempNode;
                 tempNode = tempNode.left;
-            } else if(currentNode.val > root.val){
+            } else if(currentNode.val > tempNode.val){
                 tempNode = tempNode.right;
             } else {
                 break;

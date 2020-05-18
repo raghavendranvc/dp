@@ -20,6 +20,12 @@ public class EncodingNumbers {
 
 
      */
+	
+	/*
+	 * TODO practice logic
+	 * Similar problem
+	 * Stair case movement with 1 step or 2 steps
+	 */
 
     public int numDecodingsCopied(String str) {
         int n=str.length();

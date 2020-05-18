@@ -10,6 +10,7 @@ public class SumOfSubSets {
 	
 	public void GetAllCombinationsOfValue(int N){
 		
+		//TODO, this preparation of this table is very important
 		int[] allDenom = new int[N-1];
 		for(int i=0;i<N-1;i++){
 			allDenom[i] = i+1;
@@ -41,7 +42,7 @@ public class SumOfSubSets {
 		
 		GetAllCombinationsRecursively(N,currentDenom-1,allDenominations,new ArrayList<Integer>(combination));
 		
-		combination.add(currentDenom);
+		combination.add(currentDenom); //Including and repeating to use it again in the subset combination
 		GetAllCombinationsRecursively(N-allDenominations[currentDenom-1],currentDenom,allDenominations,combination);
 		
 	}

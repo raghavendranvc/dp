@@ -14,6 +14,8 @@ public class Stairs {
 	   At step 3, we have 2 ways
 	   		We can come from step 1. So step1 ways
 	   		We can come from step 2. So step2 ways
+	   		
+	   This is similar to encoding numbers problem		
 	 */
 	public int climbStairs(int A) {
 		

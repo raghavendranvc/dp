@@ -1,4 +1,4 @@
-package com.my.dp;
+package com.my.graphs;
 
 public class ShortestPathBellmonFord {
 	

@@ -3,6 +3,7 @@ package com.my.graphs;
 public class ShortstPath {
 
 	// BellmanFord from Source Vertex To all Vertices
+	// Dijkstra Minimum distance to all vertices
 
 	public void shortestPath(int[][] graph, int src) {
 

@@ -10,6 +10,9 @@ public class WaveArray {
     //  6, 0, 6, 12 12
     //  0  6  6  12 12
     //  0  12 6  12  6
+	
+	// 1 2 3 4 5 6 7 8 9 10
+	// 2 1 4 3 6 5 8 7 10 9
 
     public ArrayList<Integer> wave(ArrayList<Integer> A) {
         if(A.size() < 2){
@@ -30,49 +33,7 @@ public class WaveArray {
         A[i] = A[j];
         A[j] = save;
     }
-
-    //NOT Correct
-    public ArrayList<Integer> wave1(ArrayList<Integer> A) {
-
-        Integer[] values = A.toArray(new Integer[A.size()]);
-        Arrays.sort(values);
-        UtilityClass.print(values);
-
-        // 1 1 1 2 2 2 3 4 4 4 5 6
-        // 2 2 2 1 1 1 4 4 4 3 6 5
-        int startIndex = 0;
-        int endIndex = -1;
-
-        for(int i=1;i<values.length;i++){
-            if(values[startIndex] == values[i]) {
-                System.out.println("incrementing startIndex="+startIndex);
-                continue;
-            }
-
-            if(endIndex == -1) {
-                endIndex = i;
-                System.out.println("endIndex set="+endIndex);
-                continue;
-            }
-
-            if(values[endIndex] == values[i]) {
-                System.out.println("moving endIndex="+i);
-                endIndex = i;
-                continue;
-            }
-
-            System.out.println("startIndex="+startIndex+ " endIndex="+endIndex);
-            reverseArray(values,startIndex,endIndex);
-
-            startIndex = i;
-            endIndex = -1;
-            System.out.println("New startIndex="+startIndex+ " erased endIndex="+endIndex);
-        }
-        reverseArray(values, startIndex, endIndex);
-
-        return new ArrayList<>(Arrays.asList(values));
-    }
-
+    
     public void reverseArray(Integer[] A, int s, int e){
         while(s<e) {
             int save = A[s];

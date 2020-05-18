@@ -1,4 +1,4 @@
-package com.my.dp;
+package com.my.dp.ibit;
 
 public class OptimumGameStrategy {
 	
@@ -22,6 +22,8 @@ public class OptimumGameStrategy {
 				);
 		
 	}
+	
+	//TODO, get the trick here next time
 	
 	public int getOptStrategeyIter(int[] a){
 		

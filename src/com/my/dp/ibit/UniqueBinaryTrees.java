@@ -9,6 +9,7 @@ public class UniqueBinaryTrees {
 	 * 		1 is root 	2 is root here 		n is root here 
 	 * f(n) = f(0)f(n-1) + f(1)f(n-2) .... + f(n-1)f(0)
 	 */
+	//TODO remeber the base cases. 
 	public int numTrees(int A) {
 		if(A == 0) {
 			return 1; // With zero nodes only 1 BST possible
@@ -18,7 +19,7 @@ public class UniqueBinaryTrees {
 		}
 		
 		int[] value = new int[A + 1];
-		value[0] = 1; 
+		value[0] = 1; //
 		value[1] = 1; // With just one node 1
 		/*
 		 * 		

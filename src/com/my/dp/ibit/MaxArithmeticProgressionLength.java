@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Map;
 
 public class MaxArithmeticProgressionLength {
+	
+	//TODO the mapping creation and updation needs to be carefully practiced
 
 	public int solve(final List<Integer> A) {
 		if (A == null) {
@@ -71,6 +73,9 @@ public class MaxArithmeticProgressionLength {
 		return max;
 
 	}
+	
+	
+	//TODO practice gain
 
 	public int solveCopied(final List<Integer> A) {
 

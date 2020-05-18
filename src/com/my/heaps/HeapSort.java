@@ -40,7 +40,7 @@ public class HeapSort {
          */
 
         for(int size=n-1;size>1;size--){
-            swap(A,size,0); //element at the last of the index is swapped with the first
+            swap(A,0,size); //element at the last of the index is swapped with the first
             heapify(A,0, size);
         }
 

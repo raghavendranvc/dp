@@ -91,7 +91,7 @@ public class ShareMaxProfit {
 				maxPrice = A[i];
 			}
 
-			profitRight[i] = maxPrice - A[i]; // buying at i, selling from i+1 to n
+			profitRight[i] = maxPrice - A[i]; // buying at i, selling at max between(i+1 to n)
 			/*
 			 * Either that day's profit or the next day's maxProfit is the current day's
 			 * maxProfit

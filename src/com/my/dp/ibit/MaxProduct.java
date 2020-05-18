@@ -2,7 +2,7 @@ package com.my.dp.ibit;
 
 public class MaxProduct {
 
-	public int maxProduct(final int[] A) {
+	public int maxProductRecur(final int[] A) {
 		if (A == null || A.length < 1) {
 			return 0;
 		}
@@ -22,7 +22,7 @@ public class MaxProduct {
 		return maxProduct;
 	}
 
-	public int maxProductOOM(final int[] A) {
+	public int maxProductOOMNotWorking(final int[] A) {
 		if (A == null || A.length < 1) {
 			return 0;
 		}
@@ -44,8 +44,13 @@ public class MaxProduct {
 
 		return maxProduct;
 	}
+	
+	/*
+	 * Array contains both negative and positive numbers
+	 */
+	//TODO Practice this. GIVEN UP
 
-	int maxProduct1(int[] A) {
+	int maxProduct(int[] A) {
 		if (A == null || A.length < 1) {
 			return 0;
 		}

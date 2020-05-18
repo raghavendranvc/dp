@@ -76,5 +76,11 @@ public class FirstLoopNode {
         }
         return null;
     }
+    
+    //TODO break the loop.
+    //Since we know the loopStartNode, 
+    // we need to break the link which is node.next->loopStartNode
+    // So start from current = loopStartNode and move one node at a time till current.next=loopStartNode.
+    // Remove the link. Make current.next = null;
 
 }

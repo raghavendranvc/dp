@@ -42,6 +42,7 @@ public class ColourfulNumber {
         return number;
     }
 
+    //Reduces the multiplier by only one digit. //TODO check this
     public int colorfulCopied(int n) {
 
         int prod;

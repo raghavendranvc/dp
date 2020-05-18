@@ -2,8 +2,9 @@ package com.my.dp.ibit;
 
 public class StringMatching {
 
+	//******************************BELOW is for WildChar Pattern Matching==========================
 	public int isMatch(String s, String p) {
-		if(isGeneralRegTextBookPractice(s,p)) {
+		if(isWildCharPatternMatchPractice(s,p)) {
 			return 1;
 		}
 		return 0;
@@ -13,7 +14,8 @@ public class StringMatching {
 	 * s = aabbaa
 	 * p = c*a*a  (meaning c* is equal to '0' or more of c)
 	 */
-	public boolean isGeneralRegTextBookPractice(String s, String p) {
+	//TODO, logic needs to be understood well
+	public boolean isWildCharPatternMatchPractice(String s, String p) {
 		boolean[][] result = new boolean[s.length()+1][p.length()+1];
 		
 		result[0][0]=true;
@@ -90,12 +92,15 @@ public class StringMatching {
 	    return (t[m][n]) ? 1 :0; 
 	}
 	
+	//******************************BELOW is for RegX Matching==================================
 	
 	/*
 	 * Here we say false for the below
 	 * s = aabbaa
 	 * p = c*a*a  (meaning * is equal to '0' or more of any chars including space)
 	 */
+	
+	//TODO, logic needs to be understood well
 	public boolean isGeneralRegMatchPractice(String s, String p) {
 		
 		//result[i][j] if true of string of length 'i' an pattern of length 'j' matches

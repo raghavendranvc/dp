@@ -1,8 +1,28 @@
-package com.my.dp;
+package com.my.dp.ibit;
 
 public class CoinChangeAlrogithm {
 
-	
+	public int coinChangeIter(int[] coins,int total) {
+		int[] solution = new int[total+1]; 
+		//solution[i] contains numOfWays to get i 
+		
+		solution[0] = 0; //For sum 0 number of ways = 0
+		/*
+		 * For each coin we iterate over
+		 */
+		for(int i=0;i<coins.length;i++) {
+			/*
+			 * Using the coin 'i' we need to find the ways t
+			 */
+			//TODO, important to remember this dp recurrence.
+			//It is similar to recursive solution.
+			for(int j=1;j<total;j++) {
+				// by excluding coins[i] for each solution what is the numberOfWays
+				solution[j] += solution[j-coins[i]]; 
+			}
+		}
+		return solution[total];
+	}
 	
 	public static void main(String[] args) {
 	

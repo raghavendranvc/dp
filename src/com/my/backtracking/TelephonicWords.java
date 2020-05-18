@@ -1,4 +1,4 @@
-package com.my.dp;
+package com.my.backtracking;
 
 
 
@@ -24,8 +24,7 @@ public class TelephonicWords {
 		for(int i=0;i<digitChars.length();i++){
 			word[digits.length - currLength] = digitChars.charAt(i);
 			printAllTelehonicWordsRecur(alphbhets, digits, currLength-1, word);
-		}
-		
+		}		
 	}
 	
 	public int[] getNumberOfDigits(int number){

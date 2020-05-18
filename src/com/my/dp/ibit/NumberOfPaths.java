@@ -2,6 +2,7 @@ package com.my.dp.ibit;
 
 public class NumberOfPaths {
 
+	//TODO practice again
 	public int uniquePathsWithObstacles(int[][] A) {
 		if (A == null || A.length == 0 || A[0].length == 0) {
 			return 0;

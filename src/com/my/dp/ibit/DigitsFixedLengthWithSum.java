@@ -71,11 +71,22 @@ public class DigitsFixedLengthWithSum {
 		return count;
 	}
 	
+	//TODO practice
+	
+	/*
+	 * A is number of digits
+	 * B is sum of digits
+	 * 
+	 */
 	
 	public int solveIter(int A, int B) {
 		
         int[][] l = new int[A+1][B+1];
         
+        /*
+         * For a digit of length 1
+         * 
+         */
         for(int j = 1; j <= 9 && j <= B; j++){
             l[1][j] = 1;
         }
