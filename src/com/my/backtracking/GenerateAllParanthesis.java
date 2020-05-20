@@ -6,33 +6,7 @@ import java.util.List;
 
 public class GenerateAllParanthesis {
 
-    //TODO practice again
-    //-------------------
-
-    public ArrayList<String> generateParenthesis(int A) {
-        ArrayList<String> result = new ArrayList<>();
-
-        generateParenthesis(A,  result, "", 0, 0);
-
-        return result;
-
-    }
-
-    //Not working
-    public void generateParenthesis(int A, ArrayList<String> result, String prefix, int startIndex, int currentLength) {
-
-
-        System.out.println("prefix="+prefix+" startIndex="+startIndex+" currentLength="+currentLength);
-        for(int i=startIndex;i<A;i++){
-            prefix = prefix+"(";
-            generateParenthesis(A,result,prefix,i+1,currentLength+1);
-            prefix = prefix+")";
-            if(currentLength == A){
-                System.out.println("prefix="+prefix);
-                result.add(prefix);
-            }
-        }
-    }
+    //TODO practice again. Creation of 2 variable to track left and right is very important
     //-------------------
 
     public ArrayList<String> generateParenthesisTry(int A) {
@@ -59,7 +33,7 @@ public class GenerateAllParanthesis {
 
     public static void main(String[] args){
         GenerateAllParanthesis generateAllParanthesis = new GenerateAllParanthesis();
-        System.out.println("Result="+generateAllParanthesis.generateParenthesis(3));
+        //System.out.println("Result="+generateAllParanthesis.generateParenthesis(3));
     }
 
     public ArrayList<String> generateParenthesisCopied(int a) {

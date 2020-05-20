@@ -124,7 +124,7 @@ public class MaxProd {
             return 0;
         int left[] = new int[n];
         left[0] = 0;
-        for(int i=1;i<n;i++)
+        for(int i=1;i<n;i++) //(.....i.....) for each i find max Element between (0,i-1)
         {
             int j = i-1;
             while(j>0){

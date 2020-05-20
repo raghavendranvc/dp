@@ -3,6 +3,8 @@ package com.my.backtracking;
 import java.util.*;
 
 public class CombinationSum {
+	
+	//TODO practice. Missing some validations
 
     public ArrayList<ArrayList<Integer>> combinationSum(ArrayList<Integer> A, int B) {
         Collections.sort(A); //Should remove duplicates
@@ -35,6 +37,7 @@ public class CombinationSum {
 
             if (sum + A.get(startIndex) <= B) {
                 tempArray.add(A.get(startIndex));
+                //TODO note here we are not increasing startIndex. We use the same number again
                 combinationSum(A, B, startIndex, sum + A.get(startIndex), result, tempArray); //ignoring the startIndex number
                 tempArray.remove(tempArray.size() - 1);
             }

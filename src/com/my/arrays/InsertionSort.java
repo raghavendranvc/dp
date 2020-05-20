@@ -8,6 +8,14 @@ public class InsertionSort {
 	 * 
 	 * 11	12	13	6
 	 * 
+	 * Sorts like (0,1)
+	 * (0,2)
+	 * (0,3)
+	 * (0,4)
+	 * (0,n)
+	 * 
+	 *  (0,i), here 'i' is placed at its position in the sorted array of (0,i-1)
+	 *  we swap each element till we see a smaller element
 	 * 
 	 * @param a
 	 */

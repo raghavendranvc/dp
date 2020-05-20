@@ -11,6 +11,17 @@ public class LargestNumber {
         for(int i=0; i<A.size();i++){
             aStr.add(A.get(i).toString());
         }
+        
+        /*
+         * 
+         * Arrays.sort(arr, new Comparator<String>(){
+        public int compare(String a, String b){
+            return (b+a).compareTo(a+b);
+        }
+    });
+         * 
+         * 
+         */
         Collections.sort(aStr, new StringComparator());
         System.out.println(aStr);
 

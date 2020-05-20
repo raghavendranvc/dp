@@ -64,6 +64,12 @@ public class NQueens {
         printSolution(a, board);
         return true;
     }
+    //TODO practice well
+    
+    //This validity is very important
+    // Understanding that queens are placed as Col is also very crucial
+    // We choose col (rather than row) for better understanding. 
+    // To pleace queen of col, we should have successfully placed queens < col.
 
     boolean isSafe(int a, boolean board[][], int row, int col)
     {
@@ -98,17 +104,10 @@ public class NQueens {
         return result;
     }
 
+    //queenNumber is column
     public void solveNQueen(int a, int queenNumber, boolean[][] nQueens, ArrayList<ArrayList<String>> result){
         if(queenNumber >= a){
-            ArrayList<String> rowString = new ArrayList<>();
-            for(int i=0;i<a;i++){
-                StringBuilder StringBuilder = new StringBuilder();
-                for(int j=0;j<a;j++){
-                    StringBuilder.append(nQueens[i][j]? "Q":".");
-                }
-                rowString.add(StringBuilder.toString());
-            }
-            result.add(rowString);
+            result.add(getRequiredSolution(a,nQueens));
             return;
         }
 
@@ -119,6 +118,18 @@ public class NQueens {
                 nQueens[row][queenNumber] = false;
             }
         }
+    }
+    
+    private ArrayList<String> getRequiredSolution(int a,boolean[][] nQueens){
+    	ArrayList<String> rowString = new ArrayList<>();
+        for(int i=0;i<a;i++){
+            StringBuilder StringBuilder = new StringBuilder();
+            for(int j=0;j<a;j++){
+                StringBuilder.append(nQueens[i][j]? "Q":".");
+            }
+            rowString.add(StringBuilder.toString());
+        }
+        return rowString;
     }
 
 
@@ -237,7 +248,7 @@ public class NQueens {
     [., ., ., ., ., Q, ., .],
     [., ., Q, ., ., ., ., .]
      */
-    
+    //---------------------------One Solution-------------------------------------
     /*
      * We are trying to place the queen in a row called "row"
      * Since we are going serial, we don't need to check beyond "row" rows

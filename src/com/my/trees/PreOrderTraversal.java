@@ -45,7 +45,7 @@ public class PreOrderTraversal {
 
             A = null;
             while(!stack.isEmpty()) { //stack is only used to make sure we processed the right nodes of the nodes stored
-                A = stack.pop().right;
+                A = stack.pop().right;//we visited A. We need to visit it's right tree alone
                 if(A != null){
                     break;
                 }

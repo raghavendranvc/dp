@@ -45,6 +45,9 @@ public class BalancedBinaryTree {
         return Math.max(leftHeight,rightHeight)+1;
     }
 
+    /*
+     * Does this work? 
+     */
     public boolean isBalancedRefactored(TreeNode A){
         if(A == null){
             return true;

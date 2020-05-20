@@ -24,7 +24,7 @@ public class CombinationsSumUnique {
 
     public void combinationSum(ArrayList<Integer> a, int b, ArrayList<ArrayList<Integer>> result, int startIndex, int currentSum, ArrayList<Integer> tempArray){
         if(currentSum == b){
-            if(!result.contains(tempArray)) {
+            if(!result.contains(tempArray)) { //TODO remember this simple dedup using ArrayList
                 System.out.println("Adding array=" + tempArray);
                 result.add(new ArrayList<>(tempArray));
             }

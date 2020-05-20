@@ -1,6 +1,5 @@
 package com.my.arrays;
 
-import com.my.common.UtilityClass;
 
 import java.util.ArrayList;
 

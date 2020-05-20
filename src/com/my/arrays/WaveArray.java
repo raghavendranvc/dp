@@ -7,56 +7,95 @@ import java.util.Arrays;
 
 public class WaveArray {
 
-    //  6, 0, 6, 12 12
-    //  0  6  6  12 12
-    //  0  12 6  12  6
-	
+	// 6, 0, 6, 12 12
+	// 0 6 6 12 12
+	// 0 12 6 12 6
+
 	// 1 2 3 4 5 6 7 8 9 10
 	// 2 1 4 3 6 5 8 7 10 9
 
-    public ArrayList<Integer> wave(ArrayList<Integer> A) {
-        if(A.size() < 2){
-            return A;
-        }
-        Integer[] values = A.toArray(new Integer[A.size()]);
-        Arrays.sort(values);
+	//Better approach
+	//Uses Bubble sort technique
+	static void zigZag(int[] arr) {
+		// Flag true indicates relation "<" is expected,
+		// else ">" is expected. The first expected relation
+		// is "<"
+		boolean flag = true;
 
-        for(int i=0;i<values.length-1;i+=2) {
-            swap(values,i,i+1);
-        }
+		int temp = 0;
 
-        return new ArrayList<>(Arrays.asList(values));
-    }
+		for (int i = 0; i <= arr.length - 2; i++) {
+			// Use i%2 == 0 rather than flag
+			if (flag) /* "<" relation expected */ 
+			{
+				/*
+				 * If we have a situation like A > B > C, we get A > B < C by swapping B and C
+				 */
+				if (arr[i] > arr[i + 1]) {
+					// swap
+					temp = arr[i];
+					arr[i] = arr[i + 1];
+					arr[i + 1] = temp;
+				}
 
-    private void swap(Integer[] A, int i, int j){
-        int save = A[i];
-        A[i] = A[j];
-        A[j] = save;
-    }
-    
-    public void reverseArray(Integer[] A, int s, int e){
-        while(s<e) {
-            int save = A[s];
-            A[s] = A[e];
-            A[e] = save;
-            s++;
-            e--;
-        }
-        UtilityClass.print(A);
-    }
+			} else /* ">" relation expected */
+			{
+				/*
+				 * If we have a situation like A < B < C, we get A < C > B by swapping B and C
+				 */
+				if (arr[i] < arr[i + 1]) {
+					// swap
+					temp = arr[i];
+					arr[i] = arr[i + 1];
+					arr[i + 1] = temp;
+				}
+			}
+			flag = !flag; /* flip flag */
+		}
+	}
 
-    public static void main(String[] argrs){
-        //int[] a = new int[] {5, 1, 3, 2, 4 };
-        int[] a = new int[] {6, 17, 15, 13  };
-        UtilityClass.print(a);
+	public ArrayList<Integer> wave(ArrayList<Integer> A) {
+		if (A.size() < 2) {
+			return A;
+		}
+		Integer[] values = A.toArray(new Integer[A.size()]);
+		Arrays.sort(values);
 
-        ArrayList<Integer> intList = new ArrayList<Integer>(a.length);
-        for (int i : a)
-        {
-            intList.add(i);
-        }
-        WaveArray waveArray = new WaveArray();
-        ArrayList<Integer> returnList = waveArray.wave(intList);
-        System.out.println(returnList);
-    }
+		for (int i = 0; i < values.length - 1; i += 2) {
+			swap(values, i, i + 1);
+		}
+
+		return new ArrayList<>(Arrays.asList(values));
+	}
+
+	private void swap(Integer[] A, int i, int j) {
+		int save = A[i];
+		A[i] = A[j];
+		A[j] = save;
+	}
+
+	public void reverseArray(Integer[] A, int s, int e) {
+		while (s < e) {
+			int save = A[s];
+			A[s] = A[e];
+			A[e] = save;
+			s++;
+			e--;
+		}
+		UtilityClass.print(A);
+	}
+
+	public static void main(String[] argrs) {
+		// int[] a = new int[] {5, 1, 3, 2, 4 };
+		int[] a = new int[] { 6, 17, 15, 13 };
+		UtilityClass.print(a);
+
+		ArrayList<Integer> intList = new ArrayList<Integer>(a.length);
+		for (int i : a) {
+			intList.add(i);
+		}
+		WaveArray waveArray = new WaveArray();
+		ArrayList<Integer> returnList = waveArray.wave(intList);
+		System.out.println(returnList);
+	}
 }

@@ -118,6 +118,8 @@ public class NextPermutation {
 	 * FG(rightmost greater element compared to DE-1) Swap DE1- and FG 0 1 3 5 3 2 0
 	 * - - // Now sort letter between DE and end 0 1 3 0 2 3 5
 	 */
+	
+	//https://stackoverflow.com/questions/1622532/algorithm-to-find-next-greater-permutation-of-a-given-string
 
 	public ArrayList<Integer> nextPermutation(ArrayList<Integer> A) {
 
@@ -130,6 +132,8 @@ public class NextPermutation {
 			decreasingSequenceEnd--;
 		}
 
+		//0 ... decreasingSequenceEnd-1, decreasingSequenceEnd, ..firstGreaterElementThanDSE-1,...,n-1
+		
 		// the number which we need to swap will be at 'decreasingSequenceEnd'
 
 		System.out.println("decreasingSequenceEnd=" + decreasingSequenceEnd);
@@ -151,7 +155,7 @@ public class NextPermutation {
 
 		swap(A, decreasingSequenceEnd - 1, lastGreaterElement);
 
-		// Reverse the list starting from decreasingSequenceEnd
+		// Reverse the list starting from decreasingSequenceEnd (decreasingSequenceEnd,n)
 
 		reverseList(A, decreasingSequenceEnd, A.size() - 1);
 

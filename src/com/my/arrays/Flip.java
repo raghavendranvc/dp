@@ -156,6 +156,8 @@ public class Flip {
 
 		return result;
 	}
+	
+	//TODO check this again
 
 	public static ArrayList<Integer> flip2(String A) {
 		char[] array = A.toCharArray();

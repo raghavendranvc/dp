@@ -75,10 +75,10 @@ public class KthSmallest {
 
 			if (pivotPost - left == k - 1) {
 				return A.get(pivotPost);
-			} else if (pivotPost - left > k - 1) {
+			} else if (pivotPost - left > k - 1) { //pivot > k-1
 				return kthSmallest(A, k, left, pivotPost - 1);
-			} else {
-				return kthSmallest(A, k - (pivotPost - left) - 1, pivotPost + 1, right);
+			} else {	//pivot < k-1
+				return kthSmallest(A, k - (pivotPost - left + 1), pivotPost + 1, right);
 			}
 		}
 
