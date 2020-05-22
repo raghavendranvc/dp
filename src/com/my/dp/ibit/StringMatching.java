@@ -18,17 +18,19 @@ public class StringMatching {
 	public boolean isWildCharPatternMatchPractice(String s, String p) {
 		boolean[][] result = new boolean[s.length()+1][p.length()+1];
 		
-		result[0][0]=true;
+		result[0][0]=true; //When nothing is given
 		
 		/**
 		 * We need to fix strings that could become empty like
 		 * a*b* or .* etc
 		 */
+		//This works on first row when row length is 0 and pattern alone is present
 		
-		for(int j=1;j<=p.length();j++) {
-			if(p.charAt(j-1) == '*') {
-				if(j>1) { // first char won't be *. but we still set this condition
-					result[0][j] = result[0][j-2];
+		
+		for(int i=1;i<=p.length();i++) {
+			if(p.charAt(i-1) == '*') {
+				if(i>1) { // first char won't be *. but we still set this condition
+					result[0][i] = result[0][i-2];
 				}
 			}
 		}
@@ -103,7 +105,7 @@ public class StringMatching {
 	//TODO, logic needs to be understood well
 	public boolean isGeneralRegMatchPractice(String s, String p) {
 		
-		//result[i][j] if true of string of length 'i' an pattern of length 'j' matches
+		//result[i][j] if true of string of length 'i' and pattern of length 'j' matches
 		
 		boolean[][] result = new boolean[s.length()+1][p.length()+1];
 		
@@ -112,7 +114,7 @@ public class StringMatching {
 				if(i == 0 && j ==0) { // both pattern and string are null
 					result[i][j] = true;
 				} else if (j==0) { //pattern is null and so any not empty string is null
-					result[i][j] = false;
+					result[i][j] = false;// TODO This condition is very important
 				} else if (j> 0 && p.charAt(j-1) == '*') {
 					/*
 					 * This is the case when we ignore either the text or ignore the pattern. 

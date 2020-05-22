@@ -1,14 +1,12 @@
 package com.my.graphs;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.PriorityQueue;
-import java.util.Queue;
 
 public class SmallestSeqWithPrimes {
 	
 	// 2 3 5      
 	   
+	// This problem is similar to Ugly Numbers
 	/*
 	 * 5
 	 * 3

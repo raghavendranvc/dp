@@ -2,7 +2,84 @@ package com.my.dp.ibit;
 
 import com.my.common.UtilityClass;
 
-public class MaxCoins {
+public class OptimumGameStrategyOrMaxCoins {
+
+	public int getOptStrategey(int[] a) {
+		return getOptStrategey(a, 0, a.length - 1);
+
+	}
+
+	public int getOptStrategey(int[] a, int i, int j) {
+		if (i == j) {
+			return a[i];
+		}
+
+		if (i + 1 == j) {
+			return Math.max(a[i], a[j]);
+		}
+
+		return Math.max(a[i] + Math.min(getOptStrategey(a, i + 2, j), getOptStrategey(a, i + 1, j - 1)),
+				a[j] + Math.min(getOptStrategey(a, i + 1, j - 1), getOptStrategey(a, i, j - 2)));
+
+	}
+
+	// TODO, get the trick here next time
+
+	public int getOptStrategeyIter(int[] a) {
+
+		int n = a.length;
+
+		int[][] table = new int[n][n];
+
+		for (int gap = 0; gap < n; gap++) {
+			for (int i = 0, j = gap; j < n; i++, j++) {
+
+				/*
+				 * Check for diagonal property. We are constructing diagonal with gap 0, 1, 2,
+				 * 3, 4, ...n-1
+				 */
+				int x = (i + 2 <= j) ? table[i + 2][j] : 0;
+				int y = (i + 1 <= j - 1) ? table[i + 1][j - 1] : 0;
+				int z = (i <= j - 2) ? table[i][j - 2] : 0;
+
+				table[i][j] = Math.max(a[i] + Math.min(x, y), a[j] + Math.min(y, z));
+
+			}
+
+		}
+
+		return table[0][n - 1];
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		int[] a1 = { 8, 15, 3, 7 };
+		int[] a2 = { 2, 2, 2, 2 };
+		int[] a3 = { 20, 30, 2, 2, 2, 10 };
+
+		OptimumGameStrategyOrMaxCoins ogs = new OptimumGameStrategyOrMaxCoins();
+
+		int val1 = ogs.getOptStrategey(a1);
+		System.out.println("val1=" + val1);
+
+		int val2 = ogs.getOptStrategey(a2);
+		System.out.println("val2=" + val2);
+
+		int val3 = ogs.getOptStrategey(a3);
+		System.out.println("val3=" + val3);
+
+		int val11 = ogs.getOptStrategeyIter(a1);
+		System.out.println("val11=" + val11);
+
+		int val21 = ogs.getOptStrategeyIter(a2);
+		System.out.println("val21=" + val21);
+
+		int val31 = ogs.getOptStrategeyIter(a3);
+		System.out.println("val31=" + val31);
+
+	}
 
 	/***
 	 * if (EVEN > ODD), start choosing from the right-hand corner and select all the
@@ -54,10 +131,9 @@ public class MaxCoins {
 	}
 
 	/*
-	 * TODO check this logic
-	 * This is also called Optimum GAME strategy
+	 * TODO check this logic This is also called Optimum GAME strategy
 	 */
-	public int maxcoin(int[] A) {
+	public int maxcoin2(int[] A) {
 
 		if (A == null || A.length == 0) {
 			return 0;
@@ -67,7 +143,7 @@ public class MaxCoins {
 		int sol[][] = new int[n][n];
 
 		for (int length = 0; length < n; length++) {
-			for (int i = 0, j = length; j < n; i++, j++) {//j-i is always length
+			for (int i = 0, j = length; j < n; i++, j++) {// j-i is always length
 
 				int x = (i + 2 <= j) ? sol[i + 2][j] : 0;
 				int y = (j - 2 >= i) ? sol[i][j - 2] : 0;
@@ -80,10 +156,10 @@ public class MaxCoins {
 		return sol[0][n - 1];
 	}
 
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 		int A[] = { 26, 88, 57, 26, 65, 60, 55, 40 };
-		MaxCoins maxCoins = new MaxCoins();
-		System.out.println("Result=" + maxCoins.maxcoin(A));
+		OptimumGameStrategyOrMaxCoins maxCoins = new OptimumGameStrategyOrMaxCoins();
+		System.out.println("Result=" + maxCoins.maxcoin2(A));
 	}
 
 	/*

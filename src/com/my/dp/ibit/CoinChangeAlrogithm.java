@@ -3,10 +3,18 @@ package com.my.dp.ibit;
 public class CoinChangeAlrogithm {
 
 	public int coinChangeIter(int[] coins,int total) {
-		int[] solution = new int[total+1]; 
+		//Time complexity of this function: O(mn) 
+        //Space Complexity of this function: O(n) 
+  
+        // table[i] will be storing the number of solutions 
+        // for value i. We need n+1 rows as the table is 
+        // constructed in bottom up manner using the base 
+        // case (n = 0) 
+		
+		int[] solution = new int[total+1]; //See this array size is total+1 //TODO
 		//solution[i] contains numOfWays to get i 
 		
-		solution[0] = 0; //For sum 0 number of ways = 0
+		solution[0] = 1; //base condition. This will make sure that every coin gets one way for every value it matters
 		/*
 		 * For each coin we iterate over
 		 */
@@ -16,7 +24,7 @@ public class CoinChangeAlrogithm {
 			 */
 			//TODO, important to remember this dp recurrence.
 			//It is similar to recursive solution.
-			for(int j=1;j<total;j++) {
+			for(int j=coins[i];j<=total;j++) {
 				// by excluding coins[i] for each solution what is the numberOfWays
 				solution[j] += solution[j-coins[i]]; 
 			}

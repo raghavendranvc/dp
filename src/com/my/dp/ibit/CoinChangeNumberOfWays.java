@@ -1,12 +1,12 @@
-package com.my.dp;
+package com.my.dp.ibit;
 
-public class CoinChange {
+public class CoinChangeNumberOfWays {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		CoinChange c = new CoinChange();
+		CoinChangeNumberOfWays c = new CoinChangeNumberOfWays();
 	    
 	    int arr[] = {1, 2, 3};
 	    int val = 4;

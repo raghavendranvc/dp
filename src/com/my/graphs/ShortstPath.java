@@ -1,14 +1,14 @@
 package com.my.graphs;
 
 public class ShortstPath {
-
-	// BellmanFord from Source Vertex To all Vertices
+	
 	// Dijkstra Minimum distance to all vertices
+	// O(V^2)
 
 	public void shortestPath(int[][] graph, int src) {
 
 		int V = graph.length;
-		int[] distance = new int[V];
+		int[] distance = new int[V]; //Is the solution set
 
 		boolean[] included = new boolean[V];
 
@@ -25,8 +25,10 @@ public class ShortstPath {
 
 			if (distance[minIndex] == Integer.MAX_VALUE) {
 				continue;
+				//We can even break as none of the other vertices are not reachable
 			}
 
+			//Let's recalculate other vertices distances as we now included new "minIndex"
 			for (int j = 0; j < V; j++) {
 				if (included[j]) {
 					continue;
@@ -52,6 +54,10 @@ public class ShortstPath {
 		}
 		return minIndex;
 	}
+	
+	//TODO
+	// For negative edges, use Bellman Ford. https://www.geeksforgeeks.org/bellman-ford-algorithm-dp-23/
+	// Same as the above, except that there will a check to find a loop	
 	
 	
 	

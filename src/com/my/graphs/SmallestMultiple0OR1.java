@@ -7,6 +7,9 @@ import java.util.Queue;
 import java.util.Set;
 
 public class SmallestMultiple0OR1 {
+	
+	//TODO, the solutions is copied. GIVEN UP. Check this again
+	
 	// 33 66 99 132 165 198 
 	
 	// 10, 100, 110, 

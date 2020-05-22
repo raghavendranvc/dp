@@ -20,6 +20,13 @@ public class BinomialCoefficient {
 		for (int j = 0; j <= r; j++) {
 			C[j][j] = 1;
 		}
+		// n c r = n-1 c r + n-1 c r-1
+		// 1
+		// 1 1
+		// 1 2 1s
+		// 1 3 3 1
+		// 1 4 6 4 1
+		// 1 5 10 10 5 1
 
 		for (int i = 1; i <= n; i++) {
 			for (int j = 1; j <= Math.min(i, r); j++) {
@@ -43,6 +50,8 @@ public class BinomialCoefficient {
 		System.out.println("val2=" + val2);
 	}
 
+	/**************another recur *************************/
+	
 	static int binomialCoeff(int n, int k) {
 
 		// Base Cases
@@ -52,6 +61,8 @@ public class BinomialCoefficient {
 		// Recur
 		return binomialCoeff(n - 1, k - 1) + binomialCoeff(n - 1, k);
 	}
+	
+	/**************another opt *************************/
 
 	static int binomialCoeffOpt(int n, int k) {
 		int C[] = new int[k + 1];
@@ -62,11 +73,14 @@ public class BinomialCoefficient {
 		for (int i = 1; i <= n; i++) {
 			// Compute next row of pascal
 			// triangle using the previous row
-			for (int j = Math.min(i, k); j > 0; j--)
+			for (int j = Math.min(i, k); j > 0; j--) {
 				C[j] = C[j] + C[j - 1];
+			}
 		}
 		return C[k];
 	}
+	
+	/**************another space efficient *************************/
 
 	// Returns value of Binomial Coefficient C(n, k)
 	static int binomialCoeffSpaceAndTimeEfficient(int n, int k) {

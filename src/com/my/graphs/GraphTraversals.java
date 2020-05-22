@@ -57,10 +57,10 @@ public class GraphTraversals {
 		boolean[] visited = new boolean[this.vertices];
 		visited[source] = true; 
 		toBeProcessedStack.push(source); //We are adding to the stack only those which are visited
+		processedList.add(source);
 		
 		while(!toBeProcessedStack.isEmpty()) {
 			int processingVertex = toBeProcessedStack.pop(); 
-			processedList.add(processingVertex);
 			
 			Iterator<Integer> iterator = adjacencyList[processingVertex].iterator();
 			while(iterator.hasNext()) {

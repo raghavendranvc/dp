@@ -38,35 +38,6 @@ public class LongestIncreasingSubsequnce {
 		return max;
 	}
 
-	/*
-	 * NOT WORKING
-	 */
-	public int longestIncreasingSubsequnce(int[] a, int seqLength, int[] lisList) {
-		lisList = new int[seqLength];
-		if (seqLength == 1) {
-			lisList[seqLength - 1] = a[seqLength - 1];
-			return 1;
-		}
-
-		int max = 1;
-		int lastNum = a[seqLength - 1];
-
-		for (int i = 1; i < seqLength; i++) {
-			int[] newLisList = null;
-			int subMax = longestIncreasingSubsequnce(a, i, newLisList);
-			System.out.print("LCS Array=");
-			printArray(newLisList);
-			if (a[i - 1] < lastNum && max < (subMax + 1)) {
-				max = subMax + 1;
-				lisList = newLisList;
-				System.out.print("New LCS Array=");
-				printArray(newLisList);
-			}
-		}
-
-		return max;
-	}
-
 	public int lis(int[] A) {
 		int n = A.length;
 

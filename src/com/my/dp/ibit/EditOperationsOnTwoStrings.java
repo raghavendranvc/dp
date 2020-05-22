@@ -1,4 +1,4 @@
-package com.my.dp;
+package com.my.dp.ibit;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,101 +26,8 @@ public class EditOperationsOnTwoStrings {
 		}
 
 	}
-
-	/*
-	 * Not fully implemented. Convert into Array. Don't try to use List
-	 */
-	public int getEditOperationsNeededIter(String str1, String str2, List<OPERATION> operations) {
-
-		int m = str1.length();
-		int n = str2.length();
-
-		int[][] table = new int[m + 1][n + 1];
-
-		List<List<List<OPERATION>>> listOps = new ArrayList<List<List<OPERATION>>>();
-
-		for (int j = 0; j <= n; j++) {
-			List<List<OPERATION>> innerList = new ArrayList<List<OPERATION>>();
-			for (int i = 0; i <= m; i++) {
-				List<OPERATION> opsList = new ArrayList<OPERATION>();
-				innerList.add(opsList);
-			}
-			listOps.add(innerList);
-		}
-
-		table[0][0] = 0;
-
-		/*
-		 * When Given string is empty. All Insertions. First Columns - Column 0
-		 */
-		for (int j = 1; j <= n; j++) {
-			table[0][j] = j * (OPERATION.INSERT.getVal());
-
-			List<List<OPERATION>> innerList = listOps.get(j);
-			List<OPERATION> opsList = innerList.get(0);
-			for (int k = 0; k < j; k++) {
-				opsList.add(OPERATION.INSERT);
-			}
-
-		}
-
-		/*
-		 * When Target String is empty. All Deletions
-		 */
-		List<List<OPERATION>> innerList = listOps.get(0); // No need to get repeatedly. First Row - Row 0
-		for (int i = 1; i <= m; i++) {
-			table[i][0] = i * (OPERATION.DELETE.getVal());
-
-			List<OPERATION> opsList = innerList.get(i);
-			for (int k = 0; k < i; k++) {
-				opsList.add(OPERATION.INSERT);
-			}
-		}
-
-		for (int i = 1; i <= m; i++) {
-			for (int j = 1; j <= n; j++) {
-
-				int currentOpVal = 0; // If Chars are equal then no OPERATION needs to be performed
-				OPERATION currentOp = OPERATION.NOOP;
-				if (str1.charAt(i - 1) != str2.charAt(j - 1)) {
-					currentOpVal = OPERATION.REPLACE.getVal();
-					currentOp = OPERATION.REPLACE;
-				}
-
-				int minVal = table[i - 1][j - 1] + currentOpVal;
-				int val1 = table[i - 1][j] + OPERATION.INSERT.getVal();
-				int val2 = table[i][j - 1] + OPERATION.DELETE.getVal();
-
-				List<OPERATION> minOps = listOps.get(j - 1).get(i - 1);
-				List<OPERATION> minOps1 = listOps.get(j - 1).get(i);
-				List<OPERATION> minOps2 = listOps.get(j).get(i - 1);
-
-				if (minVal > val1) {
-					currentOp = OPERATION.INSERT;
-					minVal = val1;
-					minOps = minOps1;
-				}
-
-				if (minVal > val2) {
-					currentOp = OPERATION.DELETE;
-					minVal = val2;
-					minOps = minOps2;
-				}
-
-				table[i][j] = minVal;
-
-				List<OPERATION> updateOps = listOps.get(j).get(i);
-				updateOps.clear();
-				updateOps.addAll(minOps);
-				updateOps.add(currentOp);
-			}
-		}
-
-		System.out.println("OpsList=" + listOps.get(n).get(m));
-
-		return table[m][n];
-
-	}
+	
+	/*******************One way****************************/
 
 	public int getNumberOfEditOperationsNeededIter(String str1, String str2) {
 
@@ -129,7 +36,7 @@ public class EditOperationsOnTwoStrings {
 
 		int[][] table = new int[m + 1][n + 1];
 
-		table[0][0] = 0;
+		table[0][0] = 0; //no operations needed when strings are empty
 
 		/*
 		 * When Given string is empty. All Insertions
@@ -162,6 +69,8 @@ public class EditOperationsOnTwoStrings {
 		return table[m][n];
 
 	}
+	
+	/*******************One way****************************/
 
 	public int getNumberOfEditOperationsNeededRecur(String str1, String str2, int i, int j) {
 
@@ -228,6 +137,8 @@ public class EditOperationsOnTwoStrings {
 		// TODO Auto-generated method stub
 
 	}
+	
+	/*******************One way****************************/
 
 	public int minDistance(String A, String B) {
 

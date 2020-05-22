@@ -19,6 +19,9 @@ public class PrimsAlgo {
 	 * }
 	 */
 	
+	
+	// If cost is associated with an edge then we need to prepare EdgeNode
+	// If there is no cost, then we can have Integer/vertex and ignore creation of Edge Node
 	class EdgeNode {
 		int dest;
 		int weight;
@@ -259,6 +262,7 @@ public class PrimsAlgo {
 							 minCostFound = costMatrix[i][j];
 							 start = i;
 							 end = j;
+							  //We are including the edge here
 						 }	
 					}
 				}
@@ -269,6 +273,7 @@ public class PrimsAlgo {
 				verticesIncluded[start] = true;
 				verticesIncluded[end] = true;
 				minCost += minCostFound;
+				edgeCount++;
 			}
 			
 		}

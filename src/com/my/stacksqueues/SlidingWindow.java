@@ -66,6 +66,13 @@ public class SlidingWindow {
 
         int i=0;
 
+        /**
+         * Remove elements from the queue that are smaller than the current element.
+         * This is to discard unwanted items. They can never be the max once there
+         * is a greater element like the current one.
+         * 
+         * Below loop is only for the first sliding window.
+         */
         for(i=0;i<B;i++){
             while(!deque.isEmpty() && (A.get(deque.getLast()) <= A.get(i))){
                 deque.removeLast();
@@ -76,9 +83,18 @@ public class SlidingWindow {
         for(;i<A.size();i++){
             result.add(A.get(deque.getFirst()));
 
+            /**
+             * Remove the elements that are outside the range of the sliding window
+             */
             while(!deque.isEmpty() && deque.getFirst() <= i-B){
                 deque.removeFirst();
             }
+            
+            /**
+             * Remove elements from the queue that are smaller than the current element.
+             * This is to discard unwanted items. They can never be the max once there
+             * is a greater element like the current one.
+             */
 
             while(!deque.isEmpty() && (A.get(deque.getLast()) <= A.get(i))){
                 deque.removeLast();

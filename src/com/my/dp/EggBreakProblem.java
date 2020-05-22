@@ -43,6 +43,8 @@ public class EggBreakProblem {
 		
 	}
 	
+	//**************************Iter Solution*******************************
+	
 	public int getEggBreakIter(int floors,int eggs){
 		if(floors < 2){
 			return floors;
@@ -92,6 +94,8 @@ public class EggBreakProblem {
 		
 		return table[floors][eggs];
 	}
+	
+	//**************************Reverse Iter Solution*******************************
 	
 	public int getEggBreakIterReverse(int eggs,int floors){
 		/*

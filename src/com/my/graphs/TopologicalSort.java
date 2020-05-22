@@ -57,7 +57,7 @@ public class TopologicalSort {
 
 	public ArrayList<Integer> getLexOrder(Graph g) {
 
-		Stack<Integer> rStack = new Stack<Integer>();
+		Stack<Integer> stack = new Stack<Integer>();
 
 		boolean[] visited = new boolean[g.v];
 
@@ -65,9 +65,9 @@ public class TopologicalSort {
 			if (visited[i]) {
 				continue;
 			}
-			dfsTraverse(g, visited, i, rStack);
+			dfsTraverse(g, visited, i, stack);
 		}
-		return getResult(rStack);
+		return getResult(stack);
 	}
 
 	private ArrayList<Integer> getResult(Stack<Integer> rStack) {

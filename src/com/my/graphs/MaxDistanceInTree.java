@@ -14,6 +14,8 @@ import java.util.Stack;
 import com.my.common.UtilityClass;
 
 public class MaxDistanceInTree {
+	
+	//---------------------One way--------------------------------------------
 
 	class Node {
 		int val;
@@ -116,6 +118,9 @@ public class MaxDistanceInTree {
 		return n.height;
 	}
 
+	
+	//---------------------One way But needs to be understood well-------------------------------------------
+	
 	public int solveSimple(ArrayList<Integer> A) {
 		List<int[]> arr = new ArrayList<>();
 		for (int i = 0; i < A.size(); ++i) {
@@ -135,6 +140,9 @@ public class MaxDistanceInTree {
 		}
 		return maxDistance == 0 ? 0 : maxDistance;
 	}
+	
+	
+	//---------------------One way--------------------------------------------
 
 	public int solveUsingDFS(ArrayList<Integer> A) {
 		int n = A.size();
@@ -207,6 +215,8 @@ public class MaxDistanceInTree {
 		MaxDistanceInTree maxDistanceInTree = new MaxDistanceInTree();
 		System.out.println("value=" + maxDistanceInTree.solve(A));
 	}
+	
+	//---------------------Practice of DFS and BFS--------------------------------------------
 
 	public int solve(int[] A) {
 
@@ -259,15 +269,19 @@ public class MaxDistanceInTree {
 		boolean[] visited = new boolean[n];
 		int max = 0;
 
-		Stack<Integer> nodes = new Stack<Integer>();
+		//We can use one single stack with Node and distance as pair
+		// 'n' node is the farthest node from root.
+		// a dfs from 'n' will find the farthest node from it. 
+		// This distance will be the largest distance
+		Stack<Integer> nodesStack = new Stack<Integer>();
 		Stack<Integer> distance = new Stack<Integer>();
 
 		visited[root] = true;
-		nodes.add(root);
+		nodesStack.add(root);
 		distance.add(0);
 
-		while (!nodes.isEmpty()) {
-			int u = nodes.pop();
+		while (!nodesStack.isEmpty()) {
+			int u = nodesStack.pop();
 			int d = distance.pop();
 			
 			for (int neighbour : graph.get(u)) {
@@ -276,7 +290,7 @@ public class MaxDistanceInTree {
 				}
 				visited[neighbour] = true;
 				max = Math.max(max, d + 1);
-				nodes.push(neighbour);
+				nodesStack.push(neighbour);
 				distance.push(d + 1);
 			}
 		}

@@ -87,7 +87,7 @@ public class CuttingARod {
 	public static void main(String[] args) {
 
 		int[] lengths = { 1, 2, 3, 4, 5, 6, 7, 8 };
-		int[] values = { 1, 5, 8, 9, 10, 17, 17, 20 };
+		int[] values =  { 1, 5, 8, 9, 10, 17, 17, 20 };
 
 		/*
 		 * int[] lengths = {1,2,3,4,5,6,7,8}; int[] values = {3,5,8,9,10,17,17,20};

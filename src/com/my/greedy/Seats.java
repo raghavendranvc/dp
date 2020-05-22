@@ -46,7 +46,8 @@ public class Seats {
                 leftMoves++;
                 numberOfOccupied--;     //
             } else {
-                movesNeeded += Math.min(leftMoves, numberOfOccupied);
+                movesNeeded += Math.min(leftMoves, numberOfOccupied); 
+                // min means either people on left or people on right move towards median.
             }
         }
         return (int) (movesNeeded % MODULO);

@@ -30,6 +30,7 @@ public class PowerOf2 {
             return 1;
         }
 
+        // Check number of bits. If number of bits is 1.
 
         return 0;
     }

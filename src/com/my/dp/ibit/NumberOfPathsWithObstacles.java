@@ -1,6 +1,6 @@
 package com.my.dp.ibit;
 
-public class NumberOfPaths {
+public class NumberOfPathsWithObstacles {
 
 	//TODO practice again
 	public int uniquePathsWithObstacles(int[][] A) {

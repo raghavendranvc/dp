@@ -64,7 +64,7 @@ public class DetectCycleInGraph {
 		return false;
 	}
 
-	/*************** Below is another approach **************************/
+	/*************** Below is another approach - Union Find (Parent detect)**************************/
 
 	public boolean cycleDetectUsingParent(Graph g, int v, boolean[] visited, int parent) {
 
@@ -73,11 +73,11 @@ public class DetectCycleInGraph {
 		for (int u : g.adjList[v]) {
 
 			if (u == parent) {
-				continue;
+				continue; //back ednge to the parent. This should be ok in undirected graph.
 			}
 
 			if (visited[u]) {
-				return true;
+				return true; //But if we reach a vertex which is already visited - there is a cycle
 			}
 
 			if (cycleDetectUsingParent(g, u, visited, v)) {

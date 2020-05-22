@@ -15,7 +15,9 @@ public class InsertionSort {
 	 * (0,n)
 	 * 
 	 *  (0,i), here 'i' is placed at its position in the sorted array of (0,i-1)
-	 *  we swap each element till we see a smaller element
+	 *  we swap each element till we see a smaller element 
+	 *  
+	 *  Sorting is built up from 1 to last position
 	 * 
 	 * @param a
 	 */

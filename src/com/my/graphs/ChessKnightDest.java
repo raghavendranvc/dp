@@ -8,7 +8,7 @@ public class ChessKnightDest {
 	class Pair {
 		int x;
 		int y;
-		int value;
+		int value;//distance from source vertex.
 
 		Pair(int x, int y, int val) {
 			this.x = x;
@@ -41,10 +41,11 @@ public class ChessKnightDest {
 		
 		int[] xDiff = {-2, -1, 1, 2, -2, -1, 1, 2};
 		int[] yDiff = {-1, -2, -2, -1, 1, 2, 2, 1};
+		//We shall do BFS. Shorted path is through BFS. //TODO remember BFS
 		
 		while(!queue.isEmpty()) {
 			Pair p = queue.poll();
-			if(p.x==E && p.y==F) {
+			if(p.x==E && p.y==F) { //If we reach destination
 				return p.value;
 			}	
 			for(int i=0;i<xDiff.length;i++) {
@@ -61,7 +62,7 @@ public class ChessKnightDest {
 				}
 				
 				visisted[newX][newY] = true;
-				queue.add(new Pair(newX,newY,p.value+1));
+				queue.add(new Pair(newX,newY,p.value+1)); //distance is incremented
 			}	
 		}
 		

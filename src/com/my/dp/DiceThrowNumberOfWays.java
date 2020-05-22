@@ -8,15 +8,18 @@ public class DiceThrowNumberOfWays {
 			return 0;
 		}
 		
-		if(dices > sum){
+		if(dices > sum){ // We have to get the sum using all dices. Each dice should be employed
 			return 0;
 		}
 		
-		if(dices == sum){
+		if(dices == sum){ //when dices == sum, then only one possible way.
 			return 1;
 		}
 
 		int numberOfWays = 0;
+		
+		//For each dice, we would do the below.
+		// Loop for each face.
 		
 		for(int i=faces;i>0;i--){
 			if(sum >= i){
@@ -27,6 +30,7 @@ public class DiceThrowNumberOfWays {
 	}
 
 	//TODO read
+	//**************************Iter Solution*******************************
 
 	public int getNumberOfWaysForSumIter(int faces,int dices,int sum){
 		int[][] table = new int[dices+1][sum+1];
@@ -55,7 +59,8 @@ public class DiceThrowNumberOfWays {
 				 * If we add k to table[i-1][j-k] we get value at table[i][j]
 				 */
 				for(int k=1;k<=Math.min(faces, j-1);k++){ 
-					table[i][j] += table[i-1][j-k];
+					table[i][j] += table[i-1][j-k]; 
+					//From the earlier dice + all face values (if they reach this sum)
 				}
 			}
 			

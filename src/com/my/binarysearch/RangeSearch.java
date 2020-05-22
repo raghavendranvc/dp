@@ -12,6 +12,8 @@ public class RangeSearch {
         returnList.add(findIndex(A,B,false));
         return returnList;
     }
+    
+    //TODO this logic is very crucial
 
     public int findIndex(final List<Integer> A, int key, boolean lower){
 
@@ -68,7 +70,7 @@ public class RangeSearch {
 
         int firstSmaller = l;
         while (l <= r) {
-            int mid = l + (r-l)/2;
+            int mid = (l+r)/2;
 
 //            System.out.println("SE:Starting :: A.get("+l+")="+A.get(l)+" A.get("+mid+")="+A.get(mid)+" A.get("+r+")="+A.get(r));
 

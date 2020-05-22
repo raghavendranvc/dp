@@ -37,6 +37,8 @@ public class SnakesAndLadders {
 	int getMinDiceBFS(int[] board, int maxDice, int size) {
 		boolean[] visited = new boolean[size + 1];
 		Queue<BNode> bQueue = new LinkedList<BNode>();
+		//Queue stores each point we move and the distance from source
+		//Note this is BFS.
 
 		BNode bNode = new BNode(0, 0);
 		bQueue.add(bNode);
@@ -46,10 +48,11 @@ public class SnakesAndLadders {
 			bNode = bQueue.remove();
 			int currentPosition = bNode.x;
 
-			if (currentPosition == size) {
+			if (currentPosition == size) { //End condition
 				break;
 			}
 
+			//For all possible 6 positions. This for loop formation is very important
 			for (int i = currentPosition + 1; i <= currentPosition + maxDice && i <= size; i++) {
 
 				if (visited[i]) {

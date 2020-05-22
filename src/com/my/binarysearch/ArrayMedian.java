@@ -5,75 +5,8 @@ import java.util.List;
 
 public class ArrayMedian {
 
-    public double findMedianSortedArraysNot(final List<Integer> a, final List<Integer> b) {
-        int aSize = a.size();
-        int bSize = b.size();
 
-        int min = Math.min(a.get(0),b.get(0));
-        int max = Math.max(a.get(aSize-1),b.get(bSize-1));
-
-        while(min <= max){
-            int mid = min + (max-min)/2;
-            int count = numberOfSmallerElements(a, mid);
-            count = count+numberOfSmallerElements(b, mid);
-            if(count <= (aSize+bSize)/2){
-                min = mid+1;
-            } else {
-                max = mid-1;
-            }
-        }
-
-        boolean isOdd = ((aSize+bSize)%2 == 1);
-
-        if(a.get(aSize-1) < min){
-            return findFirstGreaterElement(b,max);
-        } else if(b.get(bSize-1) < min){
-            return findFirstGreaterElement(a,max);
-        } else {
-            int a1 = findFirstGreaterElement(a,max);
-            int b1 = findFirstGreaterElement(b,max);
-            return (a1+b1)/2;
-        }
-    }
-
-    private int findFirstGreaterElement(final List<Integer> a, int number){
-        return -1;
-    }
-
-    /*
-    0       1       2       3       4       5       6       7       8       8       9      10       11                                                                                      11
-    left                                                                                            right
-    1       2       2       4       4       5       5       6       8       9       10      30      42
-
-
-    number = 15
-    left=0, right=11 , mid = 0 + (11-0)/2 = 5
-    left=6  right=11,  mid = 6+5/2 = 8
-    left=9  right=11   mid = 9+1 =10
-    left=9  right=9    mid = 9
-
-    number = 4
-    left=0 right=11, mid = 5
-    left=0 right=4  mid = 2
-    left=3 right=4  mid = 3+1/2=3 (4 <=4)
-    left=3 right=2
-
-     */
-    private int numberOfSmallerElements(final List<Integer> a, int number){
-        int left = 0;
-        int right = a.size()-1;
-
-        while(left<=right){
-            int mid = left + (right-left)/2;
-            if(number <= a.get(mid)){
-                right = mid-1;
-            } else {
-                left = mid+1;
-            }
-        }
-
-        return left;
-    }
+    
 
     public double findMedianSortedArrays(final List<Integer> a, final List<Integer> b) {
         int total = a.size() + b.size();
@@ -136,6 +69,8 @@ public class ArrayMedian {
         }
 
     }
+    
+    //----------------------------------------Practice-------------------
 
      /*
         Even    = len = 10+14 = 24/2 = 12,13    :: total/2, total/2+1
@@ -152,6 +87,8 @@ public class ArrayMedian {
         }
     }
 
+   
+    
     public int findKth(List<Integer> A, int A_start, List<Integer> B, int B_start, int k){
         if(A_start >= A.size())
             return B.get(B_start + k - 1);

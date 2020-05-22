@@ -1,4 +1,4 @@
-package com.my.dp.ibit;
+package com.my.dp.notdone;
 
 public class FlipMinimumSignsOfElement {
 	

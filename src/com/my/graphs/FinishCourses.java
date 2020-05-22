@@ -15,7 +15,8 @@ public class FinishCourses {
 	
 	class Graph {
 		int v;
-		Map<Integer,Set<Integer>> dependentCourses = new HashMap<>();
+		//Remember to use HashMap for this kind of nodes
+		Map<Integer,Set<Integer>> dependentCourses = new HashMap<>();//Adjacency List
 	
 		Graph(int v){
 			this.v = v;
