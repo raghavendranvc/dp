@@ -7,7 +7,7 @@ import java.util.List;
 import com.my.common.UtilityClass;
 //import com.my.sorting.BinarySearch;
 
-public class LongestIncreasingSubsequnce {
+public class LongestIncreasingSubsequnceLength {
 
 	public static void printArray(int[] a) {
 		for (int i = 0; i < a.length; i++) {
@@ -16,6 +16,9 @@ public class LongestIncreasingSubsequnce {
 		System.out.println();
 	}
 
+	
+	/********************One way********************************************/
+	
 	public int longestIncreasingSubsequnce(int[] a, int seqLength) {
 		if (seqLength == 1) {
 			return 1;
@@ -37,6 +40,8 @@ public class LongestIncreasingSubsequnce {
 
 		return max;
 	}
+	
+	/********************One way********************************************/
 
 	public int lis(int[] A) {
 		int n = A.length;
@@ -56,6 +61,8 @@ public class LongestIncreasingSubsequnce {
 		}
 		return max;
 	}
+	
+	/********************One way********************************************/
 
 	public int lisIterative(int[] a, int seqLength) {
 		if (seqLength == 1) {
@@ -89,6 +96,8 @@ public class LongestIncreasingSubsequnce {
 
 		return max;
 	}
+	
+	/********************One way********************************************/
 
 	public int lisListIterative(int[] a, int seqLength) {
 		if (seqLength == 1) {
@@ -150,6 +159,8 @@ public class LongestIncreasingSubsequnce {
 			System.out.println();
 		}
 	}
+	
+	/********************Efficient One way********************************************/
 
 	private int lcsNlogNAlgo(int[] a) {
 		int totalSize = a.length;
@@ -192,7 +203,7 @@ public class LongestIncreasingSubsequnce {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		LongestIncreasingSubsequnce lis = new LongestIncreasingSubsequnce();
+		LongestIncreasingSubsequnceLength lis = new LongestIncreasingSubsequnceLength();
 		int[] a = { 8, 22, 9, 33, 21, 24, 32, 34, 50, 41, 60, 80, 56, 58, 64, 62, 67, 55, 68, 70, 74, 43, 79, };
 //		int[] a = { 2, 5, 3, 7, 11, 8, 10, 13, 6 };
 //		int val = lis.longestIncreasingSubsequnce(a, a.length);

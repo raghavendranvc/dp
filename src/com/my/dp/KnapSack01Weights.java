@@ -1,6 +1,8 @@
 package com.my.dp;
 
-public class KnapSack01 {
+public class KnapSack01Weights {
+	
+	/********************One way********************************************/
 
 	/*
 	 * This does for each permuations
@@ -18,6 +20,8 @@ public class KnapSack01 {
 		}
 		return max;
 	}
+	
+	/********************One way********************************************/
 
 	public int maxValue(int[] values, int[] weights, int capacity, int selectedWeight, int currentValue) {
 
@@ -63,6 +67,8 @@ public class KnapSack01 {
 		a[i] = a[j];
 		a[j] = temp;
 	}
+	
+	/********************One way********************************************/
 
 	private int SimpleKnapSackRecus(int[] values, int[] weights, int capacity, int i) {
 		if (capacity == 0 || i == 0) {
@@ -84,31 +90,7 @@ public class KnapSack01 {
 		}
 	}
 
-	/*
-	 * Not correct. Something is wrong. Check again
-	 */
-	private int SimpleKnapSackReverseRecus(int[] values, int[] weights, int capacity, int selectedWeight) {
-
-		if (capacity == 0 || selectedWeight == weights.length) {
-			return 0;
-		}
-
-		/*
-		 * If the weight of nth time is more than the capacity then discard it
-		 */
-		if (weights[selectedWeight] > capacity) {
-			return SimpleKnapSackReverseRecus(values, weights, capacity, selectedWeight + 1);
-		} else {
-			/*
-			 * Include it or
-			 */
-			return Math.max(
-					values[selectedWeight] + SimpleKnapSackReverseRecus(values, weights,
-							capacity - weights[selectedWeight], selectedWeight + 1),
-					SimpleKnapSackReverseRecus(values, weights, capacity, selectedWeight + 1));
-
-		}
-	}
+	/********************One way********************************************/
 
 	private int KnapSnackIter(int[] values, int[] weights, int capacity) {
 		int table[][] = new int[weights.length + 1][capacity + 1];
@@ -160,7 +142,7 @@ public class KnapSack01 {
 	}
 
 	public static void main(String[] args) {
-		KnapSack01 ks = new KnapSack01();
+		KnapSack01Weights ks = new KnapSack01Weights();
 		int values[] = { 60, 100, 120, 400 };
 		int weights[] = { 10, 20, 30, 60 };
 		int capacity = 50;

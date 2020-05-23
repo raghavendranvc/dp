@@ -1,6 +1,10 @@
 package com.my.dp.ibit;
 
 public class DunjeonPrincess {
+	
+	//A contains health that consumes at that place. 
+	// -ve value indicate that health is consumed at that place
+	// +ve value indicate that health is add to health
 
 	public int calculateMinimumHP(int[][] A) {
 

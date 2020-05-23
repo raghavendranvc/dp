@@ -2,7 +2,9 @@ package com.my.dp;
 
 import com.my.common.UtilityClass;
 
-public class LongestCommonSubString {
+public class LongestCommonSubStringLength {
+	
+	/********************One way********************************************/
 
 	public int lcSubString(String str1, String str2) {
 		int m = str1.length();
@@ -47,7 +49,7 @@ public class LongestCommonSubString {
 		String str1 = "OldSite:GeeksforGeeks.org";
 		String str2 = "NewSite:GeeksQuiz.com";
 
-		LongestCommonSubString lcss = new LongestCommonSubString();
+		LongestCommonSubStringLength lcss = new LongestCommonSubStringLength();
 		int val1 = lcss.lcSubString(str1.toLowerCase(), str2.toLowerCase());
 		System.out.println("val1=" + val1);
 

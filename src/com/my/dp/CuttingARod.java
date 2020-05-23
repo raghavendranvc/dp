@@ -1,6 +1,9 @@
 package com.my.dp;
 
 public class CuttingARod {
+	
+	/********************One way********************************************/
+	
 
 	public int maxValueByCutting(int[] lengths, int[] values, int start, int end) {
 
@@ -32,6 +35,8 @@ public class CuttingARod {
 		}
 		return currentMax;
 	}
+	
+	/********************One way********************************************/
 
 	public int maxValueSimpleRecu(int[] values, int size) {
 		if (size <= 0) {
@@ -48,6 +53,8 @@ public class CuttingARod {
 		}
 		return maxValue;
 	}
+	
+	/********************Iter way********************************************/
 
 	public int maxValueIter(int[] values, int size) {
 		int[] tables = new int[size + 1];
@@ -105,20 +112,6 @@ public class CuttingARod {
 
 		int val3 = cr.maxValueIter(values, end);
 		System.out.println("val3=" + val3);
-
-	}
-
-	int getMaxProfit(int[] rod, int length) {
-		if (length <= 0) {
-			return 0;
-		}
-
-		int profit = Integer.MIN_VALUE;
-		for (int i = 0; i < length; i++) {
-			profit = Math.max(profit, rod[i] + getMaxProfit(rod, length - (i + 1)));
-		}
-
-		return profit;
 
 	}
 

@@ -2,6 +2,8 @@ package com.my.dp;
 
 public class DiceThrowNumberOfWays {
 	
+	/********************One way********************************************/
+	
 	public int getNumberOfWaysForSum(int faces,int dices,int sum){
 		
 		if(dices <1 && sum >0){

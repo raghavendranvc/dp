@@ -43,6 +43,12 @@ public class BoxStacking {
 		Box[] r = new Box[tmpHeight];
 		
 		/*
+		 * For each box, we will add 3 choices
+		 *  A[i].h as height (it doesn't matter the other two)
+		 *  A[i].d as height (we will use the maximum one as depth from the rest 2 (ht,wdith)
+		 * 	A[i].w as height (here too. We will use the maximum one as depth for the rest 2(ht, dep)
+		 */
+		/*
 		 * Depth >= Width
 		 */
 		for(int i=0,k=0;i<numberOfBoxes;i++){
@@ -52,20 +58,21 @@ public class BoxStacking {
 		}
 		
 		BoxComparator bc = new BoxComparator();
-		Arrays.sort(r, bc);
+		Arrays.sort(r, bc); 
+		//We now sort based on base area. We want to have the one with max are as bottom
 		printBox(r);
 		
 		
 		int[] maxHeight = new int[tmpHeight];
 		
 		for(int i=0;i<tmpHeight;i++){
-			maxHeight[i] = r[i].h;
+			maxHeight[i] = r[i].h; // is initialized to the maximum of all the box heights
 		}
 		
-		for(int i=1;i<tmpHeight;i++){
+		for(int i=1;i<tmpHeight;i++){ //LCS like algorithm
 			for(int j=0;j<i;j++){
-				System.out.print(i+"="+r[i]+" j="+r[j]);
-				if(r[i].d < r[j].d  &&  r[i].w < r[j].w){  // If i has less d and w compared with j
+				System.out.print(i+"="+r[i]+" j="+r[j]);   // "i" is going to be higher than "j"
+				if(r[i].d < r[j].d  &&  r[i].w < r[j].w){  // If "i" has less d and w compared with "j"
 					maxHeight[i] = Math.max(maxHeight[i], maxHeight[j]+r[i].h);
 					System.out.print("New maxHeight["+i+"]="+maxHeight[i]);
 				}

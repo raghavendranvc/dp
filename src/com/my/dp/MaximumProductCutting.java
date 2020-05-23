@@ -3,6 +3,7 @@ package com.my.dp;
 
 public class MaximumProductCutting {
 	
+	/********************One way********************************************/
 	
 	public int getMaxProductCutVal(int l){
 		
@@ -24,6 +25,8 @@ public class MaximumProductCutting {
 //		System.out.println(l+" --Out="+maxProd);
 		return maxProd;
 	}
+	
+	/********************Iter way********************************************/
 	
 	public int getMaxProductCutValIter(int l){
 		int[] table = new int[l+1];

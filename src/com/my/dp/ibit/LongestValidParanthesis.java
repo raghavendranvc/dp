@@ -3,6 +3,9 @@ package com.my.dp.ibit;
 import java.util.Stack;
 
 public class LongestValidParanthesis {
+	
+	/************************One way***********************************/
+	
 	//TODO
 	public int longestValidParenthesesStack(String A) {
 		if (A == null || A.length() == 0) {
@@ -20,6 +23,7 @@ public class LongestValidParanthesis {
 				stack.push(i);
 			} else {
 				stack.pop();
+				//We don't bother about the last popped element
 				if (stack.isEmpty()) {
 					stack.push(i); // this will be our new base index for the next part of the string
 				} else {
@@ -31,6 +35,8 @@ public class LongestValidParanthesis {
 
 		return maxValid;
 	}
+	
+	/************************One way***********************************/
 
 	//TODO check this logic again
 	public int longestValidParentheses(String A) {

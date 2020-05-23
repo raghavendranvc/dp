@@ -6,12 +6,14 @@ public class MatrixMultiplicationOrder {
 	 * Eg : (order,1,4) for order (10,30,20,20,40) k=1 to 3 // closed parenthesis
 	 * moves from position 1 to 4
 	 * 
-	 * 10*30*5*60 A = 20*30, B = 30*5, C =5*60
+	 * 10*30*5*60 			A = 20*30, B = 30*5, C =5*60
 	 * 
 	 * (AB)C = (10×30×5) + (10×5×60) = 1500 + 3000 = 4500 operations A(BC) =
 	 * (30×5×60) + (10×30×60) = 9000 + 18000 = 27000 operations.
 	 * 
 	 */
+	
+	/********************One way********************************************/
 
 	public int getMinMultiplications(int[] order, int i, int j) {
 
@@ -36,6 +38,8 @@ public class MatrixMultiplicationOrder {
 
 		return min;
 	}
+	
+	/********************iter way********************************************/
 
 	public int getMatrixMulIter(int[] p, int n) {
 
@@ -50,7 +54,7 @@ public class MatrixMultiplicationOrder {
 			table[i][i] = 0;
 		}
 
-		for (int chainLength = 2; chainLength < n; chainLength++) {
+		for (int chainLength = 2; chainLength < n; chainLength++) {//TODO important
 
 			System.out.println("chainLength=" + chainLength);
 
@@ -69,9 +73,6 @@ public class MatrixMultiplicationOrder {
 					int val = table[i][k] + p[i - 1] * p[k] * p[j] + table[k + 1][j];
 
 					table[i][j] = Math.min(table[i][j], val);
-					if (val < table[i][j]) {
-						table[i][j] = val;
-					}
 					System.out.println("   [" + i + "][" + j + "]=" + table[i][j]);
 				}
 			}
@@ -82,35 +83,6 @@ public class MatrixMultiplicationOrder {
 
 	}
 
-	/*
-	 * Not correct. Needs to be enhanced
-	 * 
-	 * (AB)C or A(BC) = 2 ways (AB)CD or A(BC)D or AB(CD) = 3 ways (AB)CDE or
-	 * A(BC)DE or AB(CD)E or ABC(DE) = 4 ways
-	 */
-
-	public int getMinMultiplications1(int[] order, int i, int j) {
-
-		if (i == j || i < j) {
-			return 0;
-		}
-
-		int min = Integer.MAX_VALUE;
-
-		/*
-		 * if(i<j){ return min; }
-		 */
-		for (int k = i; k <= j; k++) {
-			int count = getMinMultiplications(order, i, k - 2) + (order[k - 1] * order[k])
-					+ getMinMultiplications(order, k + 1, j);
-
-			if (count < min) {
-				min = count;
-			}
-
-		}
-		return min;
-	}
 
 	/**
 	 * @param args

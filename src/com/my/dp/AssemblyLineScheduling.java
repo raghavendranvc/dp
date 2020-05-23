@@ -2,6 +2,14 @@ package com.my.dp;
 
 public class AssemblyLineScheduling {
 	
+	/*
+	 * Only 2 assembly lines
+	 * 
+	 * a => assembly cost at station a[0][i] of assembly line 0
+	 * t => transfer cost at station t[0][i] of assembly line 0
+	 * e => entry cost at assembly line
+	 * x => exit cost at assembly line
+	 */
 	public int getMinTimeForCar(int[][] a,int[][] t,int[] e,int[] x){
 		
 		int numberOfStations = a[0].length;

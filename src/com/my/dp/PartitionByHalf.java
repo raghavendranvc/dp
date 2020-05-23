@@ -1,7 +1,5 @@
 package com.my.dp;
 
-import java.util.Arrays;
-
 import com.my.common.UtilityClass;
 
 public class PartitionByHalf {
@@ -29,7 +27,7 @@ public class PartitionByHalf {
 		
 		if(targetSum == 0){
 			return true;
-		} else if(targetSum < 0){
+		} else if(targetSum < 0){ //assumption here is we only have positive numbers
 			return false;
 		} else if(targetSum > 0 && index == a.length){
 			return false;
@@ -55,66 +53,6 @@ public class PartitionByHalf {
 		
 	}
 	
-	/*
-	 * Not implemented. Needs to improvde
-	 */
-	
-	public boolean partitionIter(int[] a){
-		int size = a.length;
-		int[][] sumTable = new int[size+1][size];
-		
-		/*
-		 * sumTable[0] contains cumulative sums
- 		 */
-		sumTable[0][0] = a[0];
-		for(int i=1;i<size;i++){
-			sumTable[0][i] = sumTable[0][i-1] + a[i];
-		}
-		
-		/*
-		 * Check whether sum is even. If add return false
-		 */
-		if(sumTable[0][size-1]%2 !=0){
-			return false;
-		}
-		
-		/*
-		 * Get the target value
-		 */
-		int targetSum = sumTable[0][size-1]/2;
-		
-		/*
-		 * Search for the targetSum in sumTable[0]
-		 */
-		for(int i=0;i<size;i++){
-			Arrays.binarySearch(sumTable[0], targetSum);
-		}
-		
-		boolean result = false;
-		
-		/*
-		 * Now calculate all possible sums
-		 */
-		
-		for(int i=1;i<size+1;i++){
-			for(int j=0;j<size;j++){
-				if(j > i+1){
-					sumTable[i][j] = sumTable[0][j]-a[i-1];
-				} else {
-					sumTable[i][j] = sumTable[0][j];
-				}
-				if(sumTable[i][j] == targetSum){
-					result = true;
-				}
-				
-			}
-		}
-		
-		UtilityClass.printArray(sumTable);
-		
-		return result;
-	}
-
 	/**
 	 * @param args
 	 */

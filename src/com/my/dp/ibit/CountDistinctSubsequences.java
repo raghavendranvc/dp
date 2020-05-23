@@ -20,14 +20,16 @@ public class CountDistinctSubsequences {
 		Arrays.fill(last, -1);
 
 		for (int i = 1; i <= n; i++) {
-			sol[i] = 2 * sol[i - 1];
+			sol[i] = 2 * sol[i - 1]; //Every new character increases the existing subset by 2
 
-			int lastOccuranceIndex = last[s.charAt(i-1)];
+			char ch = s.charAt(i-1);
+			
+			int lastOccuranceIndex = last[ch];
 
-			if (lastOccuranceIndex == -1) {
-				sol[i] = sol[i] - sol[lastOccuranceIndex];
+			if (lastOccuranceIndex != -1) {
+				sol[i] = sol[i] - sol[lastOccuranceIndex]; 
 			}
-			last[s.charAt(i-1)] = i-1;
+			last[ch] = i-1;
 
 		}
 

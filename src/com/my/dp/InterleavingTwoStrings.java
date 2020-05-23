@@ -1,6 +1,8 @@
 package com.my.dp;
 
 public class InterleavingTwoStrings {
+	
+	/********************One way********************************************/
 
 	public boolean isInterleaved(String a, String b, String c) {
 		if (a.length() + b.length() != c.length()) {
@@ -37,6 +39,8 @@ public class InterleavingTwoStrings {
 
 	}
 
+	/********************One way********************************************/
+	
 	public boolean isInterleavedIter(String a, String b, String c) {
 		int m = a.length();
 		int n = b.length();
@@ -109,6 +113,8 @@ public class InterleavingTwoStrings {
 
 	}
 
+	/********************One way********************************************/
+	
 	public boolean isInterleavedPractice(String a, String b, String c) {
 
 		int m = a.length();

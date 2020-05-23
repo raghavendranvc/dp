@@ -2,7 +2,9 @@ package com.my.dp.ibit;
 
 import com.my.common.UtilityClass;
 
-public class PalindromePartitioning {
+public class MinCustsNeededForPalindromePartitioning {
+	
+	/***************************One sol*****************************************/
 
 	public int minCutsForPalindromePartitioning(String str, int i, int j) {
 
@@ -10,7 +12,7 @@ public class PalindromePartitioning {
 			return 0;
 		}
 
-		if (isPalindromeIter(str, i, j)) {
+		if (isPalindromeRecur(str, i, j)) {
 			return 0;
 		}
 
@@ -23,8 +25,8 @@ public class PalindromePartitioning {
 		return min;
 
 	}
-
-	private boolean isPalindromeIter(String str, int i, int j) {
+	
+	private boolean isPalindromeRecur(String str, int i, int j) {
 		if (i == j) {
 			return true;
 		}
@@ -35,7 +37,7 @@ public class PalindromePartitioning {
 
 		return ((str.charAt(i) == str.charAt(j)) && isPalindrome(str, i + 1, j - 1));
 	}
-
+	
 	private boolean isPalindrome(String str, int i, int j) {
 		int midSize = (j - i + 1) / 2;
 		for (int k = 0; k < midSize; k++) {
@@ -45,8 +47,11 @@ public class PalindromePartitioning {
 		}
 		return true;
 	}
+	
+	
+	/***************************One sol*****************************************/
 
-	public int minCutsForPalindromePartition(String str) {
+	public int minCutsForPalindromePartition(String str) {//TODO remember 2 tables
 		int size = str.length();
 
 		int[][] table = new int[size][size];
@@ -76,7 +81,7 @@ public class PalindromePartitioning {
 							& isPalTable[startIndexForEachSize + 1][endIndexForEachSize - 1];
 				}
 
-				if (isPalTable[startIndexForEachSize][endIndexForEachSize]) {
+				if (!isPalTable[startIndexForEachSize][endIndexForEachSize]) {
 					table[startIndexForEachSize][endIndexForEachSize] = 0;
 				} else {
 
@@ -111,7 +116,7 @@ public class PalindromePartitioning {
 	 */
 	public static void main(String[] args) {
 
-		PalindromePartitioning pp = new PalindromePartitioning();
+		MinCustsNeededForPalindromePartitioning pp = new MinCustsNeededForPalindromePartitioning();
 
 		String str1 = "ababbbabbababa";
 		// System.out.println("a\tb\ta\tb\tb\tb\ta\tb\tb\ta\tb\ta\tb\ta");
@@ -131,6 +136,8 @@ public class PalindromePartitioning {
 	 * between 1 and n (n-1) partitions
 	 * 
 	 */
+	
+	/***************************One sol*****************************************/
 
 	public int minCut(String A) {
 		if (A == null || A.isEmpty()) {

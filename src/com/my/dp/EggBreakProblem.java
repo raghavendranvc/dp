@@ -2,6 +2,8 @@ package com.my.dp;
 
 public class EggBreakProblem {
 	
+	/********************One way********************************************/
+	
 	public int eggBreak(int floors,int eggs){
 		
 //		System.out.println("Floors="+floors+" eggs="+eggs);

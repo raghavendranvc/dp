@@ -15,7 +15,7 @@ public class MinSumPathMatrix {
 		for (int i = m - 1; i >= 0; i--) {
 			for (int j = n - 1; j >= 0; j--) {
 				if (i == m - 1 && j == n - 1) {
-					minSum[i][j] = A[m - 1][n - 1];
+					minSum[i][j] = A[i][j];
 					continue;
 				}
 

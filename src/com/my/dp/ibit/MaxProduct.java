@@ -21,29 +21,6 @@ public class MaxProduct {
 
 		return maxProduct;
 	}
-
-	public int maxProductOOMNotWorking(final int[] A) {
-		if (A == null || A.length < 1) {
-			return 0;
-		}
-		int n = A.length;
-		int[][] maxP = new int[n][n];
-
-		int maxProduct = Integer.MIN_VALUE;
-
-		for (int i = 0; i < n; i++) {
-			for (int j = i; j < n; j++) {
-				if (i == j) {
-					maxP[i][i] = A[i];
-				} else {
-					maxP[i][j] = maxP[i][j - 1] * A[j];
-				}
-				maxProduct = Math.max(maxProduct, maxP[i][j]);
-			}
-		}
-
-		return maxProduct;
-	}
 	
 	/*
 	 * Array contains both negative and positive numbers
@@ -59,6 +36,7 @@ public class MaxProduct {
 		int[] pProduct = new int[n];
 		int[] nProduct = new int[n];
 		int[] mProduct = new int[n];
+		//We need to store both negative and positives in 2 arrays and calculate dp
 
 		pProduct[0] = nProduct[0] = mProduct[0] = A[0];
 

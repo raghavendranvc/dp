@@ -6,6 +6,8 @@ import java.util.Arrays;
 import com.my.common.UtilityClass;
 
 public class MinimumJumps {
+	
+	/***************************once sol *************************/
 
 	public int jumpReverse(ArrayList<Integer> A) {
 
@@ -45,6 +47,8 @@ public class MinimumJumps {
 		return minWays[0];
 
 	}
+	
+	/***************************once sol *************************/
 
 	public int jump(ArrayList<Integer> A) {
 
@@ -91,6 +95,8 @@ public class MinimumJumps {
 		System.out.println("Result=" + minimumJumps.jump(A));
 
 	}
+	
+	/***************************once sol *************************/
 
 	public int jumpCopied(ArrayList<Integer> A) {
 		if (A.size() == 1) {
@@ -125,6 +131,8 @@ public class MinimumJumps {
 		}
 		return jumps;
 	}
+	
+	/***************************once sol *************************/
 
 	/*
 	 * 
@@ -153,6 +161,9 @@ public class MinimumJumps {
 		}
 		return jumps;
 	}
+	
+	
+	/***************************once sol *************************/
 
 	public int jump2(ArrayList<Integer> a) {
 		// int[] count= new int[a.size()];
@@ -191,6 +202,10 @@ public class MinimumJumps {
 		return steps;
 	}
 
+	
+	/***************************once sol *************************/
+	
+	
 	public int getMinJumpsNeeded(int[] a, int s, int d) {
 		if (s == d) {
 			System.out.println("Dest reached*****");
@@ -215,6 +230,8 @@ public class MinimumJumps {
 		System.out.println("=====" + s + "," + d + "=" + minVal);
 		return minVal;
 	}
+	
+	/***************************once sol *************************/
 
 	public int getMinJumpsIter(int[] a) {
 		int numberOfPos = a.length;

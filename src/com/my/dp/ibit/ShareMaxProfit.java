@@ -7,6 +7,8 @@ public class ShareMaxProfit {
 	/**
 	 * Single Share any number of times
 	 */
+	
+	//------------------------One way----------------------------------------
 
 	public int maxProfit(final List<Integer> A) {
 
@@ -46,6 +48,39 @@ public class ShareMaxProfit {
 
 		return profit;
 	}
+	
+	//------------------------Recur way----------------------------------------
+	
+	
+	/*
+	 * Anu number of transactions, one share at a time
+	 */
+	public int maxProfitRecur(final int[] A) {
+		if (A == null || A.length < 2) {
+			return 0;
+		}
+		return maxProfit(A, 0, A.length - 1);
+	}
+
+	public int maxProfit(final int[] A, int start, int end) {
+		if (end <= start) {
+			return 0;
+		}
+
+		int profit = 0;
+		for (int i = start; i < end - 1; i++) {
+			for (int j = i + 1; j < end; j++) {
+				if (A[j] > A[i]) {
+					//TODO recheck this again
+					int currentProfit = A[j] - A[i] + maxProfit(A, start, i - 1) + maxProfit(A, i + 1, end);
+					profit = Math.max(profit, currentProfit);
+				}
+			}
+		}
+		return profit;
+	}
+	
+	//------------------------Different 1 share 2 times----------------------------------------
 
 	/*
 	 * Single share only 2 times
@@ -143,6 +178,8 @@ public class ShareMaxProfit {
 		return max;
 
 	}
+	
+	//------------------------Single transaction----------------------------------------
 
 	/***
 	 * One single transaction
@@ -174,31 +211,6 @@ public class ShareMaxProfit {
 	
 	
 	
-	/*
-	 * Anu number of transactions, one share at a time
-	 */
-	public int maxProfitRecur(final int[] A) {
-		if (A == null || A.length < 2) {
-			return 0;
-		}
-		return maxProfit(A, 0, A.length - 1);
-	}
-
-	public int maxProfit(final int[] A, int start, int end) {
-		if (end <= start) {
-			return 0;
-		}
-
-		int profit = 0;
-		for (int i = start; i < end - 1; i++) {
-			for (int j = i + 1; j < end; j++) {
-				if (A[j] > A[i]) {
-					int currentProfit = A[j] - A[i] + maxProfit(A, start, i - 1) + maxProfit(A, i + 1, end);
-					profit = Math.max(profit, currentProfit);
-				}
-			}
-		}
-		return profit;
-	}
+	
 
 }

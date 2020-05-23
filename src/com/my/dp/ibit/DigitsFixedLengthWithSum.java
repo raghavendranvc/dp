@@ -4,6 +4,12 @@ import java.util.Arrays;
 
 public class DigitsFixedLengthWithSum {
 	
+	/*
+	 * A is number of digits
+	 * B is sum of digits
+	 * 
+	 */
+	
 	int[][] lookupTable = null;
 	public int solve(int A, int B) {
 		lookupTable = new int[A+1][B+1];
@@ -35,7 +41,7 @@ public class DigitsFixedLengthWithSum {
 	public int solveRecur(int A, int B) {
 		
 		if(A ==0 && B == 0) {
-			return 1;
+			return 1; //1 for target sum 0
 		}
 		
 		if(A ==0 ) {
@@ -81,28 +87,34 @@ public class DigitsFixedLengthWithSum {
 	
 	public int solveIter(int A, int B) {
 		
-        int[][] l = new int[A+1][B+1];
+        int[][] sol = new int[A+1][B+1];
         
         /*
          * For a digit of length 1
          * 
          */
+        //For single digits
         for(int j = 1; j <= 9 && j <= B; j++){
-            l[1][j] = 1;
+            sol[1][j] = 1;
         }
         
-        for(int i = 2; i <= A; i++){
-            for(int j = 1; j <= B; j++){
-                int x = j-10;
-                long val = (long)l[i][j-1] + (long)l[i-1][j];
-                if(x > 0)
-                    val -= (long)l[i-1][x];
+        //For each number of length i
+        //TODO
+        for(int length = 2; length <= A; length++){
+            for(int j = 1; j <= B; j++){ //For each sum j
+            	
+                long val = (long)sol[length][j-1] + (long)sol[length-1][j];
+                
+                if(j-10 > 0)
+                    val -= (long)sol[length-1][j-10];
+                
                 if(val < 0)
                     val += 1000000007;
-                l[i][j] = (int)(val%(long)1000000007);
+                
+                sol[length][j] = (int)(val%(long)1000000007);
             }
         }
-        return l[A][B];
+        return sol[A][B];
     }
 	
 	

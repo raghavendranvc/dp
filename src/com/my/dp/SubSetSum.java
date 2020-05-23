@@ -58,10 +58,15 @@ public class SubSetSum {
 				 */
 				table[i][j] = table[i][j-1];
 				/*
-				 * If current sum is greater than or equal to a[j-1]
-				 * Then check if by including and by excluding
+				 * If current sum "i" is greater than or equal to a[j-1]
+				 * Then check if by including and by excluding it
+				 * Excluding is simply table[i][j]
+				 * Including means from the previous column check by adding a[j-1] you can reach
+				 * [i] meaning table[i-a[j-1]][j-1]
 				 * 
-				 * If that sum
+				 * from the previous column see if by adding a[j-1] 
+				 * we can reach i
+				 * 
 				 */
 				if(i >= a[j-1]){
 					table[i][j] = table[i][j] || table[i-a[j-1]][j-1];

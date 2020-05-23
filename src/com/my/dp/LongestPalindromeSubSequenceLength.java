@@ -2,7 +2,9 @@ package com.my.dp;
 
 import com.my.common.UtilityClass;
 
-public class LongestPalindromeSubSequence {
+public class LongestPalindromeSubSequenceLength {
+	
+	/********************One way********************************************/
 	
 	public int lpsIter(String str){
 		int size = str.length();
@@ -114,6 +116,7 @@ public class LongestPalindromeSubSequence {
 		return table[0][size-1];
 	}
 	
+	/********************Recur way********************************************/
 	
 	public int lps(String str,int i,int j){
 		
@@ -150,7 +153,7 @@ public class LongestPalindromeSubSequence {
 	
 	public static void main(String[] args) {
 		
-		LongestPalindromeSubSequence lps = new LongestPalindromeSubSequence();
+		LongestPalindromeSubSequenceLength lps = new LongestPalindromeSubSequenceLength();
 //		String str1 = "ABCDEFGHABCDEFGHHGFEDCBA";
 //		String str1 = "GEEKSFORGEEKS";
 //		String str1 = "BBABCBCAB";

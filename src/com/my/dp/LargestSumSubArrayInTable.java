@@ -7,6 +7,7 @@ public class LargestSumSubArrayInTable {
 		int top;
 		int right;
 		int bottom;
+		int max;
 		
 		public String toString(){
 			return "left="+left +"  top="+top+"  right="+right+"  bottom="+bottom;
@@ -22,32 +23,32 @@ public class LargestSumSubArrayInTable {
 		}
 	}
 	
-	public void getMaxSumSubArray(int[] a,SubArray sb){
-		int maxSum = a[0];
-		int consecSum = a[0];
+	SubArray getMaxSumSubArray(int[] a){
+		
+		SubArray sb = new SubArray();
 		sb.left = 0;
 		sb.right = 0;
-		sb.val = maxSum;
+		sb.val = a[0];
+		
+		int newStart = 0;
+		int consecSum = a[0];
 		
 		for(int i=1;i<a.length;i++){
 			
-			int newSum = consecSum+a[i];
-			if(a[i] > newSum){
-				sb.left = i;
-				sb.right = i;
-				sb.val = maxSum;
-				consecSum = a[i];
-			} else if(consecSum < newSum){
+			if(consecSum + a[i] > consecSum) {
 				consecSum = consecSum + a[i];
+			} else {
+				consecSum = a[i];
+				newStart = i;
 			}
 			
-			if(consecSum > maxSum){
-				maxSum = consecSum;
+			if(consecSum > sb.val ) {
+				sb.left = newStart;
 				sb.right = i;
-				sb.val = maxSum;
+				sb.val = consecSum;
 			}
 		}
-		
+		return sb;
 		
 	}
 	
@@ -55,20 +56,43 @@ public class LargestSumSubArrayInTable {
 		int rows = m.length;
 		int columns = m[0].length;
 		
-		int max = m[0][0];
-		
 		rect.left = 0;
 		rect.top = 0;
 		rect.right = 0;
 		rect.bottom = 0;
+		rect.max = m[0][0];
 			
-		
+		/*
+		 * We are evaluating like  
+		 * [0,0]
+		 * [1,0]
+		 * [2,0]
+		 * [3,0]
+		 * 
+		 * and then
+		 * 
+		 * [0,1]
+		 * [1,1]
+		 * [2,1]
+		 * [3,1]
+		 * 
+		 * ...
+		 * 
+		 * [0,2]
+		 * [1,2]
+		 * [2,2]
+		 * [3,2]
+		 *  
+		 * 
+		 */
 		for(int left=0;left<columns;left++){
 			
 			int[] rowArray = new int[rows];
 			
-			for(int right=left;right<columns;right++){
-				
+			for(int right=left;right<columns;right++){ 
+				//For left = 0 (0,n), (1,n), (2,n) ....(n,n)
+				//For left = 1 (1,n), (2,n), (3,n) ....(n,n)
+ 				
 				
 				/*
 				 * rowArray 
@@ -81,11 +105,10 @@ public class LargestSumSubArrayInTable {
 					rowArray[i] += m[i][right]; 
 				}
 				
-				SubArray sa = new SubArray();
-				getMaxSumSubArray(rowArray,sa);
+				SubArray sa = getMaxSumSubArray(rowArray);
 				
-				if(max < sa.val){
-					max = sa.val;
+				if(rect.max < sa.val){
+					rect.max = sa.val;
 					rect.left = left;    //In rowArray top to bottom row values are stored from left to right 
 					rect.top = sa.left;  	//sa.left has the top row  
 					rect.right = right;  

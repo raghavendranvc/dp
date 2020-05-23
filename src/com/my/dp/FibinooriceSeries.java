@@ -2,6 +2,7 @@ package com.my.dp;
 
 public class FibinooriceSeries {
 	
+	/********************One way********************************************/
 	
 	public int fibinocciRecur(int i){
 		if(i==0){
@@ -12,6 +13,8 @@ public class FibinooriceSeries {
 			return (fibinocciRecur(i-2)+fibinocciRecur(i-1));
 		}
 	}
+	
+	/********************One way********************************************/
 	
 	public int fibinocciTabulation(int i){
 		int[] table = new int[i+2];
@@ -24,6 +27,7 @@ public class FibinooriceSeries {
 		return table[i];
 	}
 	
+	/********************One way********************************************/
 	
 	public int fibinocciSimpleVariables(int i){
 		if(i==0){
@@ -43,6 +47,26 @@ public class FibinooriceSeries {
 		return b;
 	}
 
+	/********************One way********************************************/
+	
+	public int fibinocciSimpleVar(int i){
+		if(i==0){
+			return 0;
+		}else if(i==1){
+			return 1;
+		}
+		           //         a b
+		int a = 0; // 0 1 1 2 3 5 8
+		int b = 1;
+		
+		for(int k=2;k<=i;k++){
+			b = a + b;
+			a = b - a;
+		}
+		return b;
+	}
+
+	
 	/**
 	 * @param args
 	 */

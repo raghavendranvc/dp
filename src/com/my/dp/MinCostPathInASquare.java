@@ -3,6 +3,9 @@ package com.my.dp;
 public class MinCostPathInASquare {
 	
 	// From Destination
+	
+	/********************One way********************************************/
+	
 	public int minCostFromDestinationRecur(int[][] cost,int i,int j){
 		
 		if(i==0 && j==0){
@@ -15,6 +18,8 @@ public class MinCostPathInASquare {
 		return (cost[i][j]+ Math.min(minCostFromDestinationRecur(cost,i-1,j-1),Math.min(minCostFromDestinationRecur(cost,i-1,j),minCostFromDestinationRecur(cost,i,j-1))));
 		
 	}
+	
+	/********************One way********************************************/
 	
 	// From Source
 	public int minCostFromSourceRecur(int[][] cost,int m,int n,int i,int j){
@@ -30,6 +35,8 @@ public class MinCostPathInASquare {
 		
 		return (cost[i][j]+ Math.min(minCostFromSourceRecur(cost,m,n,i+1,j+1),Math.min(minCostFromSourceRecur(cost,m,n,i+1,j),minCostFromSourceRecur(cost,m,n,i,j+1))));
 	}
+	
+	/********************One way********************************************/
 	
 	public int minCostFromDestinationIter(int[][] cost,int dx,int dy){
 		

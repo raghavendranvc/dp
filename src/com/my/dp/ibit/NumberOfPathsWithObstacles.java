@@ -22,7 +22,7 @@ public class NumberOfPathsWithObstacles {
 		 * 
 		 * m---------------t
 		 */
-		path[m - 1][n - 1] = 1;
+		//path[m - 1][n - 1] = 1; //Base condition
 
 		for (int i = m - 1; i >= 0; i--) {
 			for (int j = n - 1; j >= 0; j--) {

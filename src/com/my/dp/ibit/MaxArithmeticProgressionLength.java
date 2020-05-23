@@ -10,7 +10,7 @@ public class MaxArithmeticProgressionLength {
 	//TODO the mapping creation and updation needs to be carefully practiced
 
 	public int solve(final List<Integer> A) {
-		if (A == null) {
+		if (A == null) { 
 			return 0;
 		}
 
@@ -137,19 +137,6 @@ public class MaxArithmeticProgressionLength {
 		
 		return false;
 		
-	}
-	
-	/*
-	 * This method needs to be implemented.
-	 * http://www.geeksforgeeks.org/length-of-the-longest-arithmatic-progression-in-a-sorted-array/
-	 */
-	public int getLengthOfLongestAP(int[] a){
-		int n = a.length-1;
-		if(n<3){
-			return n;
-		}
-		
-		return 2;
 	}
 
 	/**

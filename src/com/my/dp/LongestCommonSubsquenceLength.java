@@ -1,21 +1,9 @@
 package com.my.dp;
 
-public class LongestCommonSubsquence {
-
-	public String getLongestCommonSubSequenceStringRecur(char[] a, char[] b, int i, int j) {
-		if (i < 0 || j < 0) {
-			return "";
-		}
-
-		if (a[i] == b[j]) {
-			return getLongestCommonSubSequenceStringRecur(a, b, i - 1, j - 1) + a[i];
-		} else {
-			String str1 = getLongestCommonSubSequenceStringRecur(a, b, i - 1, j);
-			String str2 = getLongestCommonSubSequenceStringRecur(a, b, i, j - 1);
-			return ((str1.length() >= str2.length()) ? str1 : str2);
-		}
-
-	}
+public class LongestCommonSubsquenceLength {
+	
+	
+	/********************One way********************************************/
 
 	public int getLongestCommonSubSequenceRecur(char[] a, char[] b, int i, int j) {
 		if (i < 0 || j < 0) {
@@ -75,18 +63,13 @@ public class LongestCommonSubsquence {
 		 * String str1 = "BAABAABA"; String str2 = "BBBAABAAAA";
 		 */
 
-		LongestCommonSubsquence lcs = new LongestCommonSubsquence();
+		LongestCommonSubsquenceLength lcs = new LongestCommonSubsquenceLength();
 
 		int lcsLength1 = lcs.getLongestCommonSubSequenceRecur(str1.toCharArray(), str2.toCharArray(), str1.length() - 1,
 				str2.length() - 1);
 		int lcsLength2 = lcs.getLongestCommonSubSequenceIter(str1.toCharArray(), str2.toCharArray());
 
 		System.out.println("LCSLength1=" + lcsLength1 + "   LCSLength2=" + lcsLength2);
-		// TODO Auto-generated method stub
-
-		String lcsString = lcs.getLongestCommonSubSequenceStringRecur(str1.toCharArray(), str2.toCharArray(),
-				str1.length() - 1, str2.length() - 1);
-		System.out.println("LCSString=" + lcsString);
 
 	}
 
@@ -107,7 +90,7 @@ public class LongestCommonSubsquence {
 					sol[i][j] = sol[i - 1][j - 1] + 1;
 				} else {
 					// 
-					sol[i][j] = Math.max(sol[i - 1][j], sol[i][j - 1]); //TODO
+					sol[i][j] = Math.max(sol[i - 1][j], sol[i][j - 1]); 
 				}
 			}
 		}

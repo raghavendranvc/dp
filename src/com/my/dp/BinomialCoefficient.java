@@ -1,6 +1,8 @@
 package com.my.dp;
 
 public class BinomialCoefficient {
+	
+	//-----------------------Recur-----------------------------------------
 
 	// (n,0)/(n,n) = 1
 	// (n,r) = (n-1,r-1) + (n-1,r)
@@ -10,7 +12,20 @@ public class BinomialCoefficient {
 		}
 		return BinomialCoeffiecntRecur(n - 1, r - 1) + BinomialCoeffiecntRecur(n - 1, r);
 	}
+	
+	/**************another recur *************************/
+	
+	static int binomialCoeff(int n, int k) {
 
+		// Base Cases
+		if (k == 0 || k == n)
+			return 1;
+
+		// Recur
+		return binomialCoeff(n - 1, k - 1) + binomialCoeff(n - 1, k);
+	}
+
+	//-----------------------Iter1-----------------------------------------
 	public int BinomialCoefficentIter(int n, int r) {
 		int C[][] = new int[n + 1][r + 1];
 		for (int i = 0; i <= n; i++) {
@@ -50,17 +65,7 @@ public class BinomialCoefficient {
 		System.out.println("val2=" + val2);
 	}
 
-	/**************another recur *************************/
 	
-	static int binomialCoeff(int n, int k) {
-
-		// Base Cases
-		if (k == 0 || k == n)
-			return 1;
-
-		// Recur
-		return binomialCoeff(n - 1, k - 1) + binomialCoeff(n - 1, k);
-	}
 	
 	/**************another opt *************************/
 

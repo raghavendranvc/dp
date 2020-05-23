@@ -2,8 +2,12 @@ package com.my.dp.ibit;
 
 public class KingdomOfWar {
 	
-	//Greedy approach
+	// Greedy approach
 	// Check the question first
+	// Position where resistence can be large
+	// simply find the max strength place(i,j)
+	// start from right-bottom most point
+	
 	public int solve(int[][] A) {
 		if (A == null || A.length == 0) {
 			return 0;

@@ -4,7 +4,9 @@ import java.util.ArrayList;
 
 import com.my.common.UtilityClass;
 
-public class JumpArray {
+public class JumpArrayPossible {
+	
+	/****************************One way*******************************/
 
 	public int canJump(ArrayList<Integer> A) {
 		if (canJump(A, 0)) {
@@ -38,6 +40,8 @@ public class JumpArray {
 		return false;
 
 	}
+	
+	/****************************One Iter*******************************/
 
 	public int canJumpIter(ArrayList<Integer> A) {
 
@@ -74,6 +78,8 @@ public class JumpArray {
 	 * step = min(steps-1, a[i]) 2 1/3(3) 2/1(2) 1/1(1) 0/4
 	 * 
 	 */
+	
+	/****************************One way*******************************/
 
 	public int canJumpPossible(ArrayList<Integer> A) {
 		if (A == null) {
@@ -129,10 +135,12 @@ public class JumpArray {
 				0, 0, 0, 0, 0, 0, 0, 0, 5, 0 };
 		ArrayList<Integer> A = UtilityClass.getList(a);
 
-		JumpArray jumpArray = new JumpArray();
+		JumpArrayPossible jumpArray = new JumpArrayPossible();
 		System.out.println("Result=" + jumpArray.canJumpIter(A));
 
 	}
+	
+	/****************************One way*******************************/
 
 	// TODO remember this approach
 	public int canJumpCopied(ArrayList<Integer> a) {
@@ -148,6 +156,8 @@ public class JumpArray {
 				return 0; // If at any point of time, the steps become less than 0, then there is no
 							// solution
 			}
+			
+			//steps = Math.max(steps, a.get(i)); Easy way
 
 			if (a.get(i) > steps) {
 				steps = a.get(i); // At each step, we go maximum either our earlier steps or the current steps

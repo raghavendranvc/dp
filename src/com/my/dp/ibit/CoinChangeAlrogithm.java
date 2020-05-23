@@ -1,6 +1,8 @@
 package com.my.dp.ibit;
 
 public class CoinChangeAlrogithm {
+	
+	/********************************Iter way****************************/
 
 	public int coinChangeIter(int[] coins,int total) {
 		//Time complexity of this function: O(mn) 
@@ -24,6 +26,7 @@ public class CoinChangeAlrogithm {
 			 */
 			//TODO, important to remember this dp recurrence.
 			//It is similar to recursive solution.
+			// j starts with each coin[i] value
 			for(int j=coins[i];j<=total;j++) {
 				// by excluding coins[i] for each solution what is the numberOfWays
 				solution[j] += solution[j-coins[i]]; 
@@ -32,7 +35,7 @@ public class CoinChangeAlrogithm {
 		return solution[total];
 	}
 	
-	public static void main(String[] args) {
+	public static void main1(String[] args) {
 	
 		int totalValue = 100;
 		int[] denominations = {25,10,5,1};
@@ -43,6 +46,8 @@ public class CoinChangeAlrogithm {
 		System.out.println(makeChange(totalValue, 25));
 		
 	}
+	
+	/********************************Recur way****************************/
 	
 	private static int getNumberOfWaysToRepresentTotalValue(int value,int[] denominations,int currentDenomIndex){
 		
@@ -74,6 +79,8 @@ public class CoinChangeAlrogithm {
 		return ways;
 	}
 	
+	/********************************Recu2 way****************************/
+	
 	public static int makeChange(int value, int denom) {
 		int next_denom = 0;
 		switch (denom) {
@@ -95,6 +102,55 @@ public class CoinChangeAlrogithm {
 			ways += makeChange(value - i * denom, next_denom);
 		}
 		return ways;
+	}
+	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		CoinChangeAlrogithm c = new CoinChangeAlrogithm();
+	    
+	    int arr[] = {1, 2, 3};
+	    int val = 4;
+	    
+	    int ways1 = c.coinChangeRecur(arr, arr.length, val);
+	    System.out.println("ways="+ways1);
+
+	}
+	
+	/********************************recur way****************************/
+	
+	public int coinChangeRecur(int[] coins,int m,int val){
+		
+		/*
+		 * Val is o. So this is a Solution
+		 */
+		if(val==0){
+			return 1;
+		}
+		
+		/*
+		 * val got below '0'. So no solution exists
+		 */
+		
+		if(val<0){
+			return 0;
+		}
+		
+		/*
+		 * All 'm' are considered. But still val > 0
+		 * val is anyway greater than 0 here
+		 */
+		if(m<=0){
+			return 0;
+		}
+		
+		/*
+		 * When m is not considered        : coinChange(coins,m-1,val)
+		 * When m is present at-least once : coinChange(coins,m,val-coins[m])
+		 */
+		
+		return coinChangeRecur(coins,m-1,val)+coinChangeRecur(coins,m,val-coins[m-1]);
 	}
 		
 		

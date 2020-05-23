@@ -4,6 +4,8 @@ import com.my.common.UtilityClass;
 
 public class MaxSumIncreasingSubsequence {
 	
+	/********************One way********************************************/
+	
 	public int maxSumIter(int[] a,int seqLength){
 		int[] table = new int[seqLength];
 		for(int i=0;i<seqLength;i++){
@@ -28,6 +30,8 @@ public class MaxSumIncreasingSubsequence {
 		
 		return max;
 	}
+	
+	/********************Recur way********************************************/
 	
 	public int maxSum(int[] a){
 		int max = Integer.MIN_VALUE;

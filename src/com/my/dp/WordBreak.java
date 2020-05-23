@@ -33,6 +33,8 @@ public class WordBreak {
 //		System.out.println("Check word="+word);
 		return dictionary2.contains(word);
 	}
+	
+	/********************Recur way********************************************/
 
 	public boolean wordBreak(String str) {
 //		System.out.println("Str=="+str);
@@ -51,6 +53,8 @@ public class WordBreak {
 		}
 		return false;
 	}
+	
+	/********************Iter2 way********************************************/
 
 	// TODO check this logic again
 	public boolean wordBreakIter(String str) {
@@ -78,7 +82,8 @@ public class WordBreak {
 			}
 
 			if (i == n) {
-				return true;
+				return table[n];
+				//return true;
 			}
 
 			/*

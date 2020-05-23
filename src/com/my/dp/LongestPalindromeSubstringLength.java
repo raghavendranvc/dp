@@ -1,8 +1,9 @@
 package com.my.dp;
 
 
-public class LongestPalindromeSubstring {
+public class LongestPalindromeSubstringLength {
 
+	/********************One way********************************************/
 	
 	public int getLPalindSS(String str){
 		int size = str.length();
@@ -55,7 +56,7 @@ public class LongestPalindromeSubstring {
 	
 	public static void main(String[] args) {
 		
-		LongestPalindromeSubstring lpss = new LongestPalindromeSubstring();
+		LongestPalindromeSubstringLength lpss = new LongestPalindromeSubstringLength();
 		
 		String str1 = "ababbbabbababa";
 		System.out.println("a\tb\ta\tb\tb\tb\ta\tb\tb\ta\tb\ta\tb\ta");

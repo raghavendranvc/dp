@@ -2,6 +2,7 @@ package com.my.dp;
 
 public class MinInsertionsForPalindrome {
 	
+	/********************One way********************************************/
 	
 	public int getMinInsertionsNeeded(String str){
 		return getMinInsertionsNeeded(str,0,str.length()-1);
@@ -45,15 +46,18 @@ public class MinInsertionsForPalindrome {
 		}
 	}
 	
+	/********************One way********************************************/
+	
 	public int getMinInsertionsNeededIter(String str){
 		int n = str.length();
 		
 		int table[][] = new int[n][n];
 		
-		for(int gap=1;gap<n;gap++){
-			for(int i=0,j=gap;j<n;i++,j++){
+		for(int length=1;length<n;length++){
+			for(int i=0,j=length;j<n;i++,j++){
 				table[i][j] = 
-						(str.charAt(i) == str.charAt(j))? table[i+1][j-1] : 1 + Math.min(table[i][j-1], table[i+1][j]);  
+						(str.charAt(i) == str.charAt(j))? 
+								table[i+1][j-1] : 1 + Math.min(table[i][j-1], table[i+1][j]);  
 			}
 			
 		}
