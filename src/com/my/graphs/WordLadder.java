@@ -68,7 +68,7 @@ public class WordLadder {
 		Set<WordNode> visited = new HashSet<WordNode>();
 		Queue<WordNode> queue = new LinkedList<WordNode>();
 
-		int dist = 0;
+		int dist = 0;//Wrong way of dist calc. Use a temp node structure
 		queue.add(src);
 
 		while (!queue.isEmpty()) {

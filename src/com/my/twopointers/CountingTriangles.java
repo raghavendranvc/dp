@@ -1,9 +1,6 @@
 package com.my.twopointers;
 
-import com.my.common.UtilityClass;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 
 public class CountingTriangles {

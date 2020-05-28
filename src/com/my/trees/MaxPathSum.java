@@ -9,7 +9,8 @@ public class MaxPathSum {
 	}
 
 	int maxVal = Integer.MIN_VALUE;
-
+	
+	//TODO remember this
 	int maxPathSum(TreeNode root) {
 
 		if (root == null) {

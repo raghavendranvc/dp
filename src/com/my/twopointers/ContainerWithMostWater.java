@@ -28,7 +28,7 @@ public class ContainerWithMostWater {
 		for (int start = 0, end = A.size() - 1; start < end;) {
 			maxArea = Math.max(maxArea, Math.min(A.get(start), A.get(end)) * (end - start));
 
-			if (A.get(start) < A.get(end)) {
+			if (A.get(start) < A.get(end)) { // move whichever is lower
 				start++;
 			} else {
 				end--;

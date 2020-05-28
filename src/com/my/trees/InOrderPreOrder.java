@@ -1,6 +1,6 @@
 package com.my.trees;
 
-public class InPreOrder {
+public class InOrderPreOrder {
 
     class TreeNode {
         int val;

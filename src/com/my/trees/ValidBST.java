@@ -11,37 +11,16 @@ public class ValidBST {
         }
     }
 
-    public int isValidBSTWrong(TreeNode A) {
-        if(isValidBSTRecur(A)){
-            return 1;
-        }
-        return 0;
-
-    }
-
-    //This is wrong.//TODO remember this
-    public boolean isValidBSTRecur(TreeNode A) {
-        if(A == null || (A.left==null && A.right==null)){
-            return  true;
-        }
-
-        if((A.left != null && A.val <= A.left.val) ||  (A.right != null && A.val >= A.right.val)){
-            return false;
-        }
-
-        if(!isValidBSTRecur(A.left)){
-            return false;
-        }
-
-        return (isValidBSTRecur(A.right));
-    }
-
+    
+    
     public int isValidBST(TreeNode A) {
         if(isValidBST(A, Integer.MIN_VALUE, Integer.MAX_VALUE)){
             return 1;
         }
         return 0;
     }
+    
+    
 
     public boolean isValidBST(TreeNode A, int minVal, int maxVal){
 
@@ -72,4 +51,34 @@ public class ValidBST {
 
         return isValidBSTReturn(A.right,A.val+1,maxVal);
     }
+    
+    // Not the right answer. Kept here to make sure that this is a wrong answer
+    
+    public int isValidBSTWrong(TreeNode A) {
+        if(isValidBSTRecur(A)){
+            return 1;
+        }
+        return 0;
+
+    }
+
+  //This is wrong.//TODO remember this
+    public boolean isValidBSTRecur(TreeNode A) {
+        if(A == null || (A.left==null && A.right==null)){
+            return  true;
+        }
+
+        if((A.left != null && A.val <= A.left.val) ||  (A.right != null && A.val >= A.right.val)){
+            return false;
+        }
+
+        if(!isValidBSTRecur(A.left)){
+            return false;
+        }
+
+        return (isValidBSTRecur(A.right));
+    }
+
+    
+    
 }

@@ -29,7 +29,7 @@ public class Permuation {
 			System.out.println("New startIndex=" + startIndex + " k=" + k + " A=" + A);
 			swap(A, startIndex, k);
 			permute(A, result, startIndex + 1);
-			swap(A, startIndex, k);
+			swap(A, startIndex, k); //backtrack
 			System.out.println("Backtrack startIndex=" + startIndex + " k=" + k + " A=" + A);
 			// System.out.println("k="+k+" startIndex="+startIndex +" new
 			// tempArray="+tempArray);

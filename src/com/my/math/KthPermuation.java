@@ -70,40 +70,6 @@ public class KthPermuation {
 
      */
 
-    public String getPermutationNotWorking(int A, int B) {
-        int[] factorial = new int[A+1];
-        factorial[0]=1;
-        for(int i=1;i<=A;i++){
-            factorial[i] = i*factorial[i-1];
-        }
-
-        UtilityClass.print(factorial);
-        ArrayList<Integer> list = new ArrayList<>();
-        for(int i=1;i<=A;i++){
-            list.add(i);
-        }
-
-        List<Integer> value = new ArrayList<>();
-
-        B = B-1;
-        System.out.println("A="+A+" B="+B);
-
-        int index=0;
-        for(int i=0;i<A;i++){
-            int quotient = B/factorial[A-i];
-            value.add(list.get(quotient));
-            list.remove(quotient);
-            B = B % factorial[i];
-
-            System.out.println("quotient="+quotient+" value="+value+" B="+B);
-        }
-
-        StringBuilder sb = new StringBuilder();
-        for(int i=0;i<value.size();i++){
-            sb.append(value.get(i));
-        }
-        return sb.toString();
-    }
 
     public String getPermutationLC(int A, int B) {
 
@@ -174,6 +140,7 @@ public class KthPermuation {
         return StringBuilder.toString();
 
     }
+    //We need to find the rank of 'k'
 
     public String getPermutationIB(int n,int k) {
 
@@ -193,8 +160,8 @@ public class KthPermuation {
         int num=list.get(index);
         list.remove(index);
         k%=fact_n;
-        return "";
-        //return num+getPermutation(n,k);
+        //return "";
+        return num+getPermutation(n,k);
     }
 
     int fact(int n)

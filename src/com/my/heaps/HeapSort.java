@@ -1,5 +1,7 @@
 package com.my.heaps;
 
+import java.util.ArrayList;
+
 public class HeapSort {
 
 
@@ -73,5 +75,41 @@ public class HeapSort {
         A[i] = A[j];
         A[j] = temp;
     }
+    
+
+
+    private void prepareMaxHeap(ArrayList<Integer> A){
+        int n = A.size();
+        for(int i=n/2-1;i>=0;i--){
+            heapify(A,i,n);
+        }
+    }
+
+    private void heapify(ArrayList<Integer> A, int parent, int n){
+        int left = 2*parent+1;
+        int right = 2*parent+2;
+
+        int largest = parent;
+
+        if(left < n && A.get(largest) < A.get(left)){
+            largest = left;
+        }
+
+        if(right < n && A.get(largest) < A.get(right)){
+            largest = right;
+        }
+
+        if(parent != largest){
+            swap(A,parent,largest);
+            heapify(A,largest,n);
+        }
+    }
+
+    private void swap(ArrayList<Integer> A, int i, int j){
+        int temp = A.get(i);
+        A.set(i,A.get(j));
+        A.set(j,temp);
+    }
+
 
 }

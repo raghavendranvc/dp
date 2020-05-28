@@ -31,7 +31,7 @@ public class TrailingZerosInFactorial {
         int divisor = 5;
 
         while ( A/divisor > 0){
-            numberOfTrailingZeros = numberOfTrailingZeros + A/divisor;
+            numberOfTrailingZeros += A/divisor;
             divisor = divisor*5;
         }
 

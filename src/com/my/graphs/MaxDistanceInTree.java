@@ -157,7 +157,7 @@ public class MaxDistanceInTree {
 				root = i;
 				continue;
 			}
-			graph.get(i).add(num);
+			graph.get(i).add(num);//Edge between both parent and child
 			graph.get(num).add(i);
 		}
 		// Find the node which is farthest from root node using BFS

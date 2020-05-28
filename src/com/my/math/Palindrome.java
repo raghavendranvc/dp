@@ -1,8 +1,5 @@
 package com.my.math;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 public class Palindrome {
 
     // 9052

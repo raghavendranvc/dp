@@ -71,8 +71,10 @@ public class PrimsAlgo {
 		 * 
 		 */
 		
-		for(int i=0;i<g.V;i++) { pNode[i] = new PNode(); pNode[i].currentKey =
-			Integer.MAX_VALUE; pNode[i].vertex=i; 
+		for(int i=0;i<g.V;i++) { 
+			pNode[i] = new PNode(); 
+			pNode[i].currentKey = Integer.MAX_VALUE; 
+			pNode[i].vertex=i; 
 			parent[i] = -1; //assuming everyone is root initially 	
 		}
 		
@@ -84,7 +86,7 @@ public class PrimsAlgo {
 		
 		PNode firstNode = new PNode();
 		firstNode.currentKey = 0;
-		firstNode.vertex = 0;
+		//firstNode.vertex = 0;
 		pQueue.add(firstNode);
 		
 		includedInPQ[0] = true;

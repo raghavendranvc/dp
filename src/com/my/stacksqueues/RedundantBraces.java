@@ -32,6 +32,7 @@ public class RedundantBraces {
                 while (top != '('){
                     System.out.print("Checking top="+top+" ");
                     if(operators.contains(top)){
+                    	// If the pop contains operand before we see "(", then no redundant braces
                         System.out.print("  Not redudnant");
                         redundantBraces = false;
                     }

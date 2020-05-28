@@ -3,8 +3,6 @@ package com.my.graphs;
 import java.util.LinkedList;
 import java.util.List;
 
-import sun.security.provider.certpath.AdjacencyList;
-
 public class DetectCycleInGraph {
 
 	/*

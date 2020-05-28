@@ -7,13 +7,13 @@ import java.util.LinkedList;
 import java.util.Map;
 
 
-public class Solution {
+public class LRUImplementation {
 
     private Map<Integer,Integer> linkedHashMap = null;
     private Deque<Integer> deque = null;
     private int capacity = 0;
 
-    public Solution(int capacity) {
+    public LRUImplementation(int capacity) {
         this.capacity = capacity;
         linkedHashMap = new LinkedHashMap<>(capacity);
         deque = new LinkedList<>();

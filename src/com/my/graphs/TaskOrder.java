@@ -25,6 +25,7 @@ public class TaskOrder {
 		int v;
 		LinkedList<Integer>[] adjList;
 
+		@SuppressWarnings("unchecked")
 		public Graph(int v) {
 			this.v = v;
 			this.adjList = new LinkedList[v];

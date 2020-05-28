@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class FindMinLengthSubString {
 	
-	//TODO Remeber the logic written here
+	//TODO Remember the logic written here
 
 	int minLengthSubstring(String s, String t) {
 		// Write your code here

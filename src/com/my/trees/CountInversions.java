@@ -1,7 +1,6 @@
 package com.my.trees;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class CountInversions {
 
@@ -53,52 +52,6 @@ public class CountInversions {
         return root;
     }
 
-    // Merge Sort is the preferred approach
-    public int countInversionsNotWorking(ArrayList<Integer> A) {
-        return mergeSort(A, 0, A.size()-1);
-    }
-
-    // end is inclusive
-    public int mergeSort(ArrayList<Integer> A, int start, int end){
-        int count = 0;
-        if(start < end){
-            int mid = (start+end)/2;
-            count += mergeSort(A, start, mid);
-            count += mergeSort(A, mid+1, start);
-            count += merge(A,start,mid,end);
-        }
-
-        return count;
-    }
-
-
-    private int merge(ArrayList<Integer> A, int start, int mid, int end){
-        ArrayList<Integer> leftArray = new ArrayList<>(A.subList(start,mid+1)); // mid needs to be included
-        ArrayList<Integer> rightArray = new ArrayList<>(A.subList(mid+1, end+1)); // end needs to be included
-
-        int i=0,j=0,k=start;
-        int swaps=0;
-
-        while( i < leftArray.size() && j <rightArray.size()){
-            if(leftArray.get(i) <= rightArray.get(j)){
-                A.set(k++,leftArray.get(i++));
-            } else {
-                A.set(k++,rightArray.get(j++));
-                swaps += leftArray.size()-i;  // => (mid+1-start) - i
-                //swaps += (mid + 1) - (start + i);
-            }
-        }
-
-        while (i<leftArray.size()){
-            A.set(k++,leftArray.get(i++));
-        }
-
-        while (j<rightArray.size()){
-            A.set(k++,rightArray.get(j++));
-        }
-        return swaps;
-    }
-
     /*
     Simple merge Sort to count inversions
      */
@@ -131,9 +84,13 @@ public class CountInversions {
                 i++;
             } else {
                 result.set(i+j, right.get(j));
-                count += (left.size()-i);
+                count += (left.size()-i); //TODO check how the count increases
                 j++;
             }
+            
+            // left ....i .....mid .....j ......right
+            //  if(j<i), then number of inversions = left elements that are greater than j
+            // meaning all elements from i too mid meaning left.size()-i
         }
         return count;
     }

@@ -111,7 +111,7 @@ public class GreyCode {
      * Copied
      *
      */
-    //TODO proactice again
+    //TODO practice again
 
     private static int workingNumber = 0;
 

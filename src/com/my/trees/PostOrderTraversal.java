@@ -22,13 +22,16 @@ public class PostOrderTraversal {
             return postOrderTravelsal;
         }
         Stack<TreeNode> stack1 = new Stack<>();
-        Stack<TreeNode> stack2 = new Stack<>();
+        Stack<TreeNode> resultStack = new Stack<>();
 
         stack1.push(A);
-
+        //Order of print is left, right, root
+        //So we need to push root, right, left to stack2 - in that order
+        //So stack1 needs to be pushed and poped accordingly
+        // so we need to push root, left, right to stack1
         while (!stack1.isEmpty()){
             TreeNode treeNode = stack1.pop();
-            stack2.push(treeNode);
+            resultStack.push(treeNode);
             if(treeNode.left != null){
                 stack1.push(treeNode.left);
             }
@@ -38,8 +41,8 @@ public class PostOrderTraversal {
             }
         }
 
-        while(!stack2.isEmpty()){
-            postOrderTravelsal.add(stack2.pop().val);
+        while(!resultStack.isEmpty()){
+            postOrderTravelsal.add(resultStack.pop().val);
         }
         return postOrderTravelsal;
     }

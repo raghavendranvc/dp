@@ -27,6 +27,7 @@ public class ValidPathInRectOfCircles {
 					// If <=R, then the point (i,j) shouldn't be touched
 					// squareRoot(x^2+y^2) <=r
 					
+					//D is diameter of circle
 					int distance = (int) Math.ceil(Math.sqrt(Math.pow((i-E.get(k)),2) + Math.pow((j-F.get(k)), 2)));
 					if(distance <= D) {
 						solution[i][j] = -1;

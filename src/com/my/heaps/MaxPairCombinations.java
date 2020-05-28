@@ -64,59 +64,7 @@ public class MaxPairCombinations {
         return returnList;
     }
 
-    public ArrayList<Integer> solveNotRequired(ArrayList<Integer> A, ArrayList<Integer> B) {
-        prepareMaxHeap(A);
-        prepareMaxHeap(B);
-
-        int n = A.size();
-        ArrayList<Integer> arrayList = new ArrayList<>();
-        for(int size=n-1;size>=0;size--){
-            int elementA = A.get(0);
-            int elementB = A.get(0);
-            arrayList.add(A.get(0)+B.get(0));
-
-            swap(A,0,size);
-            heapify(A,0,size);
-
-            swap(B,0,size);
-            heapify(B,0,size);
-        }
-        return arrayList;
-    }
-
-    private void prepareMaxHeap(ArrayList<Integer> A){
-        int n = A.size();
-        for(int i=n/2-1;i>=0;i--){
-            heapify(A,i,n);
-        }
-    }
-
-    private void heapify(ArrayList<Integer> A, int parent, int n){
-        int left = 2*parent+1;
-        int right = 2*parent+2;
-
-        int largest = parent;
-
-        if(left < n && A.get(largest) < A.get(left)){
-            largest = left;
-        }
-
-        if(right < n && A.get(largest) < A.get(right)){
-            largest = right;
-        }
-
-        if(parent != largest){
-            swap(A,parent,largest);
-            heapify(A,largest,n);
-        }
-    }
-
-    private void swap(ArrayList<Integer> A, int i, int j){
-        int temp = A.get(i);
-        A.set(i,A.get(j));
-        A.set(j,temp);
-    }
-
+    
     /*
 
     4 3 2 2

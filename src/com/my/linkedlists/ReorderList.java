@@ -144,8 +144,8 @@ public class ReorderList {
 
      */
 
-    public ListNode reverseList(ListNode n, int k){
-        ListNode current = n;
+    public ListNode reverseList(ListNode first, int k){
+        ListNode current = first;
         ListNode previous = null;
         ListNode next = null;
 
@@ -159,7 +159,7 @@ public class ReorderList {
         }
 
         if(next != null){
-            n.next = reverseList(next,k);
+            first.next = reverseList(next,k);
         }
 
         return previous;

@@ -29,21 +29,6 @@ public class DivideIntegers {
         return count*sign;
     }
 
-    public int divideNotWorking(int A, int B) {
-
-        int quotient = 1;
-        int computedDivisor = B;
-        while(computedDivisor <= A){
-            computedDivisor = computedDivisor << 1;
-            quotient = quotient << 1;
-        }
-
-        quotient = quotient + divide(A-computedDivisor,B);
-
-        return quotient;
-
-    }
-
     public int divideCopiedNonBit(int A, int B) {
         if(A == Integer.MIN_VALUE && B == -1) {
             return Integer.MAX_VALUE;

@@ -27,7 +27,7 @@ public class Combinations {
         for(int i=startNum;i<=A;i++){
             tempArray.add(i);
             combine(A, B, result, i+1, tempArray);
-            tempArray.remove(tempArray.size()-1);
+            tempArray.remove(tempArray.size()-1); //backtrack
         }
 
     }

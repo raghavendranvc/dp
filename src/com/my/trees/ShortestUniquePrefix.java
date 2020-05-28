@@ -10,7 +10,6 @@ public class ShortestUniquePrefix {
 
     class TrieNode {
         Map<Character, Long> wordCounts = null;
-        long currentLevel = -1;
 
         public TrieNode(){
             wordCounts = new HashMap<>();

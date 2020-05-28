@@ -48,11 +48,11 @@ public class InorderPostOrderToBT {
                     = PostIn + root - si -1
          */
 
-        int leftSubTreeLength = rootIndexInInOrder-startIn-1; //6 //TODO recheck this
+        int leftSubTreeLength = rootIndexInInOrder-startIn; //6 //TODO recheck this
 
         TreeNode treeNode = new TreeNode(root);
-        treeNode.left = buildTree(A,startIn,rootIndexInInOrder-1,B, startPost, startPost+leftSubTreeLength);
-        treeNode.right = buildTree(A, rootIndexInInOrder+1, endIn, B, startPost+leftSubTreeLength+1, endPost-1);
+        treeNode.left = buildTree(A,startIn,rootIndexInInOrder-1,B, startPost, startPost+leftSubTreeLength-1);
+        treeNode.right = buildTree(A, rootIndexInInOrder+1, endIn, B, startPost+leftSubTreeLength, endPost-1);
         return treeNode;
     }
 

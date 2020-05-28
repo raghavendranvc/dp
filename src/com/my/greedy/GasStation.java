@@ -4,37 +4,23 @@ import java.util.List;
 
 public class GasStation {
 
-    public int canCompleteCircuitNotOptimal(final List<Integer> A, final List<Integer> B) {
-        int n = A.size();
-        int[] diff =  new int[n];
-
-        for(int i=0;i<n;i++){
-            diff[i] = A.get(i) - B.get(i);
-        }
-
-        for(int startStation=0;startStation<n;startStation++){
-            if(diff[startStation] < 0){
-                continue;
-            }
-
-            int gas = diff[startStation];
-            int j=1;
-            boolean foundStation = true;
-            while(j < n) {
-                gas += diff[(startStation+j)%n];
-                if(gas < 0){
-                    foundStation = false;
-                }
-                j++;
-            }
-
-            if(foundStation){
-                return startStation;
-            }
-        }
-
-        return -1;
-    }
+	/*
+	 * public int canCompleteCircuitNotOptimal(final List<Integer> A, final
+	 * List<Integer> B) { int n = A.size(); int[] diff = new int[n];
+	 * 
+	 * for(int i=0;i<n;i++){ diff[i] = A.get(i) - B.get(i); }
+	 * 
+	 * for(int startStation=0;startStation<n;startStation++){ if(diff[startStation]
+	 * < 0){ continue; }
+	 * 
+	 * int gas = diff[startStation]; int j=1; boolean foundStation = true; while(j <
+	 * n) { gas += diff[(startStation+j)%n]; if(gas < 0){ foundStation = false; }
+	 * j++; }
+	 * 
+	 * if(foundStation){ return startStation; } }
+	 * 
+	 * return -1; }
+	 */
 
     public int canCompleteCircuit(final List<Integer> A, final List<Integer> B) {
         int n = A.size();
