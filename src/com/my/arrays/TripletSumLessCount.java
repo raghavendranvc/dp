@@ -29,7 +29,8 @@ public class TripletSumLessCount {
 				else {
 					// This is important. For current i and j, there
 					// can be total k-j third elements.
-					ans += (k - j); // all elements between k and j contribute to triplet //TODO important
+					//TODO important
+					ans += (k - j); // all elements between k and j contribute to triplet 
 					j++;
 				}
 			}

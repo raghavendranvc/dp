@@ -76,12 +76,12 @@ public class MinDepthOfBT {
 			return 1;
 
 		if (a.left == null)
-			return minDepth(a.right) + 1;
+			return minDepthElegant(a.right) + 1;
 
 		if (a.right == null)
-			return minDepth(a.left) + 1;
+			return minDepthElegant(a.left) + 1;
 
-		return Math.min(minDepth(a.left), minDepth(a.right)) + 1;
+		return Math.min(minDepthElegant(a.left), minDepthElegant(a.right)) + 1;
 	}
 
 }

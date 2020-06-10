@@ -37,47 +37,7 @@ public class PairwiseHammingDistance {
 		return dist;
 	}
 
-	public void computePermutation(String str, String suffix) {
-		if (str.length() == 0) {
-			System.out.println(suffix);
-		}
-
-		for (int i = 0; i < str.length(); i++) {
-			char ch = str.charAt(i);
-			String restOfTheString = str.substring(0, i) + str.substring(i + 1);
-			computePermutation(restOfTheString, suffix + ch);
-		}
-
-	}
-
-	public void computePermutationDistinct(String str, String suffix) {
-		boolean[] exists = new boolean[26];
-		computePermutationDistinct(str, suffix, exists);
-	}
-
-	public void computePermutationDistinct(String str, String suffix, boolean[] exists) {
-		if (str.length() == 0) {
-			System.out.println(suffix);
-		}
-
-		for (int i = 0; i < str.length(); i++) {
-			char ch = str.charAt(i);
-			String restOfTheString = str.substring(0, i) + str.substring(i + 1);
-
-			// UtilityClass.print(exists);
-			if (!exists[ch - 'a']) { // Only for distinct chars do permutation
-				computePermutationDistinct(restOfTheString, suffix + ch);
-			}
-			exists[ch - 'a'] = true;
-		}
-	}
-
-	public static void main(String[] args) {
-		String s = "abdd";
-		PairwiseHammingDistance pairwiseHammingDistance = new PairwiseHammingDistance();
-		// pairwiseHammingDistance.computePermutation(s, "");
-		pairwiseHammingDistance.computePermutationDistinct(s, "");
-	}
+	
 
 	static int hammingDistance(int n1, int n2) {
 		int x = n1 ^ n2; // XOR operation. Will show all unique 1's and 0's between the two
@@ -106,7 +66,7 @@ public class PairwiseHammingDistance {
 
 	public int hammingDistanceCopied(final List<Integer> A) {
 		int n = A.size();
-
+  
 		int dist = 0;
 		for (int i = 0; i < 31; i++) { // at each bit position we count number of 1's and 0's
 			int oneCount = 0;

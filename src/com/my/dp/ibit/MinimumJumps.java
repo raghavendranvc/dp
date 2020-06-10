@@ -22,8 +22,10 @@ public class MinimumJumps {
 		int n = A.size();
 
 		int[] minWays = new int[n];
-		Arrays.fill(minWays, Integer.MAX_VALUE);
+		Arrays.fill(minWays, Integer.MAX_VALUE); //Remember this //TODO
 		minWays[n - 1] = 0;
+		
+		// Idea is to move from the end
 
 		for (int i = n - 2; i >= 0; i--) {
 			int jumpsPossible = A.get(i);

@@ -29,7 +29,7 @@ public class Permuation {
 			System.out.println("New startIndex=" + startIndex + " k=" + k + " A=" + A);
 			swap(A, startIndex, k);
 			permute(A, result, startIndex + 1);
-			swap(A, startIndex, k); //backtrack
+			swap(A, startIndex, k); // backtrack
 			System.out.println("Backtrack startIndex=" + startIndex + " k=" + k + " A=" + A);
 			// System.out.println("k="+k+" startIndex="+startIndex +" new
 			// tempArray="+tempArray);
@@ -50,6 +50,48 @@ public class Permuation {
 		}
 		Permuation permuation = new Permuation();
 		System.out.println("Result=" + permuation.permute1(A));
+	}
+
+	public void computePermutation(String str, String suffix) {
+		if (str.length() == 0) {
+			System.out.println(suffix);
+		}
+
+		for (int i = 0; i < str.length(); i++) {
+			char ch = str.charAt(i);
+			String restOfTheString = str.substring(0, i) + str.substring(i + 1);
+			computePermutation(restOfTheString, suffix + ch);
+		}
+
+	}
+
+	public void computePermutationDistinct(String str, String suffix) {
+		boolean[] exists = new boolean[26];
+		computePermutationDistinct(str, suffix, exists);
+	}
+
+	public void computePermutationDistinct(String str, String suffix, boolean[] exists) {
+		if (str.length() == 0) {
+			System.out.println(suffix);
+		}
+
+		for (int i = 0; i < str.length(); i++) {
+			char ch = str.charAt(i);
+			String restOfTheString = str.substring(0, i) + str.substring(i + 1);
+
+			// UtilityClass.print(exists);
+			if (!exists[ch - 'a']) { // Only for distinct chars do permutation
+				computePermutationDistinct(restOfTheString, suffix + ch);
+			}
+			exists[ch - 'a'] = true;
+		}
+	}
+
+	public static void main1(String[] args) {
+		String s = "abdd";
+		Permuation permuation = new Permuation();
+		// pairwiseHammingDistance.computePermutation(s, "");
+		permuation.computePermutationDistinct(s, "");
 	}
 
 	// ================Trying Combination way. But didn't work==============

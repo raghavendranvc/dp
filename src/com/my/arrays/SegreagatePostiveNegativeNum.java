@@ -11,7 +11,7 @@ public class SegreagatePostiveNegativeNum {
 		for(int j=0; j< array.length; j++) {
 			if(array[j]< 0) {
 				i++;
-				if(i != j) {
+				if(i != j) { //this is just optimization. It is not necessary
 					swap(array,i,j);
 				}
 			}

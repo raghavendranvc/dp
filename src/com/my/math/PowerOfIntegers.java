@@ -75,6 +75,7 @@ public class PowerOfIntegers {
 		return false;
 
 	}
+	// https://www.geeksforgeeks.org/write-a-c-program-to-calculate-powxn/
 
 	int power(int x, int y) {
 		int res = 1; // Initialize result
@@ -90,6 +91,48 @@ public class PowerOfIntegers {
 			x = x * x; // So Change x to x^2
 		}
 		return res;
+	}
+
+	float power(float x, int y) {
+		float temp;
+		if (y == 0)
+			return 1;
+
+		temp = power(x, y / 2);
+
+		if (y % 2 == 0)
+			return temp * temp;
+		else {
+			if (y > 0)
+				return x * temp * temp;
+			else
+				return (temp * temp) / x;
+		}
+	}
+	
+	//TODO give this solution. It is elegant
+	/**
+	 *
+	 * @param x
+	 * @param n
+	 * @return
+	 */
+
+	public double myPow(double x, int n) {
+		if (n == 0)
+			return 1;
+
+		if (n < 0) {
+			return 1 / myPow(x, -n);
+		}
+
+		double v = myPow(x, n / 2);
+
+		if (n % 2 == 0) {
+			return v * v;
+		} else {
+			return v * v * x;
+		}
 	}
 
 	int powerMod(int x, int y, int p) {

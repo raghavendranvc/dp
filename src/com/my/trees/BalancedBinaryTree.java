@@ -45,23 +45,4 @@ public class BalancedBinaryTree {
         return Math.max(leftHeight,rightHeight)+1;
     }
 
-    /*
-     * Does this work? 
-     */
-    public boolean isBalancedRefactored(TreeNode A){
-        if(A == null){
-            return true;
-        }
-
-        if(A.left == null && A.right != null && (A.right.left !=null || A.right.right!=null)){
-            return false;
-        }
-
-        if(A.left != null && A.right == null && (A.left.left != null || A.left.right!=null)){
-            return false;
-        }
-
-        return (isBalancedRefactored(A.left) && isBalancedRefactored(A.right));
-    }
-
 }

@@ -1,0 +1,55 @@
+https://stackoverflow.com/questions/35653431/how-to-select-the-top-3-salaries-of-the-department
+================================
+
+
+
+SELECT *
+FROM Employee e1
+WHERE 3 > (
+           SELECT COUNT(DISTINCT Salary)
+           FROM Employee e2
+           WHERE e2.Salary > e1.Salary
+           AND e1.DepartmentID = e2.DepartmentID
+          );
+
+
+SELECT
+    dpt.Name AS Department,
+    e1.Name AS Employee,
+    e1.Salary AS Salary
+FROM Employee AS e1
+INNER JOIN Department dpt
+ON e1.DepartmentID = dpt.Id
+WHERE 3 > (
+           SELECT COUNT(DISTINCT Salary)
+           FROM Employee AS e2
+           WHERE e2.Salary > e1.Salary
+           AND e1.DepartmentID = e2.DepartmentID
+          )
+ORDER BY
+Department ASC,
+Salary DESC;
+
+
+==================
+
+(SELECT COUNT(DISTINCT(Salary)) FROM Employee 
+       WHERE DepartmentId = E.DepartmentId AND Salary > E.Salary)
+       
+       
+SELECT 
+      D.Name AS Department, 
+      E.Name AS Employee, 
+      E.Salary AS Salary,
+      Count(E2.Salary) as Count_employees_who_earn_more
+FROM Employee E 
+INNER JOIN Department D 
+ON E.DepartmentId = D.Id 
+LEFT JOIN Employee E2 ON 
+    e2.DepartmentId = E.DepartmentId
+    AND E2.Salary > E.Salary
+GROUP BY  D.Name , 
+      E.Name , 
+      E.Salary 
+      
+      

@@ -63,7 +63,7 @@ public class DigitsFixedLengthWithSum {
 			return lookupTable[A][B];
 		}
 		
-		
+			
 		int count=0;
 		for(int i=0;i<=9;i++) {
 			if(B-i >=0) {

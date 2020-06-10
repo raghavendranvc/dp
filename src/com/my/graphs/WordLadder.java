@@ -63,7 +63,7 @@ public class WordLadder {
 
 	private int getShortestPath(WordNode src, WordNode dest) {
 
-		// BFS would work?
+		// BFS would work? Yes.
 
 		Set<WordNode> visited = new HashSet<WordNode>();
 		Queue<WordNode> queue = new LinkedList<WordNode>();

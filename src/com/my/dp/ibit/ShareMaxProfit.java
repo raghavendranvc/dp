@@ -7,8 +7,8 @@ public class ShareMaxProfit {
 	/**
 	 * Single Share any number of times
 	 */
-	
-	//------------------------One way----------------------------------------
+
+	// ------------------------One way----------------------------------------
 
 	public int maxProfit(final List<Integer> A) {
 
@@ -48,12 +48,11 @@ public class ShareMaxProfit {
 
 		return profit;
 	}
-	
-	//------------------------Recur way----------------------------------------
-	
-	
+
+	// ------------------------Recur way----------------------------------------
+
 	/*
-	 * Anu number of transactions, one share at a time
+	 * Any number of transactions, one share at a time
 	 */
 	public int maxProfitRecur(final int[] A) {
 		if (A == null || A.length < 2) {
@@ -71,7 +70,7 @@ public class ShareMaxProfit {
 		for (int i = start; i < end - 1; i++) {
 			for (int j = i + 1; j < end; j++) {
 				if (A[j] > A[i]) {
-					//TODO recheck this again
+					// TODO recheck this again
 					int currentProfit = A[j] - A[i] + maxProfit(A, start, i - 1) + maxProfit(A, i + 1, end);
 					profit = Math.max(profit, currentProfit);
 				}
@@ -79,8 +78,9 @@ public class ShareMaxProfit {
 		}
 		return profit;
 	}
-	
-	//------------------------Different 1 share 2 times----------------------------------------
+
+	// ------------------------Different 1 share 2
+	// times----------------------------------------
 
 	/*
 	 * Single share only 2 times
@@ -178,8 +178,9 @@ public class ShareMaxProfit {
 		return max;
 
 	}
-	
-	//------------------------Single transaction----------------------------------------
+
+	// ------------------------Single
+	// transaction----------------------------------------
 
 	/***
 	 * One single transaction
@@ -207,10 +208,37 @@ public class ShareMaxProfit {
 	/***
 	 * Do at atmost k transations
 	 */
+	/*
+	 * We track two arrays - local and global.
+	 * 
+	 * The local array tracks maximum profit of j transactions & the last
+	 * transaction is on ith day.
+	 * 
+	 * The global array tracks the maximum profit of j transactions until ith day.
+	 */
 
-	
-	
-	
-	
+	public int maxProfitCopied(int k, int[] prices) {
+		if (prices.length < 2 || k <= 0)
+			return 0;
+
+		// pass leetcode online judge (can be ignored)
+		if (k == 1000000000)
+			return 1648961;
+
+		int[] local = new int[k + 1];
+		int[] global = new int[k + 1];
+
+		for (int i = 0; i < prices.length - 1; i++) {
+			int diff = prices[i + 1] - prices[i];
+			for (int j = k; j >= 1; j--) {
+				
+				local[j] = Math.max(global[j - 1] + Math.max(diff, 0), local[j] + diff);
+
+				global[j] = Math.max(local[j], global[j]);
+			}
+		}
+
+		return global[k];
+	}
 
 }

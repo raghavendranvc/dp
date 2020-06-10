@@ -214,21 +214,23 @@ public class MaxProd {
     }
 
     public int maxSpecialProductNonStack(ArrayList<Integer> A) {
+    	
+    	int n = A.size();
 
-        int[] LS = new int[A.size()];
-        int[] RS = new int[A.size()];
+        int[] LS = new int[n]; //largest number so far from the start
+        int[] RS = new int[n]; //largest number so far from the end
 
-        for(int i=0; i<A.size();i++){
-            for(int j = i-1; j>= 0; j--) {
+        for(int i=0; i<n;i++){
+            for(int j = i-1; j>= 0; j--) { 
                 if(A.get(j) > A.get(i)){
                     LS[i] = j;
                     break;
                 }
             }
-        }
+        } 
 
-        for(int i=A.size()-1; i>=0; i--){
-            for(int j = i+1; j<A.size(); j++) {
+        for(int i=n-1; i>=0; i--){
+            for(int j = i+1; j<n; j++) {
                 if(A.get(j) > A.get(i)){
                     RS[i] = j;
                     break;
@@ -237,7 +239,7 @@ public class MaxProd {
         }
 
         long max = 0;
-        for(int i=0;i<A.size();i++) {
+        for(int i=0;i<n;i++) {
             max = Math.max(max, 1L*LS[i]*RS[i]);
         }
 

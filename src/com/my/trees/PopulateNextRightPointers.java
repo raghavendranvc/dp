@@ -29,6 +29,7 @@ public class PopulateNextRightPointers {
                     previousNode.next = tempNode; //Populating the next pointer
                 }
                 previousNode = tempNode;
+                
                 if(tempNode.left != null){      // Simulataneously we are also preparing nextList
                     nextList.add(tempNode.left);
                 }

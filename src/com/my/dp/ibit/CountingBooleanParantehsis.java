@@ -122,7 +122,7 @@ public class CountingBooleanParantehsis {
 				// For each selected operator, we calculate its left and right
 				for (int k = i; k < j; k++) {
 
-					//T[i,k] is the value of operators from i to k using k-1 operands
+					//T[i,k] is the value of operands from i to k using k-1 operators
 					//T[k+1,j] is the value of operators from k+1 to j using the rest of the operands from k+1 to j-1
 					switch (operators[k]) {
 					case '&':

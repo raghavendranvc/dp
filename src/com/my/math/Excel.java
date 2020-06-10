@@ -56,11 +56,11 @@ public class Excel {
         StringBuilder result = new StringBuilder();
         while(A!=0){
             int remainder = A % 26;
-            A=A/26;
             if(remainder == 0) {
                 remainder = 26;
             }
             result.append(""+(char)(64+remainder));
+            A=A/26;
 
         }
         result.reverse();

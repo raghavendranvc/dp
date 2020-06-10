@@ -55,6 +55,26 @@ public class WordBreak {
 	}
 	
 	/********************Iter2 way********************************************/
+	
+	public boolean wordBreak(String s, Set<String> dict) {
+        if (s == null || s.isEmpty()) return true;
+         
+        // dp[i] means [0,i) is breakable
+        boolean[] dp = new boolean[s.length() + 1];
+        dp[0] = true;
+         
+        for (int i = 1; i <= s.length(); i++) {
+            for (int j = 0; j < i; j++) {
+                if (dp[j] && dict.contains(s.substring(j,i))) {
+                    dp[i] = true;
+                    break;
+                }
+            }
+        }
+        return dp[s.length()];
+    }
+	
+	/********************Iter2 way********************************************/
 
 	// TODO check this logic again
 	public boolean wordBreakIter(String str) {

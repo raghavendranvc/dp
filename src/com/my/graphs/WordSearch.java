@@ -46,6 +46,7 @@ public class WordSearch {
 
 		currentWordIndex++;
 		// matches. So check if this is the end
+		//here same letter can be used.
 		if (currentWordIndex == B.length()) {
 			return true;
 		}

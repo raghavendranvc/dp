@@ -1,13 +1,13 @@
 package com.my.dp.ibit;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 
 import com.my.common.UtilityClass;
 
 public class BirthdayKicks {
 
-	
 	public static void main(String[] args) {
 		int A = 26;
 		int[] b = { 8, 8, 6, 5, 4 };
@@ -19,8 +19,7 @@ public class BirthdayKicks {
 	}
 
 	/*
-	 * TODO
-	 * Rework on this again. It is more greedy and tricky
+	 * TODO Rework on this again. It is more greedy and tricky
 	 */
 
 	public ArrayList<Integer> solve(int A, int[] B) {
@@ -41,7 +40,11 @@ public class BirthdayKicks {
 		 * array possible.
 		 * 
 		 */
-		int min = 3;// Arrays.min(B);
+
+		int min = Integer.MAX_VALUE;
+		for (int i : B) {
+			min = Math.min(min, i);
+		}
 
 		/*
 		 * IF let's say everyone gives something and the remainder is still available
@@ -58,12 +61,13 @@ public class BirthdayKicks {
 
 		int i = 0;
 		while (howManyMaxFriendsCanBeatWithMaxOfMinBeats > bumpArray.size()) {
-			// Anone greate than min for now is skipped
+			// Anyone greater than min for now is skipped
 			if (B[i] - min > available) {
 				i++;
 			} else {
 				available -= (B[i] - min); // He gives all his bumps
 				bumpArray.add(i); // so we add him to the list
+				i++;
 			}
 		}
 

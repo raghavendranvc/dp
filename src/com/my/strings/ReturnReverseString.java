@@ -10,6 +10,11 @@ public class ReturnReverseString {
 
 
      */
+	
+	/*
+	 * GOOD Approach
+	 * First reverse each word and then reverse the whole string
+	 */
 
     public String solve(String A) {
         A = A.trim();

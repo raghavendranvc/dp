@@ -177,7 +177,7 @@ public class NQueens {
     }
 
 /*
-===============================From IB=====================================================
+===============================From IB Print All NQueens=====================================================
  */
     StringBuilder str = new StringBuilder("");
     public boolean isSafe(ArrayList<String> board, int row, int col)
@@ -188,11 +188,15 @@ public class NQueens {
             if(board.get(row).charAt(i) == 'Q')
                 return false;
         }
+        
+        //Upper left diagonal. Rows decreasing, column decreasing.
         i = row;
         j = col;
         for (; i>=0 && j>=0; i--, j--)
             if (board.get(i).charAt(j) == 'Q')
                 return false;
+        
+        //Lower Left diagonal. Rows increasing, columns decreased
         i = row;
         j = col;
         for (; j>=0 && i<board.get(0).length(); i++, j--)

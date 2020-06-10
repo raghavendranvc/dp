@@ -16,6 +16,8 @@ public class ArrayMedian {
             return (findKthSmallestNumber(a, 0 , b, 0 , total/2) + findKthSmallestNumber(a, 0 , b, 0 , total/2+1))/2.0;
         }
     }
+    
+    // k is indexed from 1
 
     public int findKthSmallestNumber(List<Integer> A, int aIndex, List<Integer> B, int bIndex, int k){
 

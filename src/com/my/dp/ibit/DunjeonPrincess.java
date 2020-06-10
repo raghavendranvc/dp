@@ -32,6 +32,7 @@ public class DunjeonPrincess {
 			minHealth[i][n - 1] = Math.max(minHealth[i + 1][n - 1] - A[i][n - 1], 1);
 		}
 
+		//similarly for last row
 		for (int i = n - 2; i >= 0; i--) {
 			minHealth[m - 1][i] = Math.max(minHealth[m - 1][i + 1] - A[m - 1][i], 1);
 		}

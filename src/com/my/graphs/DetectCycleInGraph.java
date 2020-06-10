@@ -71,7 +71,7 @@ public class DetectCycleInGraph {
 		for (int u : g.adjList[v]) {
 
 			if (u == parent) {
-				continue; //back ednge to the parent. This should be ok in undirected graph.
+				continue; //back edge to the parent. This should be ok in undirected graph.
 			}
 
 			if (visited[u]) {

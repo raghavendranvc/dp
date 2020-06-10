@@ -36,7 +36,7 @@ public class MatrixMedian {
 				min = mid + 1;
 			}
 		}
-		return max;
+		return  max;
 	}
 
 	public int getSmallerCountInMatrix(ArrayList<ArrayList<Integer>> A, int number) {
