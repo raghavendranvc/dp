@@ -37,7 +37,7 @@ public class KthSmallestElement {
 		return inOrderTraversal(A.right, B);
 	}
 
-	// Simple One
+	// Simple One --- non recursive
 	public int kthSmallestSimple(TreeNode root, int k) {
 
 		Stack<TreeNode> stack = new Stack<>();

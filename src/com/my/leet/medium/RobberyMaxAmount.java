@@ -29,7 +29,7 @@ public class RobberyMaxAmount {
         return sol[n-1];        
     }
 	
-	// houses in a circle
+	// houses in a circle--------------------------------------
 	
 	public int rob2(int[] nums) {
 		if(nums == null || nums.length == 0){
