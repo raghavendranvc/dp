@@ -6,9 +6,10 @@ import com.my.common.UtilityClass;
 import java.util.ArrayList;
 
 public class RearrangeArray {
-	
+
 	/**
 	 * TODO Idea to do this is very important
+	 * 
 	 * @param a
 	 */
 
@@ -42,40 +43,35 @@ public class RearrangeArray {
 
 	public void arrange3(ArrayList<Integer> A) {
 		int n = A.size();
-		
+
 		for (int i = 0; i < n; i++) {
-			A.set(i, A.get(i) + (A.get(A.get(i)) % n) * n);
+			A.set(i, A.get(i) + (A.get(A.get(i)) % n) * n); //child + parent*n
 		}
-			
+
 		for (int i = 0; i < n; i++) {
-			A.set(i, A.get(i) / n);
+			A.set(i, A.get(i) / n);  // (child/n + parent)
 		}
 	}
 
 	// 4, 1, 2, 7, 6, 5, 3, 0
 
-	public void arrangeNot(ArrayList<Integer> a) {
+	public void arrangeCopied(ArrayList<Integer> a) {
+		
+		int n = a.size();
 
-		// 0 1 2 3 4 5 6 7 size = 8
-		// 3 2 1 4 7 5 0 6 i=0
-		// 4 j=3 (0<-4) i=3 c=1
-		// 4 7 j=4 (3<-7) i=4 c=2
-		// 4 7 6 j=7 (6) i=7 c=3
-		// 4 7 6 0 j=0 (0) i=0 c=4
-		// 4 7 6 0 j=4 (0) i=0 c=4
+		for (int i = 0; i < n; i++) {
 
-		int save = a.get(0);
-		int i = 0;
-		int count = 0;
-		while (count < a.size()) {
-			int j = a.get(i);
-			a.set(i, a.get(a.get(i))); // (0,3)
-			i = j;
-			count++;
-			System.out.println(a);
+			int index = a.get(i);
+			int val = a.get(index)%n + 1;
+			a.set(i, a.get(i) + n*val);
 		}
-		a.set(i, save);
-		System.out.println(a);
+		
+		for (int i = 0; i < n; i++) {
+			
+			int val = a.get(i);
+			val = val/n - 1;
+			a.set(i, val);
+		}
 
 	}
 

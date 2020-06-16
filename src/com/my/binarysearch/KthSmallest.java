@@ -75,10 +75,10 @@ public class KthSmallest {
 
 			if (pivotPost - left == k - 1) {
 				return A.get(pivotPost);
-			} else if (pivotPost - left > k - 1) { //pivot > k-1
+			} else if (pivotPost - left > k - 1) { // pivot > k-1
 				return kthSmallest(A, k, left, pivotPost - 1);
-			} else {	//pivot < k-1
-				return kthSmallest(A, k - (pivotPost - left + 1), pivotPost + 1, right);
+			} else { // pivot < k-1
+				return kthSmallest(A, left + (k - pivotPost + 1), pivotPost + 1, right);
 			}
 		}
 
@@ -102,11 +102,12 @@ public class KthSmallest {
 		 * left All elements > pivot are towards its right
 		 *
 		 */
-		int pivot = A.get(right), i = left;
+		int pivotVal = A.get(right), i = left; 
+		//i points to first greater element than pivotVal
 		for (int j = left; j < right; j++) {
-			if (A.get(j) <= pivot) {
-				swap(A, i, j);
-				i++;
+			if (A.get(j) <= pivotVal) {
+				swap(A, i, j); 
+				i++; 
 			}
 		}
 		swap(A, i, right);

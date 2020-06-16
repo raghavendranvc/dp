@@ -47,16 +47,16 @@ public class GreyCode {
         }
 
         if(a>2){
-            List<String> list1 = new ArrayList<>(returnList);
-            List<String> list2 = new ArrayList<>(returnList);
-            Collections.reverse(list2);
+            List<String> list = new ArrayList<>(returnList);
+            List<String> reverseList = new ArrayList<>(returnList);
+            Collections.reverse(reverseList);
 
-            prefixList( list1,"0");
-            prefixList( list2,"1");
+            prefixList( list,"0");
+            prefixList( reverseList,"1");
 
             returnList = new ArrayList<>();
-            returnList.addAll(list1);
-            returnList.addAll(list2);
+            returnList.addAll(list);
+            returnList.addAll(reverseList);
 
         }
         return returnList;

@@ -16,22 +16,23 @@ public class WindowString {
         int start = 0,  min = Integer.MAX_VALUE;
         int count = 0;
 
-        for (int j = 0; j < A.length(); j++){
-            s[A.charAt(j)]++;
+        for (int i = 0; i < A.length(); i++){
+            s[A.charAt(i)]++;
 
-            if (s[A.charAt(j)] <= p[A.charAt(j)] )
+            if (s[A.charAt(i)] <= p[A.charAt(i)] )
                 count++;
 
             if (count == B.length()){
+            	//Once we find all P chars, then we execute this block every time
                 while ( s[A.charAt(start)] > p[A.charAt(start)]){
                     s[A.charAt(start)]--;
                     start++;
                 }
-                if(j - start + 1 < min){
-                    min = j - start + 1;
-                    res = A.substring(start, j+1);
+                if(i - start + 1 < min){
+                    min = i - start + 1;
+                    res = A.substring(start, i+1);
                 }
-                min = Math.min(min, j - start + 1);
+                //min = Math.min(min, i - start + 1);
             }
         }
         return res;

@@ -56,7 +56,7 @@ public class Excel {
         StringBuilder result = new StringBuilder();
         while(A!=0){
             int remainder = A % 26;
-            if(remainder == 0) {
+            if(remainder == 0) {//'0' is treated as '26'
                 remainder = 26;
             }
             result.append(""+(char)(64+remainder));

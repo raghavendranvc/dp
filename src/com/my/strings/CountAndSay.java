@@ -47,11 +47,12 @@ public class CountAndSay {
 
     public String countAndSay(int A) {
         String countSay = "1";
-        String nextSequence = "";
+        
 
         while(A > 1){
             int count=1;
             int currentDigit = countSay.charAt(0)-'0';
+            String nextSequence = "";
             //System.out.println("Checking currentDigit="+currentDigit);
             for(int i=1;i<countSay.length();i++){
                 //System.out.println("countSay.charAt("+i+")="+countSay.charAt(i));
@@ -69,7 +70,6 @@ public class CountAndSay {
             nextSequence += count + ""+ currentDigit +"";
             countSay = nextSequence;
             //System.out.println("-------A="+A+" Next Sequence="+countSay);
-            nextSequence = "";
             A--;
         }
 

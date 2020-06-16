@@ -15,6 +15,7 @@ public class WordLadder {
 
 	class WordNode {
 		String word;
+		int dist;
 		List<WordNode> neighbours;
 
 		WordNode(String word) {
@@ -45,7 +46,7 @@ public class WordLadder {
 			return -1;
 		}
 
-		C.add(A);
+		C.add(A); //if A and B are not in C
 		C.add(B);
 
 		int V = C.size();
@@ -68,28 +69,30 @@ public class WordLadder {
 		Set<WordNode> visited = new HashSet<WordNode>();
 		Queue<WordNode> queue = new LinkedList<WordNode>();
 
-		int dist = 0;//Wrong way of dist calc. Use a temp node structure
+		
 		queue.add(src);
 
 		while (!queue.isEmpty()) {
 
 			WordNode s = queue.remove();
-			dist++;
+			
 			for (WordNode neigh : s.neighbours) {
 
 				// same reference object will return true. This should suffice for us
 				if (neigh.equals(dest)) {
-					System.out.println("found at dist=" + dist);
-					return dist;
+					neigh.dist = s.dist+1;
+					System.out.println("found at dist=" + neigh.dist);
+					return neigh.dist;
 				}
 				if (visited.contains(neigh)) {
 					continue;
 				}
 				visited.add(neigh);
+				neigh.dist = s.dist+1;
 				queue.add(neigh);
 			}
 
-			System.out.println("Level" + dist + " Next Queue=" + queue);
+			System.out.println(" Next Queue=" + queue);
 		}
 
 		return -1;
@@ -118,7 +121,7 @@ public class WordLadder {
 				}
 			}
 		}
-		return true;
+		return (count < 2);
 	}
 
 	public static void main(String[] args) {

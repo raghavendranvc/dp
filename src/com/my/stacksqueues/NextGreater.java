@@ -36,22 +36,4 @@ public class NextGreater {
         return new ArrayList(Arrays.asList(result));
     }
 
-    public ArrayList<Integer> prevSmaller(ArrayList<Integer> A) {
-        Stack<Integer> stack = new Stack<>();
-        ArrayList<Integer> integers = new ArrayList<>();
-
-        for(int i : A){
-            while(!stack.isEmpty() && stack.peek()>=i) {
-                stack.pop();
-            }
-            if(stack.isEmpty()){
-                integers.add(-1);
-            } else {
-                integers.add(stack.peek());
-            }
-            stack.push(i);
-        }
-        return integers;
-    }
-
 }

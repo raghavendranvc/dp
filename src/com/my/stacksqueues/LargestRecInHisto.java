@@ -17,7 +17,8 @@ public class LargestRecInHisto {
         int i=0;
         while (i < A.size()){
             if(stack.isEmpty() || A.get(i) >= A.get(stack.peek())){
-                stack.push(i++);
+                stack.push(i);
+                i++; // i is only incremented here
             } else {
                 int top = stack.pop();
                 int currentArea = A.get(top) * (stack.isEmpty() ? i : i - stack.peek() - 1);

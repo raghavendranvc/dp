@@ -50,7 +50,7 @@ public class SortedPermutationRank {
 	}
 
 	// Repeats are allowed
-	//TODO 
+	//TODO  Use this
 	public int findRankNonDistinctCopied(String s) {
 		final int n = s.length();
 		int[] f = getFactorialArray(n); // Get all factorials till n
@@ -62,7 +62,7 @@ public class SortedPermutationRank {
 		for (int i = n - 1; i >= 0; i--) { // We have to do it in the reverse
 			final char c = s.charAt(i);
 			final int less = set.headSet(c).size(); 
-			// get the number of characters <=c so far. 
+			// get the number of characters < c so far. 
 			// Since the array is in sorted form, 
 			// it will return all elements from head to this value exclusive
 

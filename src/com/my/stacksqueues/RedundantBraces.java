@@ -37,7 +37,7 @@ public class RedundantBraces {
                         redundantBraces = false;
                     }
                     System.out.println();
-                    top = stack.pop();
+                    top = stack.pop();//continue to pop, till you remove "("
                 }
                 System.out.println();
                 if(redundantBraces){

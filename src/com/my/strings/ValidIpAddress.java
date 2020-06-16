@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class ValidIpAddress {
 
 	//TODO Practice again
+	//backtracking
 	
     public ArrayList<String> restoreIpAddresses(String A) {
         ArrayList<String> result = new ArrayList<>();

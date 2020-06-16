@@ -107,7 +107,7 @@ public class IslandsBridges {
 	}
 
 	public int solve(int A, int[][] B) {
-		if (A <= 0 || B == null || B == null || B[0].length == 0) {
+		if (A <= 0 || B == null || B.length == 0 || B[0].length == 0) {
 			return -1;
 		}
 

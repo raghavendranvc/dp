@@ -126,7 +126,7 @@ class PairSums {
 					numOfPairs += count * map.get(k - key);
 				}
 				System.out.println("numOfPairs="+numOfPairs+" key="+key+" count="+count+" key2="+(k-key)+" count2="+map.get(k - key));
-				iterator.remove();
+				iterator.remove();//important TODO remember to remove
 			}
 		}
 

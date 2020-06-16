@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
 
-public class CourseSchedule {
+public class CourseScheduleTaskSchedule {
 
 	class Graph {
 		int v;
@@ -36,6 +36,15 @@ public class CourseSchedule {
 		for (int i = 0; i < prerequisites.length; i++) {
 			g.addEdge(prerequisites[i][1], prerequisites[i][0]);
 		}
+		
+		/*
+		 * Visited is for the DFS so that we will not revisit it as
+		 * we have already proceeded it
+		 * 
+		 * currentPath is used to detect cycle. If we visit any on the
+		 * path again, we have a cycle
+		 * This is like GREY COLOR
+		 */
 
 		boolean[] visited = new boolean[numCourses];
 		boolean[] currentPath = new boolean[numCourses]; // TODO
@@ -52,7 +61,9 @@ public class CourseSchedule {
 
 	public boolean detectCycle(Graph g, int v, boolean[] visited, boolean[] currentPath) {
 
-		if (visited[v]) {
+		// if we see an already visited vertix, means there cannot be deadlock 
+		if (visited[v]) { //remember this is not on the current path
+			//we could also write this as (visited[v] && !currentPth[v])
 			return false;
 		}
 
@@ -63,11 +74,11 @@ public class CourseSchedule {
 				return true;
 			}
 		}
-		currentPath[v] = false;
+		currentPath[v] = false;//backtrack 
 		return false;
 	}
 
-	/******************* Get the schedule ************************/
+	/******************* Get the schedule - Task Order************************/
 
 	public int[] findOrder(int numCourses, int[][] prerequisites) {
 
@@ -85,8 +96,9 @@ public class CourseSchedule {
 			g.addEdge(prerequisites[i][1], prerequisites[i][0]);
 		}
 
-		boolean[] visited = new boolean[numCourses];
-		boolean[] currentPath = new boolean[numCourses];
+		boolean[] visited = new boolean[numCourses]; //visited is for whole
+		boolean[] currentPath = new boolean[numCourses]; 
+		//Remember this. Very important. Needed for disconnected graph
 
 		boolean canFinish = true;
 		for (int i = 0; i < g.v; i++) {

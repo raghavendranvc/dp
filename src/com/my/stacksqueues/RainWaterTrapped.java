@@ -4,63 +4,78 @@ import java.util.List;
 
 public class RainWaterTrapped {
 
-	//TODO Pracice this again. We can also do in a different way
-	
-    public int trap(final List<Integer> A) {
+	// TODO Practice this again. We can also do in a different way
 
-        int n = A.size();
-        int[] leftMax = new int[n];
-        int[] rightMax = new int[n];
+	public int trapSimple(final List<Integer> A) {
+		int left = 0;
+		int right = A.size() - 1;
 
-        leftMax[0] = A.get(0);
-        for(int i=1;i<n;i++){
-            leftMax[i] = Math.max(leftMax[i-1],A.get(i));
-        }
+		int max = 0;
+		int leftmax = 0;
+		int rightmax = 0;
 
-        rightMax[n-1] = A.get(n-1);
-        for(int i=n-2;i>=0;i--){
-            rightMax[i] = Math.max(rightMax[i+1],A.get(i));
-        }
+		while (left <= right) {
+			leftmax = Math.max(leftmax, A.get(left));
+			rightmax = Math.max(rightmax, A.get(right));
 
-        int result = 0;
-        for(int i=0;i<n-1;i++){
-            result = result + Math.min(rightMax[i],leftMax[i]) - A.get(i);
-        }
+			if (leftmax < rightmax) {
+				max += (leftmax - A.get(left));
+				// leftmax is smaller than rightmax,
+				// so the (leftmax-A[a]) water can be stored
+				left++;
+			} else {
+				max += (rightmax - A.get(right));
+				right--;
+			}
+		}
+		return max;
 
-        return result;
+	}
 
-    }
+	public int trapE(final List<Integer> A) {
+		int len = A.size();
+		if (len < 3) {
+			return 0;
+		}
+		int sum = 0, i = 1, j = len - 1;
+		int lmax = A.get(0), rmax = A.get(len - 1);
+		while (i <= j) {
+			lmax = Math.max(lmax, A.get(i));
+			rmax = Math.max(rmax, A.get(j));
+			if (lmax <= rmax) {
+				sum += (lmax - A.get(i));
+				i += 1;
+			} else {
+				sum += (rmax - A.get(j));
+				j -= 1;
+			}
+		}
+		return sum;
+	}
 
-    public int trapWithSimpleVar(final List<Integer> A) {
+	public int trap(final List<Integer> A) {
 
-        int n = A.size();
+		int n = A.size();
+		int[] leftMax = new int[n];
+		int[] rightMax = new int[n];
 
-        int count = 0;
+		leftMax[0] = A.get(0);
+		for (int i = 1; i < n; i++) {
+			leftMax[i] = Math.max(leftMax[i - 1], A.get(i));
+		}
 
-        int leftMax = 0;
-        int rightMax = 0;
+		rightMax[n - 1] = A.get(n - 1);
+		for (int i = n - 2; i >= 0; i--) {
+			rightMax[i] = Math.max(rightMax[i + 1], A.get(i));
+		}
 
-        int left=0;
-        int right=n-1;
+		int result = 0;
+		for (int i = 0; i < n - 1; i++) {
+			result = result + Math.min(rightMax[i], leftMax[i]) - A.get(i);
+		}
 
-        while(left <= right){
-            if(A.get(left) < A.get(right)){
-                if(A.get(left) > leftMax){
-                    leftMax = A.get(left);
-                } else {
-                    count += leftMax - (A.get(left));
-                }
-                left++;
-            } else {
-                if(A.get(right) > rightMax){
-                    rightMax = A.get(right);
-                } else {
-                    count += rightMax - (A.get(right));
-                }
-                right++;
-            }
-        }
+		return result;
 
-        return count;
-    }
+	}
+
 }

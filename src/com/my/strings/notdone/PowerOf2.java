@@ -1,4 +1,4 @@
-package com.my.strings;
+package com.my.strings.notdone;
 
 public class PowerOf2 {
 

@@ -48,7 +48,7 @@ public class TopologicalSort {
 		visited[src] = true;
 		for (int v : g.adjList[src]) {
 			if (visited[v]) {
-				continue;
+				continue; 
 			}
 			dfsTraverse(g, visited, v, stack);
 		}
@@ -59,7 +59,8 @@ public class TopologicalSort {
 
 		Stack<Integer> stack = new Stack<Integer>();
 
-		boolean[] visited = new boolean[g.v];
+		boolean[] visited = new boolean[g.v]; 
+		//assumption here is there is no deadlock in the given edges
 
 		for (int i = 0; i < g.v; i++) {
 			if (visited[i]) {

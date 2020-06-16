@@ -2,7 +2,7 @@ package com.my.binarysearch;
 
 import java.util.List;
 
-public class FirstLowerFirstGreaterElementInSortedArray {
+public class NumberOfSmallerElements {
 
     /*
     0       1       2       3       4       5       6       7       8       8       9      10       11                                                                                      11

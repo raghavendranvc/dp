@@ -1,4 +1,4 @@
-package com.my.leet.hard.notdone;
+package com.my.leet.hard;
 
 public class CountNumberOfOneDigit {
 

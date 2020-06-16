@@ -1,6 +1,5 @@
 package com.my.trees;
 
-import java.util.TreeSet;
 
 public class SymmetricTrees {
     class TreeNode {

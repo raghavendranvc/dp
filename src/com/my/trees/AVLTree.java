@@ -1,4 +1,4 @@
-package com.my.trees;
+ package com.my.trees;
 
 public class AVLTree {
 	class Node {

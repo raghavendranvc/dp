@@ -27,17 +27,22 @@ public class MaxConsectiveGap {
 	 * (N - 1). For example, for the example shown above, if the number is uniformly
 	 * distributed, the gap is (7 - 1) / 3 = 2, i.e, the array should be 1 3 5 7.
 	 * Since now the number may not be uniformly distributed, the maximum gap might
-	 * be greater than 2. -- Step 2: Determine the number of buckets, which should
-	 * be (max - min) / interval + 1. The number of buckets should be equal to the
-	 * range of numbers / range per bucket. -- Step 3: Determine which number is in
-	 * which bucket, which equals to (A[i] - min) / interval. e.g. (7 - 1) / 2 = 3,
-	 * in bucket[3]. -- Step 4: We only need to maintain the min and max value for
-	 * each bucket. The maximum gap must between two adj. buckets instead of within
-	 * a bucket. That is because the maximum gap inside of a bucket is interval - 1.
-	 * However, in the step 1 we have already known that the the maximal gap must be
-	 * greater than interval. -- Step 5. After we calculated the min and max value
-	 * in each bucket, we then iterate through the buckets and get the maximal gap
-	 * between buckets. Be very careful that buckets might be empty.
+	 * be greater than 2.
+	 * 
+	 * -- Step 2: Determine the number of buckets, which should be (max - min) /
+	 * interval + 1. The number of buckets should be equal to the range of numbers /
+	 * range per bucket.
+	 * 
+	 * -- Step 3: Determine which number is in which bucket, which equals to (A[i] -
+	 * min) / interval. e.g. (7 - 1) / 2 = 3, in bucket[3].
+	 * 
+	 * -- Step 4: We only need to maintain the min and max value for each bucket.
+	 * The maximum gap must between two adj. buckets instead of within a bucket.
+	 * That is because the maximum gap inside of a bucket is interval - 1. However,
+	 * in the step 1 we have already known that the the maximal gap must be greater
+	 * than interval. -- Step 5. After we calculated the min and max value in each
+	 * bucket, we then iterate through the buckets and get the maximal gap between
+	 * buckets. Be very careful that buckets might be empty.
 	 */
 
 	public int maximumGap(final List<Integer> A) {
@@ -57,6 +62,7 @@ public class MaxConsectiveGap {
 		int bucketSize = difference / (A.size()); // (29+8)/9 = 4 or 29/3=4
 
 		int[] verification = new int[bucketSize * 2];
+		// bucket stores min and max of the bucket
 		System.out.println("bucketSize=" + bucketSize + " difference=" + difference);
 
 		for (int i = 0; i < A.size(); i++) {
@@ -65,11 +71,11 @@ public class MaxConsectiveGap {
 			int bucket = element / bucketSize;
 			System.out.println("i=" + i + " element=" + element + " bucket=" + bucket);
 			if (verification[2 * bucket] == 0 || element < verification[2 * bucket + 1]) {
-				verification[2 * bucket] = element;
+				verification[2 * bucket] = element;//min of bucket
 			}
 
 			if (verification[2 * bucket] == 0 || element > verification[2 * bucket + 1]) {
-				verification[2 * bucket + 1] = element;
+				verification[2 * bucket + 1] = element;//max of bucket
 			}
 
 		}

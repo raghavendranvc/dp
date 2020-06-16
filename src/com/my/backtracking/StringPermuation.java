@@ -7,15 +7,15 @@ public class StringPermuation {
 	// TODO revisit this
 	// pairwiseHammingDistance.computePermutation(s, "");
 
-	public void computePermutation(String str, String suffix) {
+	public void computePermutation(String str, String prefix) {
 		if (str.length() == 0) {
-			System.out.println(suffix);
+			System.out.println(prefix);
 		}
 
 		for (int i = 0; i < str.length(); i++) {
 			char ch = str.charAt(i);
 			String restOfTheString = str.substring(0, i) + str.substring(i + 1);
-			computePermutation(restOfTheString, suffix + ch);
+			computePermutation(restOfTheString, prefix + ch);
 		}
 
 	}

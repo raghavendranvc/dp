@@ -27,7 +27,7 @@ public class AddTwoNumbers {
         while(A != null && B!= null){
             int sum = (carry + A.val + B.val)%10;
             carry = (carry + A.val + B.val)/10;
-            if(next == null){
+            if(next == null){ //For the first time
                 next = new ListNode(sum);
                 result = next;
             } else {

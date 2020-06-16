@@ -15,8 +15,9 @@ public class ChocMagician {
         return (int)(nchocInt(A,copyB));
     }*/
 
+	static long longMod = (long)Math.pow(10,9)+7;
     public int nchoc(int A, ArrayList<Integer> B) {
-        long longMod = (long)Math.pow(10,9)+7;
+        
         PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
         pq.addAll(B);
 

@@ -21,7 +21,6 @@ public class Fractions {
         A = (A%B)*10;
 
         Map<Integer,Integer> fraction = new LinkedHashMap<>();
-        fraction.entrySet();
         while(fraction.containsKey(A)){
             fraction.put(A, sb.length()); //Record the length of the result string. So that we know where to keep "("
             sb.append(A/B);

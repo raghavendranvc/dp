@@ -36,7 +36,7 @@ public class NQueens {
                 board[i][col] = true;
 
                 /* recur to place rest of the queens */
-                if (solveNQUtil(a, board, col + 1) == true)
+                if (solveNQUtil(a, board, col + 1))
                     return true;
 
                 /* If placing queen in board[i][col]

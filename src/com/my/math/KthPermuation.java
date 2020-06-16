@@ -1,7 +1,5 @@
 package com.my.math;
 
-import com.my.binarysearch.KthSmallest;
-import com.my.common.UtilityClass;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -180,7 +178,7 @@ public class KthPermuation {
 		}
 		int quotient = k / fact[n - 1];
 		int num = digits.get(quotient);
-		digits.remove(quotient);
+		digits.remove(quotient);//Important
 		k = k % fact[n - 1];
 
 		return num + getPerm(n - 1, k, fact, digits);

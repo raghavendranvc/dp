@@ -60,7 +60,12 @@ public class CountingTriangles {
                     }
                     ans+=(k-j-1);
                     ans=ans%1000000007;
-                    j++;
+                    j++; 
+                    //k will resume from where it's stopped. 
+                    //We don't need to recompute. 
+                    //So We already have k-(j+1)-1 with j++ triangles
+                    //If i, j++, k forms a triange
+                    
                 }
             }
         }

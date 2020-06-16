@@ -24,6 +24,7 @@ public class SmallestMultiple0OR1 {
 	
 	//	
 	
+	//TODO this mod is critical
 	public int getMod(String s, int n) {
 		int mod = 0;
 		for(char ch : s.toCharArray()) {

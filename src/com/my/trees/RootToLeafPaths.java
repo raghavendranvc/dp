@@ -1,7 +1,5 @@
 package com.my.trees;
 
-import java.math.BigInteger;
-
 public class RootToLeafPaths {
 
     class TreeNode{

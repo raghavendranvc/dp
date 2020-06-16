@@ -42,7 +42,7 @@ public class FirstLoopNode {
             return null;
         }
 
-        slow = a;
+        slow = a; //slow is reset to the first node.
         while(slow != fast){
             slow = slow.next;
             fast = fast.next;

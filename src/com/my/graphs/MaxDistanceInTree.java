@@ -144,6 +144,7 @@ public class MaxDistanceInTree {
 	
 	//---------------------One way--------------------------------------------
 
+	// A is parent vertex
 	public int solveUsingDFS(ArrayList<Integer> A) {
 		int n = A.size();
 		ArrayList<ArrayList<Integer>> graph = new ArrayList<ArrayList<Integer>>();

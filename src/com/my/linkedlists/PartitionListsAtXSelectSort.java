@@ -1,6 +1,6 @@
 package com.my.linkedlists;
 
-public class PartitionLists {
+public class PartitionListsAtXSelectSort {
 
 	// TODO not done
 
@@ -27,34 +27,6 @@ public class PartitionLists {
 	 * 6 9 6 2 4 8* 3 4 5 6 9 6 7 2 4 3 4 5 6 9 6 7 8
 	 * 
 	 */
-
-	public ListNode partition(ListNode A, int B) {
-
-		if (A == null || A.next == null) {
-			return A;
-		}
-
-		ListNode lastNode = A;
-		while (lastNode.next != null) {
-			lastNode = lastNode.next;
-		}
-
-		ListNode previous = null;
-		ListNode currentNode = A;
-		// ListNode lastKnownSmallerElement = null;
-		while (currentNode != null) {
-
-			if (currentNode.val > B) {
-				if (currentNode == A) {
-
-				}
-			}
-
-		}
-
-		return lastNode;
-
-	}
 
 	// https://www.programcreek.com/2013/02/leetcode-partition-list-java/
 

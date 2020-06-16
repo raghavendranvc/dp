@@ -53,6 +53,12 @@ public class ValidPathInRectOfCircles {
 			
 			
 			
+			// 8 directions
+			// should use 2 for loops
+			// i = -1 to 1
+			// j = -1 to 1
+			// (0,0) is already visisted. So all 8 will be called for dfs
+			
 			// -1, -1
 			// -1, 0
 			// 0, -1

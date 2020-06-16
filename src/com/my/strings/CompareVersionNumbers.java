@@ -115,7 +115,7 @@ public class CompareVersionNumbers {
 				} else if (Integer.parseInt(arr1[i]) > Integer.parseInt(arr2[i])) {
 					return 1;
 				}
-			} else if (i < arr1.length) {
+			} else if (i < arr1.length) {// 3.4.1 > 3.4
 				if (Integer.parseInt(arr1[i]) != 0) {
 					return 1;
 				}

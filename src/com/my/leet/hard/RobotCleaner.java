@@ -1,4 +1,4 @@
-package com.my.leet.hard.notdone;
+package com.my.leet.hard;
 
 import java.util.HashSet;
 import java.util.Set;

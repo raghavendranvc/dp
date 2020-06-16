@@ -11,7 +11,6 @@ public class LeftRotateArray {
 		int src = numbers[0];
 		int destIndex = rotate % n;
 
-		int dest;
 		int totalOperations = n; //overall we shall have n operations
 		while (totalOperations > 0) {
 
@@ -20,7 +19,7 @@ public class LeftRotateArray {
 			 * 2) Now you can safely move the source/current Element to destIndex
 			 * 3) Now for the next iteration, dest becomes source. So assign dest to src
 			 */
-			dest = numbers[destIndex];
+			int dest = numbers[destIndex];
 			numbers[destIndex] = src;
 			src = dest;
 			

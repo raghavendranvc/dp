@@ -11,6 +11,9 @@ public class RootToLeafSums {
             this.val = val;
         }
     }
+    
+    
+    //Root to Leaf path sums is B
 
     public ArrayList<ArrayList<Integer>> pathSum(TreeNode A, int B) {
         ArrayList<ArrayList<Integer>> result = new ArrayList<>();

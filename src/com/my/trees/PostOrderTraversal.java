@@ -49,36 +49,4 @@ public class PostOrderTraversal {
         return postOrderTravelsal;
     }
 
-    // TODO not done fully. Refer Geeks - Complex - No Time
-    public ArrayList<Integer> postorderTraversalSingleStack(TreeNode A) {
-        ArrayList<Integer> postOrderTravelsal = new ArrayList<>();
-        if(A == null){
-            return postOrderTravelsal;
-        }
-        Stack<TreeNode> stack = new Stack<>();
-
-        pushLeftTreeToStack(A.left, stack);
-
-        while (A.left == null || !stack.isEmpty() ){
-            if(stack.isEmpty()){
-                pushLeftTreeToStack(A.right, stack);
-            }
-
-            if(!stack.isEmpty()){
-                A = stack.pop();
-
-            }
-        }
-
-        return postOrderTravelsal;
-
-    }
-
-    private void pushLeftTreeToStack(TreeNode node, Stack<TreeNode> stack){
-        while(node != null){
-            stack.push(node);
-            node = node.left;
-        }
-    }
-
 }

@@ -26,6 +26,7 @@ public class PrettyPrint {
                 resultList.get(j).set(i,A-i);
                 resultList.get(arraySize-1-i).set(j,A-i);
                 resultList.get(j).set(arraySize-1-i,A-i);
+                
                 result[i][j]                = A-i;
                 result[j][i]                = A-i;
                 result[arraySize-1-i][j]    = A-i;

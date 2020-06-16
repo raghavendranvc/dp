@@ -15,25 +15,6 @@ public class RemoveDup {
 
     }
 
-    public ListNode deleteDuplicatesMakeUnique(ListNode A) {
-
-        ListNode currentNode = A;
-        ListNode previousNode = A;
-        while (currentNode != null && currentNode.next != null){
-            if(currentNode.val != currentNode.next.val){
-                previousNode.next = currentNode.next;
-                previousNode = previousNode.next;
-            }
-            currentNode = currentNode.next;
-        }
-        if(currentNode == null || currentNode.val==previousNode.val){
-            previousNode.next=null;
-        } else {
-            previousNode.next=currentNode;
-        }
-        return A;
-    }
-    
     public ListNode deleteDuplicatesOneVariable(ListNode A) {
     	if(A == null) {
     		return null;

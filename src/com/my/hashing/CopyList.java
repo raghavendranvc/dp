@@ -30,9 +30,9 @@ public class CopyList {
         while(currentNode!=null){
 
             if(currentNode.next != null) {
-                currentNode.next.random = (currentNode.random != null)? currentNode.random.next : currentNode.random;
+                currentNode.next.random = (currentNode.random != null)? currentNode.random.next : null;
             }
-            currentNode = (currentNode.next != null)? currentNode.next.next :  currentNode.next;
+            currentNode = (currentNode.next != null)? currentNode.next.next :  null;
         }
 
         RandomListNode newHead = head.next;
@@ -41,8 +41,8 @@ public class CopyList {
         RandomListNode currentCopyNode = newHead;
         while(currentNode!=null && currentCopyNode!=null){
 
-            currentNode.next     = (currentNode.next != null)?      currentNode.next.next       : currentNode.next;
-            currentCopyNode.next = (currentCopyNode.next !=null)?   currentCopyNode.next.next   : currentCopyNode.next;
+            currentNode.next     = (currentNode.next != null)?      currentNode.next.next       : null;
+            currentCopyNode.next = (currentCopyNode.next !=null)?   currentCopyNode.next.next   : null;
 
             currentNode = currentNode.next;
             currentCopyNode = currentCopyNode.next;

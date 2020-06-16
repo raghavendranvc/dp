@@ -37,6 +37,8 @@ public class NobleInteger {
 
 		return -1;
 	}
+	
+	// Simple non-sort-------------------------------------
 
 	public int solveNonSort(ArrayList<Integer> A) {
 
@@ -67,7 +69,7 @@ public class NobleInteger {
 		 * Max of all elements should be at the end
 		 * Once we prepare the elements, 
 		 * if max is the end, then max[end] = maxElement
-		 * So we want such an error prepared where 
+		 * So we want such an array prepared where 
 		 * we get all max from left to end
 		 * 
 		 */

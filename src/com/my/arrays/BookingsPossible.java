@@ -1,8 +1,5 @@
 package com.my.arrays;
 
-import com.my.common.UtilityClass;
-
-import java.awt.print.Book;
 import java.util.*;
 
 public class BookingsPossible {

@@ -7,7 +7,7 @@ public class MatrixMedian {
 
 	// TODO - Didn't do, copied GIVEN UP After a while
 
-	public int findMedian(ArrayList<ArrayList<Integer>> A) {
+	public int findMedian2(ArrayList<ArrayList<Integer>> A) {
 
 		int rowCount = A.size();
 		int columnCount = A.get(0).size();
@@ -16,8 +16,8 @@ public class MatrixMedian {
 		int min = A.get(0).get(0);
 		int max = A.get(0).get(columnCount - 1);
 		for (int i = 1; i < rowCount; i++) {
-			min = Math.min(min, A.get(i).get(0));//Min is present in the first column
-			max = Math.max(max, A.get(i).get(columnCount - 1));//max is present in the last column
+			min = Math.min(min, A.get(i).get(0));// Min is present in the first column
+			max = Math.max(max, A.get(i).get(columnCount - 1));// max is present in the last column
 		}
 
 		/*
@@ -28,7 +28,7 @@ public class MatrixMedian {
 		 */
 
 		while (min <= max) {
-			int mid = min + (max - min) / 2; //mid is the number between min and max
+			int mid = min + (max - min) / 2; // mid is the number between min and max
 			int smallCount = getSmallerCountInMatrix(A, mid);
 			if (smallCount > total / 2) {
 				max = mid - 1;
@@ -36,7 +36,7 @@ public class MatrixMedian {
 				min = mid + 1;
 			}
 		}
-		return  max;
+		return max;
 	}
 
 	public int getSmallerCountInMatrix(ArrayList<ArrayList<Integer>> A, int number) {
@@ -60,9 +60,11 @@ public class MatrixMedian {
 				left = mid + 1;
 			}
 		}
-		return left; 
-		//left will have moved over right. So the order will be 0,...right,left,...n
-		//So left will the number of elements greater than mid
+		return left;
+		// left will have moved over right. So the order will be 0,...right,left,...n
+		// So left will the number of elements greater than mid and "left-1" index
+		// is the place where the last smaller element will be presnt
+		// at "left" index, we have the first greater value.
 
 	}
 

@@ -55,6 +55,7 @@ public class NextPermutation {
 		// So do the reverse check
 		int decreasingSequenceEnd = A.size() - 1;
 
+		//has to be samller element, then only stop
 		while (decreasingSequenceEnd > 0 && A.get(decreasingSequenceEnd - 1) >= A.get(decreasingSequenceEnd)) {
 			decreasingSequenceEnd--;
 		}
@@ -72,6 +73,7 @@ public class NextPermutation {
 
 		// Within the decreasing sequence, find the last digit which is greater than the
 		// one at 'decreasingSequenceEnd'
+		// has to be greater element, then stop
 
 		int lastGreaterElement = A.size() - 1;
 		while (A.get(lastGreaterElement) <= A.get(decreasingSequenceEnd - 1)) {

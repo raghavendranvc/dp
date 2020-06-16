@@ -46,7 +46,7 @@ public class GasStation {
          */
 
         int currentGas = 0;
-        int minGasStation = 0;
+        int startStation = 0;
         for(int i=0;i<n;i++){
 
 
@@ -54,10 +54,10 @@ public class GasStation {
                 currentGas += diff[i];
             } else {
                 currentGas = diff[i];
-                minGasStation = i;
+                startStation = i;
             }
         }
-        return minGasStation;
+        return startStation;
     }
 
 

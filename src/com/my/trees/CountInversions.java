@@ -64,6 +64,7 @@ public class CountInversions {
         ArrayList<Integer> leftArray = new ArrayList<>(A.subList(0, m)); //m is not included
         ArrayList<Integer> rightArray = new ArrayList<>(A.subList(m,A.size()));
 
+        //We add up. Don't multiply //TODO remember
         return countInversions(leftArray) + countInversions(rightArray) + mergeCount(A, leftArray, rightArray);
 
     }
@@ -91,6 +92,10 @@ public class CountInversions {
             // left ....i .....mid .....j ......right
             //  if(j<i), then number of inversions = left elements that are greater than j
             // meaning all elements from i too mid meaning left.size()-i
+            // all elements from : left to mid are sorted
+            // all elements from : mid to right are sorted
+            // so the only ones which counts are from "i to mid" which would be greater
+            // than j. The ones from j+1 to right are obviously not counted
         }
         return count;
     }

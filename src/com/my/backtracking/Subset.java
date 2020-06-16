@@ -61,7 +61,7 @@ public class Subset {
 
 		for (int i = startIndex; i < A.size(); i++) {
 			tempArray.add(A.get(i));
-			result.add(new ArrayList<>(tempArray));
+			result.add(new ArrayList<>(tempArray)); //Immediately add it
 			System.out.println("Before temp (" + i + ") =" + tempArray);
 			subsetsRecur(A, i + 1, result, tempArray);
 			tempArray.remove(tempArray.size() - 1);

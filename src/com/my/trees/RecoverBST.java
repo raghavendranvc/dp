@@ -30,7 +30,7 @@ public class RecoverBST {
     }
 
 
-    TreeNode previousNode;
+    TreeNode previousNode; //We should have previous Node
 
     TreeNode firstNode;
     TreeNode secondNode;

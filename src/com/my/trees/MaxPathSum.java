@@ -2,6 +2,7 @@ package com.my.trees;
 
 public class MaxPathSum {
 
+	//Max path sum between any 2 nodes
 	class TreeNode {
 		int val;
 		TreeNode left;

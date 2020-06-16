@@ -4,15 +4,14 @@ public class InvertBitsInNumebr {
 
     public int invertNumber(int num){
 
-
-        int countHighestBitIndex = 0;
+        int highestBitIndex = 0;
         while (num > 0){
             num = num >> 1;
-            countHighestBitIndex++;
-            System.out.println(" num="+num+" countHighestBitIndex="+countHighestBitIndex);
+            highestBitIndex++;
+            System.out.println(" num="+num+" countHighestBitIndex="+highestBitIndex);
         }
 
-        int maskBit = 1 << (countHighestBitIndex-1);
+        int maskBit = 1 << (highestBitIndex-1);
         System.out.println("HighestBitSetNumber="+maskBit);
 
         maskBit = maskBit | (maskBit-1);

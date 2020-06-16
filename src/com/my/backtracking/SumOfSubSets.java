@@ -40,9 +40,11 @@ public class SumOfSubSets {
 			return;
 		}
 		
+		//We ignore here
 		GetAllCombinationsRecursively(N,currentDenom-1,allDenominations,new ArrayList<Integer>(combination));
 		
 		combination.add(currentDenom); //Including and repeating to use it again in the subset combination
+		//We use the denomination here
 		GetAllCombinationsRecursively(N-allDenominations[currentDenom-1],currentDenom,allDenominations,combination);
 		
 	}

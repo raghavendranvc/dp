@@ -44,21 +44,23 @@ public class WordSearch2NoReuse {
 
 		visited[r][c] = true;
 
-		if (isFound(board, word, r + 1, c, wordIndex, visited.clone(), m, n)) {
+		if (isFound(board, word, r + 1, c, wordIndex, visited, m, n)) {
 			return true;
 		}
 
-		if (isFound(board, word, r - 1, c, wordIndex, visited.clone(), m, n)) {
+		if (isFound(board, word, r - 1, c, wordIndex, visited, m, n)) {
 			return true;
 		}
 
-		if (isFound(board, word, r, c + 1, wordIndex, visited.clone(), m, n)) {
+		if (isFound(board, word, r, c + 1, wordIndex, visited, m, n)) {
 			return true;
 		}
 
-		if (isFound(board, word, r, c - 1, wordIndex, visited.clone(), m, n)) {
+		if (isFound(board, word, r, c - 1, wordIndex, visited, m, n)) {
 			return true;
 		}
+		
+		visited[r][c] = false; //erase the visit. So that it can be used in the next
 
 		return false;
 	}

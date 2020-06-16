@@ -4,36 +4,35 @@ import java.util.ArrayList;
 
 public class KDiff {
 
-    public int diffPossible(ArrayList<Integer> A, int B) {
+	public int diffPossible(ArrayList<Integer> A, int B) {
+		int i = 0;
+		int j = 1;
+		while (j < A.size() && i < A.size()) {
 
-        for(int i=0; i<A.size()-1;i++) {
-            for(int j=i+1;j<A.size();j++) {
-                int diff =  A.get(j) - A.get(i);
-                if( diff == B){
-                    return 1;
-                } else if (diff > B) {
-                    break;
-                }
-            }
-        }
+			int diff = (A.get(j) - A.get(i));
 
+			if (diff == B && i != j)
+				return 1;
 
-        //System.out.println("diff="+diff+" A.get("+j+")="+A.get(j)+" A.get("+i+")="+A.get(i));
+			if (diff < B)
+				j++;
+			else
+				i++;
+		}
+		return 0;
+	}
 
-        return 0;
-    }
+	public static void main(String[] args) {
+		int[] a = new int[] { 1, 2, 2, 3, 4 };
+		int B = 0;
+		ArrayList<Integer> intListA = new ArrayList<>(a.length);
+		for (int i : a) {
+			intListA.add(i);
+		}
+		System.out.println("initlist=" + intListA);
+		KDiff kDiff = new KDiff();
+		kDiff.diffPossible(intListA, B);
 
-    public static void main(String[] args) {
-        int[] a = new int[]{ 1, 2, 2, 3, 4};
-        int B = 0;
-        ArrayList<Integer> intListA = new ArrayList<>(a.length);
-        for (int i : a) {
-            intListA.add(i);
-        }
-        System.out.println("initlist=" + intListA);
-        KDiff kDiff = new KDiff();
-        kDiff.diffPossible(intListA,B);
-
-    }
+	}
 
 }

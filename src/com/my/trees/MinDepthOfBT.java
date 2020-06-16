@@ -66,6 +66,8 @@ public class MinDepthOfBT {
 
 		return 1 + Math.min(minDepth(A.left), minDepth(A.right));
 	}
+	
+	//TODO. Read this Elegant
 
 	public int minDepthElegant(TreeNode a) {
 

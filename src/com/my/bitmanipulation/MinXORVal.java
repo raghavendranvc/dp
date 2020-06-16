@@ -7,6 +7,7 @@ public class MinXORVal {
 
     public int findMinXor(ArrayList<Integer> A) {
 
+    	//TODO. Remember why we need to sort
         Integer[] sortInt = A.toArray(new Integer[A.size()]);
         Arrays.sort(sortInt);
 

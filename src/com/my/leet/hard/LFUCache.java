@@ -1,4 +1,4 @@
-package com.my.leet.hard.notdone;
+package com.my.leet.hard;
 
 import java.util.HashMap;
 import java.util.LinkedHashSet;

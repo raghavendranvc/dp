@@ -30,6 +30,9 @@ public class ChessKnightDest {
 		return true;
 	}
 
+	// A X B chess board
+	// C, D is the starting position
+	// E, F is the destination
 	public int knight(int A, int B, int C, int D, int E, int F) {
 		Pair s = new Pair(C, D, 0);
 		

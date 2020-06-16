@@ -54,10 +54,10 @@ public class PrimsAlgo {
 	
 	class PNode implements Comparable<PNode>{
 		int vertex;
-		int currentKey;
+		int distanceFromMST;
 		
 		public int compareTo(PNode a) {
-			return (this.currentKey - a.currentKey);
+			return (this.distanceFromMST - a.distanceFromMST);
 		}	
 	}
 	
@@ -73,19 +73,19 @@ public class PrimsAlgo {
 		
 		for(int i=0;i<g.V;i++) { 
 			pNode[i] = new PNode(); 
-			pNode[i].currentKey = Integer.MAX_VALUE; 
+			pNode[i].distanceFromMST = Integer.MAX_VALUE; 
 			pNode[i].vertex=i; 
 			parent[i] = -1; //assuming everyone is root initially 	
 		}
 		
 		// Let's include firstNode
 		
-		pNode[0].currentKey = 0; // When we remove the lowest from PQ, this needs to be extracted first
+		pNode[0].distanceFromMST = 0; // When we remove the lowest from PQ, this needs to be extracted first
 		
 		TreeSet<PNode> pQueue = new TreeSet<PNode>();
 		
 		PNode firstNode = new PNode();
-		firstNode.currentKey = 0;
+		firstNode.distanceFromMST = 0;
 		//firstNode.vertex = 0;
 		pQueue.add(firstNode);
 		
@@ -96,7 +96,7 @@ public class PrimsAlgo {
 		for(int i=1;i<g.V;i++) {
 			//We can also construct everything here
 			PNode newNode = new PNode();
-			newNode.currentKey = Integer.MAX_VALUE;
+			newNode.distanceFromMST = Integer.MAX_VALUE;
 			newNode.vertex=i;
 			pQueue.add(newNode);
 			parent[i] = -1;
@@ -108,11 +108,11 @@ public class PrimsAlgo {
 			
 			for(EdgeNode neighbour : g.adjList[minNode.vertex]) {
 				PNode destNodePNode = pNode[neighbour.dest];
-				if(!includedInPQ[neighbour.dest] && destNodePNode.currentKey > neighbour.weight) {
+				if(!includedInPQ[neighbour.dest] && destNodePNode.distanceFromMST > neighbour.weight) {
 					// Removing, resetting the key and adding back: This will do re-heapify and will update the heap accordingly
 					// We do not have an operation to-re heapify from the node where we changed the value
 					pQueue.remove(destNodePNode);	
-					destNodePNode.currentKey = neighbour.weight;
+					destNodePNode.distanceFromMST = neighbour.weight;
 					pQueue.add(destNodePNode);	
 					
 					parent[destNodePNode.vertex] = minNode.vertex;
