@@ -61,6 +61,7 @@ public class EliminationProblem {
 		int count = n;
 
 		for (int step = 1, digit = 1; first != last; step <<= 1, digit++) {
+			
 			if (digit % 2 == 1) {
 				first += step;
 				if (count % 2 == 1)
@@ -71,6 +72,7 @@ public class EliminationProblem {
 					first += step;
 			}
 			count /= 2;
+		
 		}
 		return first;
 	}

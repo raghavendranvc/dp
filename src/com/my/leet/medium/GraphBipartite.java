@@ -9,7 +9,7 @@ public class GraphBipartite {
 
 	public boolean isBipartite(int[][] graph) {
 		int n = graph.length;
-		int[] colors = new int[n];
+		int[] colors = new int[n];//visited. 
 
 		for (int i = 0; i < n; i++) {
 			if (colors[i] == 0 && !isValid(graph, colors, i, 1)) {
@@ -22,7 +22,7 @@ public class GraphBipartite {
 
 	public boolean isValid(int[][] graph, int[] colors, int src, int currentColor) {
 		if (colors[src] != 0) {
-			return (colors[src] == currentColor);
+			return (colors[src] == currentColor); //Important terminating condition
 		}
 
 		colors[src] = currentColor;

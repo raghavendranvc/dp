@@ -30,11 +30,14 @@ public class CountNumberOfUniqueDigits {
 		int[] f = new int[11];
 		f[1] = 10;
 		f[2] = 9 * 9;
+		
 		for (int i = 3; i <= 10; ++i)
 			f[i] = f[i - 1] * (10 - i + 1);
+		
 		int ans = 0;
 		for (int i = 0; i <= Math.min(10, n); ++i)
 			ans += f[i];
+		
 		return ans;
 	}
 

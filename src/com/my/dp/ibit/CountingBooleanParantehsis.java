@@ -92,7 +92,7 @@ public class CountingBooleanParantehsis {
 
 		/*
 		 * (i,j) represents number of ways truth can be derived between the operands
-		 * between i and j (including j) the operators between i and j (excluding j)
+		 * between i and j (including j) & the operators between i and j (excluding j)
 		 * operand(i) + operator(i) + ......operand(j-1) + operator(j-1) + operand(j)
 		 */
 
@@ -104,11 +104,11 @@ public class CountingBooleanParantehsis {
 		 * operand is T, then T(i,i) is 1 else F(i,i) is 1
 		 */
 
-		for (int j = 0; j < n; j++) {
-			if (operands[j] == 'T') {
-				T[j][j] = 1;
+		for (int i = 0; i < n; i++) {
+			if (operands[i] == 'T') {
+				T[i][i] = 1;
 			} else {
-				F[j][j] = 0;
+				F[i][i] = 0;
 			}
 		}
 
@@ -143,7 +143,7 @@ public class CountingBooleanParantehsis {
 
 			}
 
-		return T[0][n - 1];
+		return T[0][n - 1];//upper half of diagonal
 	}
 	
 	/****************************** another way ***************************/

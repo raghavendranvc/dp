@@ -42,7 +42,7 @@ public class RobotCleaner {
 		backtracking(robot, visited, 0, 0, 0);
 	}
 
-	int[][] dir = { { 1, 0 }, { -1, 0 }, { 0, 1 }, { 0, -1 } };
+	int[][] dir = { { 1, 0 }, { -1, 0 }, { 0, 1 }, { 0, -1 } };//arrow directions
 
 	private void backtracking(Robot robot, Set<String> visited, int x, int y, int arrow) {
 

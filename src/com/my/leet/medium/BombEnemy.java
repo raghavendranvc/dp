@@ -52,7 +52,7 @@ public class BombEnemy {
 							rowCount++;
 					}
 				}
-				// start from solumn, count the enemies in the current col between two walls
+				// start from column, count the enemies in the current col between two walls
 				if (i == 0 || grid[i - 1][j] == 'W') {
 					colCount[j] = 0;
 					for (int k = i; k < m && grid[k][j] != 'W'; k++) {

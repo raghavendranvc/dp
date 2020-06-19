@@ -21,7 +21,7 @@ public class FractionToDecimal {
 
 		String result = "";
 
-		// is result is negative. One amoing them is negative
+		// is result is negative. One among them is negative
 		if ((numerator < 0) ^ (denominator < 0)) {
 			result += "-";
 		}
@@ -40,9 +40,10 @@ public class FractionToDecimal {
 		if (remainder == 0)
 			return result;
 
+		result += ".";
 		// right-hand side of decimal point
 		HashMap<Long, Integer> map = new HashMap<Long, Integer>();
-		result += ".";
+		
 		while (remainder != 0) {
 			// if digits repeat
 			if (map.containsKey(remainder)) {

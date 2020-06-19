@@ -24,8 +24,9 @@ public class QueueReconstructionByHeight {
 			public int compare(int[] a, int[] b) {
 				if (a[0] != b[0]) {
 					return b[0] - a[0]; // Comparing heights. Max height person at front of array
-				} else {
+				} else {//If heights are same, the person with higher k should come later
 					return a[1] - b[1]; // Comparing how many people are there before
+										//increasing order
 				}
 			}
 		});

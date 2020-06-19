@@ -22,7 +22,7 @@ public class DistinctSubsequences {
 		int[][] table = new int[S.length() + 1][T.length() + 1];
 
 		for (int i = 0; i < S.length(); i++)
-			table[i][0] = 1;
+			table[i][0] = 1; //when target is empty string, we need to delete one
 
 		for (int i = 1; i <= S.length(); i++) {
 			for (int j = 1; j <= T.length(); j++) {

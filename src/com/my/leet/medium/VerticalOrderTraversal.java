@@ -36,10 +36,9 @@ public class VerticalOrderTraversal {
 		// Store current node in map 'm'
 		if (get == null) {
 			get = new ArrayList<>();
-			get.add(root.key);
-		} else
-			get.add(root.key);
-
+		}
+		get.add(root.key);
+	
 		m.put(hd, get);
 
 		// Store nodes in left subtree

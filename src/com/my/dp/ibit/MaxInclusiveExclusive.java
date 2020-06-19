@@ -41,6 +41,7 @@ public class MaxInclusiveExclusive {
 			
 			// here exclusive is previous exclusive
 			// here inclusive is also previous inclusive
+			// we are preparing the new exclusive
 			exclusive = Math.max(exclusive, inclusive);
 			
 			inclusive = newInclusive;//we now assign the new inclusive to inclusive

@@ -39,7 +39,7 @@ Returns [4, 5, 3], [2], [1].
 	// traverse the tree bottom-up recursively
 	private int helper(List<List<Integer>> list, TreeNode root){
 	    if(root==null)
-	        return -1; //Key is this value. For leaves, height is 0.
+	        return -1; //Key idea is this value. For leaves, height is 0.
 	 
 	    int left = helper(list, root.left);
 	    int right = helper(list, root.right);

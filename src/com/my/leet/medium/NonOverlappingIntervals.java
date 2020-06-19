@@ -7,6 +7,7 @@ public class NonOverlappingIntervals {
 
 	// https://github.com/Seanforfun/Algorithm-and-Leetcode/blob/master/leetcode/435.%20Non-overlapping%20Intervals.md
 	// Sort + greedy
+	// How many overlapping intervals, do we have?
 
 	public int eraseOverlapIntervals(int[][] intervals) {
 		int len = intervals.length;

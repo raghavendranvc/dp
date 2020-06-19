@@ -64,7 +64,7 @@ public class AlienLanguage {
 			String first = words[i - 1];
 			String second = words[i];
 
-			int length = Math.max(first.length(), second.length());
+			int length = Math.min(first.length(), second.length());
 
 			for (int j = 0; j < length; j++) {
 				if (first.charAt(j) == second.charAt(j)) {

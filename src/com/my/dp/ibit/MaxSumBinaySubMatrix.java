@@ -25,7 +25,7 @@ public class MaxSumBinaySubMatrix {
 					sol[i][j]=0;
 					continue;
 				}
-				sol[i][j] = getMin(sol[i-1][j],sol[i-1][j-1],sol[i][j-1]);
+				sol[i][j] = 1+getMin(sol[i-1][j],sol[i-1][j-1],sol[i][j-1]);
 				if(sol[i][j] > maxSum) {
 					maxSum = sol[i][j];
 					maxSumI = i;

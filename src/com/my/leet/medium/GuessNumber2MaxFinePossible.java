@@ -35,8 +35,7 @@ However, when you guess a particular number x, and you guess wrong, you pay $x. 
 
         int min = Integer.MAX_VALUE;
         for(int i = start; i <= end; i++) {
-            int cost = i;
-            cost += Integer.max(getMoney(start, i-1, dp), getMoney(i+1,end,dp));
+            int cost = i + Integer.max(getMoney(start, i-1, dp), getMoney(i+1,end,dp));
             min = Integer.min(min, cost);
         }
 

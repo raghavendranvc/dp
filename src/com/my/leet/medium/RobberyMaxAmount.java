@@ -43,7 +43,7 @@ public class RobberyMaxAmount {
         
        
         //Here, we shall rob the first house and not the last one
-        int[] solWithFirst = new int[n];
+        int[] solWithFirst = new int[n+1];
         
         solWithFirst[0] = 0;
         solWithFirst[1] = nums[0];

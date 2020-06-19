@@ -85,6 +85,7 @@ public class EggBreakProblem {
 				for(int k=1;k<=i;k++){
 					int max =  1+Math.max(table[k-1][j-1], table[i-k][j]);
 					minValue = Math.min(minValue, max);
+					//table[i][j] = Math.min(table[i][j], 1+ Math.max(table[k-1][j-1], table[i-k][j]));
 				}
 				
 				

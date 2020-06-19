@@ -13,7 +13,7 @@ public class FindDuplicateInArray {
 
 		do {
 			slow = nums[slow];
-			fast = nums[nums[fast]];
+			fast = nums[nums[fast]];//Remember
 		} while (slow != fast);
 
 		int find = 0;

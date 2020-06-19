@@ -21,8 +21,8 @@ public class MedianOfStreams {
 			output[1] = (arr[0] + arr[1]) / 2;
 
 			if (arr[0] <= arr[1]) {
-				maxHeap.add(arr[0]);
-				minHeap.add(arr[1]);
+				maxHeap.add(arr[0]); //Left - contains first half - smaller elements
+				minHeap.add(arr[1]); //Right - contains second half - greater elements
 			} else {
 				maxHeap.add(arr[1]);
 				minHeap.add(arr[0]);

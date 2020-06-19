@@ -24,6 +24,10 @@ public class SubTreeWithDeepestNodes {
 	}
 
 	TreeNode getSubTree(TreeNode root) {
+		if(root == null) {
+			return null;
+		}
+		
 		int diff = depth(root.left) - depth(root.right);
 
 		if (diff == 0) {
@@ -50,19 +54,24 @@ public class SubTreeWithDeepestNodes {
 	public int depth(TreeNode root, HashMap<TreeNode, Integer> map) {
 		if (root == null)
 			return 0;
+		
 		if (map.containsKey(root))
 			return map.get(root);
 		
-		int max = Math.max(depth(root.left, map), depth(root.right, map)) + 1;
-		map.put(root, max);
-		return max;
+		int depth = Math.max(depth(root.left, map), depth(root.right, map)) + 1;
+		map.put(root, depth);
+		return depth;
 	}
 
 	public TreeNode dfs(TreeNode root, HashMap<TreeNode, Integer> map) {
+		
+		
 		int left = depth(root.left, map);
 		int right = depth(root.right, map);
+		
 		if (left == right)
 			return root;
+		
 		if (left > right)
 			return dfs(root.left, map);
 		
@@ -72,9 +81,11 @@ public class SubTreeWithDeepestNodes {
 	public TreeNode subtreeWithAllDeepest(TreeNode root) {
 		if (root == null)
 			return null;
+		
 		HashMap<TreeNode, Integer> map = new HashMap<>();
 		
-		depth(root, map);
+		depth(root, map); //populate depth math
+		
 		return dfs(root, map);
 	}
 

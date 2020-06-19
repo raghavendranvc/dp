@@ -79,8 +79,7 @@ public class ShareMaxProfit {
 		return profit;
 	}
 
-	// ------------------------Different 1 share 2
-	// times----------------------------------------
+	// ------------------------Different 1 share 2 times-----------------------
 
 	/*
 	 * Single share only 2 times
@@ -165,7 +164,7 @@ public class ShareMaxProfit {
 		}
 
 		int max = maxProfitRight[0] + maxProfitLeft[0];
-		for (int i = 0; i < n; i++) {
+		for (int i = 1; i < n; i++) {
 			max = Math.max(max, maxProfitRight[i] + maxProfitLeft[i]);
 		}
 
@@ -179,9 +178,8 @@ public class ShareMaxProfit {
 
 	}
 
-	// ------------------------Single
-	// transaction----------------------------------------
-
+	// ------------------------Single transaction--------------------
+	
 	/***
 	 * One single transaction
 	 */
@@ -216,6 +214,8 @@ public class ShareMaxProfit {
 	 * 
 	 * The global array tracks the maximum profit of j transactions until ith day.
 	 */
+	
+	//TODO check this later
 
 	public int maxProfitCopied(int k, int[] prices) {
 		if (prices.length < 2 || k <= 0)

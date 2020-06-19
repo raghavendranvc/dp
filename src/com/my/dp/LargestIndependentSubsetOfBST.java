@@ -10,6 +10,8 @@ public class LargestIndependentSubsetOfBST {
 	 * any two nodes of the subset.
 	 * 
 	 * In a tree, if we add odd and even levels, we get the max size SubSet
+	 * 
+	 * Bipartite graph
 	 */
 
 	// TODO understand the problem
@@ -43,7 +45,7 @@ public class LargestIndependentSubsetOfBST {
 
 	}
 
-	/******************** One way ********************************************/
+	/******************** One way *********memoization***********************************/
 
 	static class LisNode {
 		int value;

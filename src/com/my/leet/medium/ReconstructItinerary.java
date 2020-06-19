@@ -40,6 +40,7 @@ public class ReconstructItinerary {
 	// Use PQ (not treeset) to sort based on Lexicographic order
 
 	HashMap<String, PriorityQueue<String>> map = new HashMap<String, PriorityQueue<String>>();
+	
 	LinkedList<String> result = new LinkedList<String>();
 
 	public List<String> findItinerary(String[][] tickets) {
@@ -63,6 +64,7 @@ public class ReconstructItinerary {
 		}
 
 		result.addFirst(s);
+		//Topological sorting type . But adding at first solves the need for stack
 	}
 
 }

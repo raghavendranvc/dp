@@ -66,7 +66,7 @@ public class MaxSizeSubSquare {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		int m[][] = { { 0, 1, 1, 0, 1 }, { 1, 1, 1, 1, 0 }, { 1, 1, 1, 1, 0 }, { 1, 1, 1, 1, 0 }, { 1, 1, 1, 1, 1 },
+		int m[][] = { { 0, 1, 1, 0, 1 }, { 1, 1, 1, 1, 0 }, { 1, 1, 0, 1, 0 }, { 1, 1, 1, 1, 0 }, { 1, 1, 1, 1, 1 },
 				{ 0, 0, 0, 0, 0 } };
 
 		SubSquare ss = new SubSquare(0, 0, 0);

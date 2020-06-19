@@ -59,6 +59,8 @@ public class MinCostPathInASquare {
 		for(int j=1;j<=dy;j++){ 
 			spcs[0][j] = spcs[0][j-1] + cost[0][j]; 
 		}
+		
+		
 		for(int i=1;i<=dx;i++){
 			for(int j=1;j<=dy;j++){
 				spcs[i][j] = cost[i][j] + Math.min(spcs[i-1][j-1],Math.min(spcs[i-1][j],spcs[i][j-1]));

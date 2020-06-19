@@ -24,7 +24,7 @@ public class WallsAndGates {
 
 		for (int i = 0; i < m; i++) {
 			for (int j = 0; j < n; j++) {
-				if (rooms[i][j] == 0) {
+				if (rooms[i][j] == 0) {//Find a gate
 					fill(rooms, i, j, 0);
 				}
 			}

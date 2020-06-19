@@ -23,6 +23,8 @@ public class TeemoAttack {
 
 		return total;
 	}
+	
+	//Better one. Use this TODO 
 
 	public int findPoisonedDuration(int[] timeSeries, int duration) {
 		if (timeSeries.length == 0)

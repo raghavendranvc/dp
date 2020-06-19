@@ -42,7 +42,7 @@ public class SerilaizeAndDeserialise {
 		if (data == null)
 			return null;
 
-		int[] t = { 0 };
+		int[] t = { 0 };// t is a global variable.
 		String[] arr = data.split(",");
 
 		return helper(arr, t);

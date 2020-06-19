@@ -6,6 +6,7 @@ import java.util.Random;
 public class InsertDeleteRandomO1 {
 
 	// https://leetcode.com/problems/insert-delete-getrandom-o1/
+	// https://www.programcreek.com/2014/08/leetcode-insert-delete-getrandom-o1-java/
 
 	/*
 	 * Design a data structure that supports all following operations in O(1) time.
@@ -51,6 +52,7 @@ public class InsertDeleteRandomO1 {
 			idxMap.remove(idx);
 
 			Integer tailElem = idxMap.get(idxMap.size());
+			// we can erase the earlier one
 			if (tailElem != null) {
 				idxMap.put(idx, tailElem);
 				valueMap.put(tailElem, idx);

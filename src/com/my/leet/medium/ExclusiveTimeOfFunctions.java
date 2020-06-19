@@ -30,8 +30,6 @@ public class ExclusiveTimeOfFunctions {
 				result[processes.peek()] += lEntry.timeStamp - pStartTime;
 			}
 
-			pStartTime = lEntry.timeStamp;
-
 			if (lEntry.start) {
 				processes.push(lEntry.processId);
 			} else {
@@ -39,7 +37,7 @@ public class ExclusiveTimeOfFunctions {
 				// as it ended at this step
 				result[processes.pop()]++;
 				// next process, shall execute from the next timestamp
-				pStartTime++;
+				pStartTime = lEntry.timeStamp + 1;
 			}
 
 		}

@@ -35,8 +35,8 @@ public class OptimumGameStrategyOrMaxCoins {
 
 		int[][] table = new int[n][n];
 
-		for (int gap = 0; gap < n; gap++) {
-			for (int i = 0, j = gap; j < n; i++, j++) {
+		for (int length = 0; length < n; length++) {
+			for (int i = 0, j = length; j < n; i++, j++) {
 
 				/*
 				 * Check for diagonal property. We are constructing diagonal with gap 0, 1, 2,

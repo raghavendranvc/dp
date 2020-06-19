@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class MasSumPathInTriangleMatrix {
+public class MaxSumPathInTriangleMatrix {
 
 	int maxPathSum(int tri[][], int m, int n) {
 

@@ -6,7 +6,7 @@ public class BitwiseAnd {
 	 * of all numbers in this range, inclusive.
 	 */
 
-	// TODO. This logic is different. Understand it
+	//TODO  This logic is different. Understand it
 	public int rangeBitwiseAnd(int m, int n) {
 		while (n > m) {
 			n = n & n - 1;

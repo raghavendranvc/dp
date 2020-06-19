@@ -38,7 +38,7 @@ public class CustomSort {
         return sb.toString();
     }
 	
-	//------------------Below is based that every aplhatbet is ranked-----------------
+	//------------------Below is based that every alphabet is ranked-----------------
 
 	int MAX_CHAR = 26;
 

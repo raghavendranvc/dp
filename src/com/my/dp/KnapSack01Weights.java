@@ -102,7 +102,8 @@ public class KnapSack01Weights {
 				} else if (weights[i - 1] > currentWeight) { // If weight is more 
 					table[i][currentWeight] = table[i - 1][currentWeight];
 				} else { // If weight is within the boundary. Then use it or don't use it
-					table[i][currentWeight] = Math.max(values[i - 1] + table[i - 1][currentWeight - weights[i - 1]],
+					table[i][currentWeight] = Math.max(
+							values[i - 1] + table[i - 1][currentWeight - weights[i - 1]],
 							table[i - 1][currentWeight]);
 				}
 			}

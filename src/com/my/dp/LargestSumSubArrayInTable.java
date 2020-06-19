@@ -91,7 +91,7 @@ public class LargestSumSubArrayInTable {
 			
 			for(int right=left;right<columns;right++){ 
 				//For left = 0 (0,n), (1,n), (2,n) ....(n,n)
-				//For left = 1 (1,n), (2,n), (3,n) ....(n,n)
+				//For left = 1 (1,n), (2,n), (3,n) ....(n,n) //discarding 1st column
  				
 				
 				/*
@@ -102,7 +102,7 @@ public class LargestSumSubArrayInTable {
 				 */
 				
 				for(int i=0;i<rows;i++){
-					rowArray[i] += m[i][right]; 
+					rowArray[i] += m[i][right]; //vertical sum from 'right' to 'left'
 				}
 				
 				SubArray sa = getMaxSumSubArray(rowArray);

@@ -11,12 +11,58 @@ public class TaskScheduler {
 	// https://massivealgorithms.blogspot.com/2017/06/leetcode-621-task-scheduler.html
 	// https://leetcode.com/problems/task-scheduler/
 
+	/*
+	 * 
+	 * Given a char array representing tasks CPU need to do. It contains capital
+	 * letters A to Z where different letters represent different tasks. Tasks could
+	 * be done without original order. Each task could be done in one unit of time.
+	 * For each unit of time, CPU could finish one task or just be idle.
+	 * 
+	 * However, there is a non-negative integer n that represents the cooldown
+	 * period between two same tasks, that is that there must be at least n units of
+	 * time between any two same tasks.
+	 * 
+	 * You need to return the least number of unit of times that the CPU will take
+	 * to finish all the given tasks.
+	 * 
+	 * 
+	 * 
+	 * Example 1:
+	 * 
+	 * Input: tasks = ["A","A","A","B","B","B"], n = 2
+	 * 
+	 * Output: 8
+	 * 
+	 * Explanation:
+	 * 
+	 * A -> B -> idle -> A -> B -> idle -> A -> B\
+	 * 
+	 * There is at least 2 units of time between any two same tasks.
+	 * 
+	 * Example 2:
+	 * 
+	 * Input: tasks = ["A","A","A","B","B","B"], n = 0
+	 * 
+	 * Output: 6
+	 * 
+	 * Explanation: On this case any permutation of size 6 would work since n = 0.
+	 * 
+	 * ["A","A","A","B","B","B"]
+	 * 
+	 * ["A","B","A","B","A","B"]
+	 * 
+	 * ["B","B","B","A","A","A"]
+	 * 
+	 * ... And so on.
+	 * 
+	 */
+
 	public int leastInterval1(char[] tasks, int n) {
 		int[] counter = new int[26];
-		
+
 		int max = 0;
 		int maxCount = 0;
-		
+
 		for (char task : tasks) {
 			counter[task - 'A']++;
 			if (max == counter[task - 'A']) {
@@ -36,6 +82,8 @@ public class TaskScheduler {
 		return tasks.length + idles;
 	}
 
+	// -----------------------------------------
+
 	public int leastIntervalUsingIdleSlots(char[] tasks, int n) {
 
 		int[] map = new int[26];
@@ -48,9 +96,12 @@ public class TaskScheduler {
 
 		for (int i = 24; i >= 0 && map[i] > 0; i--) {
 			idle_slots -= Math.min(map[i], max_val);
+			// idle_slots -= map[i]; This could also be used
 		}
 		return idle_slots > 0 ? idle_slots + tasks.length : tasks.length;
 	}
+
+	// -----------------------------------------
 
 	public int leastIntervalWithSortings(char[] tasks, int n) {
 		int[] map = new int[26];
@@ -79,6 +130,8 @@ public class TaskScheduler {
 		}
 		return time;
 	}
+
+	// -----------------------------------------
 
 	public int leastInterval(char[] tasks, int n) {
 		if (n == 0)

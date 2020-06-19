@@ -32,7 +32,7 @@ public class ExpressionAddOperators {
 			
 			String curStr = num.substring(start, i + 1);
 			
-			if (curStr.length() > 1 && curStr.charAt(0) == '0') {
+			if (curStr.length() > 1 && curStr.charAt(0) == '0') {//valid substring
 				break;
 			}
 

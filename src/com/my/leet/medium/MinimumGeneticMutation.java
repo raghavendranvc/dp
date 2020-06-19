@@ -46,7 +46,8 @@ public class MinimumGeneticMutation {
 					if (currentStrChar[i] == geneChars[j]) {
 						continue;
 					}
-					currentStrChar[i] = geneChars[j];
+					currentStrChar[i] = geneChars[j]; 
+					//we don't need to backtrack as we discard it for the next iteration
 					String newGeneStr = String.valueOf(currentStrChar);
 					if (!bankSet.contains(newGeneStr) || distance.containsKey(newGeneStr)) {
 						continue;

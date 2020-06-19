@@ -73,7 +73,7 @@ public class RemoveInvalidParanthesis {
 		}
 	}
 
-	// DFS approach
+	//-------------------DFS approach-----------------------------------------
 
 	ArrayList<String> result = new ArrayList<String>();
 	int max = 0;
@@ -123,7 +123,7 @@ public class RemoveInvalidParanthesis {
 		}
 	}
 
-	// Re-did DFS approach
+	//---------Re-did DFS approach--------------------------------------
 
 	int maxLength = 0;
 

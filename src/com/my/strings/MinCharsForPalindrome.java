@@ -16,12 +16,12 @@ public class MinCharsForPalindrome {
 
 	public int sovle(String A) {
 
-		int result = A.length();
+		int n = A.length();
 
-		while (result > 1 && !isPal(A.substring(0, result))) {
-			result--; // reduce the length from right and check if there is a match
+		while (n > 1 && !isPal(A.substring(0, n))) {
+			n--; // reduce the length from right and check if there is a match
 		}
-		return A.length() - result;
+		return A.length() - n;
 
 	}
 

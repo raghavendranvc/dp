@@ -45,7 +45,7 @@ public class LargestDivisbleSubset {
 			for (int j = i - 1; j >= 0; j--) {
 				if (nums[i] % nums[j] == 0 && t[j] + 1 > t[i]) {
 					t[i] = t[j] + 1;
-					index[i] = j;
+					index[i] = j; //storing all the indexes to retrieve the numbers
 				}
 			}
 

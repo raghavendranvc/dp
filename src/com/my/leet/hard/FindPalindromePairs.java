@@ -8,8 +8,8 @@ public class FindPalindromePairs {
 	
 	/*
 	 * Remember to split each word and see if either of the splits is palindrome
-	 * If yes, then the find if there is another word which is the reverse of the non-plaindrome 
-	 * split substrings
+	 * If yes, then the find if there is another word which is the reverse of the 
+	 * non-plaindrome split substrings
 	 * 
 	 * 
 	 * 

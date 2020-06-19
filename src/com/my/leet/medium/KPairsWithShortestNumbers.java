@@ -28,10 +28,9 @@ public class KPairsWithShortestNumbers {
 		List<int[]> res = new ArrayList<>(k);
 		PriorityQueue<int[]> q = new PriorityQueue<>((a, b) -> (a[0] + a[1]) - (b[0] + b[1]));
 
-
 		for (int i = 0; i < Math.min(k, nums1.length); i++)
-			q.offer(new int[] { nums1[i], nums2[0], 0 }); 
-		//pair(x,y) + nums2index(i) forms the PQ element
+			q.offer(new int[] { nums1[i], nums2[0], 0 });
+		// pair(x,y) + nums2index(i) forms the PQ element
 
 		for (int i = 0; i < k; i++) {
 			int[] arr = q.poll();

@@ -11,9 +11,11 @@ public class FourSum2 {
 
 	public int FourSumCount(int[] A, int[] B, int[] C, int[] D) {
 		Map<Integer, Integer> htCD = new HashMap<>();
+		//frequncyMap
 		for (int i = 0; i < C.length; i++) {
 			for (int j = 0; j < D.length; j++) {
 				int sum = C[i] + D[j];
+				
 				if (!htCD.containsKey(sum))
 					htCD.put(sum, 0);
 

@@ -48,22 +48,6 @@ public class MinInsertionsForPalindrome {
 	
 	/********************One way********************************************/
 	
-	public int getMinInsertionsNeededIter(String str){
-		int n = str.length();
-		
-		int table[][] = new int[n][n];
-		
-		for(int length=1;length<n;length++){
-			for(int i=0,j=length;j<n;i++,j++){
-				table[i][j] = 
-						(str.charAt(i) == str.charAt(j))? 
-								table[i+1][j-1] : 1 + Math.min(table[i][j-1], table[i+1][j]);  
-			}
-			
-		}
-		return table[0][n-1];
-	}
-	
 
 	/**
 	 * @param args
@@ -76,8 +60,8 @@ public class MinInsertionsForPalindrome {
 		int val1 = mPal.getMinInsertionsNeeded(str);
 		System.out.println("str="+str+" val1="+val1);
 		
-		int val2 = mPal.getMinInsertionsNeededIter(str);
-		System.out.println("str="+str+" val2="+val2);
+		//int val2 = mPal.getMinInsertionsNeededIter(str);
+		//System.out.println("str="+str+" val2="+val2);
 
 	}
 
