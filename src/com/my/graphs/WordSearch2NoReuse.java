@@ -28,6 +28,7 @@ public class WordSearch2NoReuse {
 	/*
 	 * ["C","A","A"], ["A","A","A"], ["B","C","D"]]
 	 */
+	//backtracking. Remember //TODO
 
 	private boolean isFound(char[][] board, String word, int r, int c, int wordIndex, boolean[][] visited, int m,
 			int n) {

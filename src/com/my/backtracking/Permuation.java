@@ -22,7 +22,7 @@ public class Permuation {
 		if (startIndex == A.size()) {
 			System.out.println("Added result=" + A);
 			result.add(new ArrayList<>(A));
-			return;
+			return; 
 		}
 
 		for (int k = startIndex; k < A.size(); k++) {
@@ -51,6 +51,8 @@ public class Permuation {
 		Permuation permuation = new Permuation();
 		System.out.println("Result=" + permuation.permute1(A));
 	}
+	
+	//--------------------------
 
 	public void computePermutation(String str, String suffix) {
 		if (str.length() == 0) {
@@ -64,6 +66,8 @@ public class Permuation {
 		}
 
 	}
+	
+	//--------------------------
 
 	public void computePermutationDistinct(String str, String suffix) {
 		boolean[] exists = new boolean[26];

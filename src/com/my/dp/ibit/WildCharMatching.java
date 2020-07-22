@@ -29,6 +29,7 @@ public class WildCharMatching {
 		
 		for(int i=1;i<=p.length();i++) {
 			if(p.charAt(i-1) == '*') {
+				
 				if(i>1) { // first char won't be *. but we still set this condition
 					result[0][i] = result[0][i-2];
 				}
@@ -48,7 +49,7 @@ public class WildCharMatching {
 					result[i][j] = result[i-1][j-1];
 				} else if (p.charAt(j-1) == '*') {
 					// we need to match with the preceding char to *
-					//result[i][j] = result[i][j-2]; //First get the earlier value
+					result[i][j] = result[i][j-2]; //First get the earlier value
 					if(s.charAt(i-1) == p.charAt(j-2) || p.charAt(j-2)=='.') {
 						result[i][j] = result[i][j-2] || result[i-1][j]; 
 					}

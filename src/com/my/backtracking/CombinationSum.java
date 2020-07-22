@@ -32,7 +32,7 @@ public class CombinationSum {
                 //(A.get(startIndex)==A.get(startIndex-1)) is needed when duplicates are present
                 System.out.println("Same starting index=" + startIndex+" value="+A.get(startIndex));
                 startIndex++;
-                continue;
+                continue; 
             }
 
             if (sum + A.get(startIndex) <= B) {
@@ -44,6 +44,8 @@ public class CombinationSum {
             startIndex++;
         }
     }
+    
+    //===================================================
 
     public ArrayList<ArrayList<Integer>> combinationSumCopied(ArrayList<Integer> a, int k) {
         ArrayList<Integer> list=new ArrayList<>();
@@ -74,6 +76,8 @@ public class CombinationSum {
             }
         }
     }
+    
+    //==================================================
 
     public ArrayList<ArrayList<Integer>> getCombinations(ArrayList<Integer> A, int B){
         ArrayList<ArrayList<Integer>> result = new ArrayList<>();

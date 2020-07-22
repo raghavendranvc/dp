@@ -219,8 +219,8 @@ public class NQueens {
                 StringBuilder str1 = new StringBuilder(board.get(i));
                 str1.setCharAt(col,'Q');
                 board.set(i,str1.toString());
-                generate(result,board,col+1,n);
-                board.set(i,str.toString());
+                generate(result,board,col+1,n); 
+                board.set(i,str1.toString());
             }
         }
     }

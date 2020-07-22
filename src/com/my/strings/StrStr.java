@@ -38,6 +38,7 @@ public class StrStr {
 		int n = B.length();
 		int[] lps = new int[n];
 
+		// pre-process String B and prepare a Map B
 		int i = 1;
 		int j = 0;
 		lps[0] = 0;

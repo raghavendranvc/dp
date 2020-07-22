@@ -34,7 +34,7 @@ public class DetectCycleInGraph {
 
 		for (int i = 0; i < g.numOfVertices; i++) {
 			visited[i] = Color.WHITE;
-		}
+		} 
 
 		for (int i = 0; i < g.numOfVertices; i++) {
 			if (visited[i] == Color.WHITE && isThereACycle(g, visited, i)) {

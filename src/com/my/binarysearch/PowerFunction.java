@@ -44,7 +44,8 @@ public class PowerFunction {
 
 		return (int) value;
 	}
-
+	
+	//TODO use this
 	public double myPow(double x, int n) {
 
 		if (n == 0) {

@@ -160,6 +160,7 @@ public class MinimumJumps {
 				lastReached = maxReachPosition;
 			}
 			maxReachPosition = Math.max(maxReachPosition, i + A.get(i));
+			//At each 'i' we calculate the position we can reach by i+A.get(i)
 		}
 		return jumps;
 	}

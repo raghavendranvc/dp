@@ -21,7 +21,7 @@ public class RegularExpressionMatching {
 			for(int j=0;j<=p.length();j++) {
 				if(i == 0 && j ==0) { // both pattern and string are null
 					result[i][j] = true;
-				} else if (j==0) { //pattern is null and so any not empty string is null
+				} else if (j==0) { //pattern is null and so any non empty string is null
 					result[i][j] = false;// TODO This condition is very important
 				} else if (j> 0 && p.charAt(j-1) == '*') { //here j is always > 0
 					/*

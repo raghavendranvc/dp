@@ -20,7 +20,8 @@ public class OptimumGameStrategyOrMaxCoins {
 			return Math.max(a[i], a[j]);
 		}
 
-		return Math.max(a[i] + Math.min(getOptStrategey(a, i + 2, j), getOptStrategey(a, i + 1, j - 1)),
+		return Math.max(
+				a[i] + Math.min(getOptStrategey(a, i + 2, j), getOptStrategey(a, i + 1, j - 1)),
 				a[j] + Math.min(getOptStrategey(a, i + 1, j - 1), getOptStrategey(a, i, j - 2)));
 
 	}

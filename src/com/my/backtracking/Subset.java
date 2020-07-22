@@ -67,6 +67,8 @@ public class Subset {
 			tempArray.remove(tempArray.size() - 1);
 		}
 	}
+	
+	//---------------------------------------------
 
 	public ArrayList<ArrayList<Integer>> subsetsCopied(ArrayList<Integer> a) {
 		ArrayList<ArrayList<Integer>> output = new ArrayList<>();

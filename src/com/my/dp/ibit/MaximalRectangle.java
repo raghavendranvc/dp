@@ -1,4 +1,4 @@
-package com.my.dp.ibit;
+ package com.my.dp.ibit;
 
 import java.util.ArrayList;
 import com.my.common.UtilityClass;
@@ -20,7 +20,7 @@ public class MaximalRectangle {
 				if (matrix[r][c] == '0') {
 					dpR[r][c] = 0; //If value is zero, set to '0'
 				} else if (c == n - 1) {
-					dpR[r][c] = 1; //For last column
+					dpR[r] [c] = 1; //For last column
 				} else {
 					dpR[r][c] = dpR[r][c + 1] + 1; //For any other column is the value from next
 				}

@@ -86,14 +86,14 @@ public class GreyCode {
         0
         1
         ===
-        00
+        00		for 0,1 prepend 0
         01
 
-        11
+        11		for 1,0 prepend 1
         10
         ===
      00
-     01
+     01s
 
      11
      10

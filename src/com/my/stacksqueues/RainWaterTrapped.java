@@ -10,7 +10,7 @@ public class RainWaterTrapped {
 		int left = 0;
 		int right = A.size() - 1;
 
-		int max = 0;
+		int maxResult = 0;
 		int leftmax = 0;
 		int rightmax = 0;
 
@@ -19,16 +19,16 @@ public class RainWaterTrapped {
 			rightmax = Math.max(rightmax, A.get(right));
 
 			if (leftmax < rightmax) {
-				max += (leftmax - A.get(left));
+				maxResult += (leftmax - A.get(left));
 				// leftmax is smaller than rightmax,
-				// so the (leftmax-A[a]) water can be stored
+				// so the (leftmax-A[a]) water can be stored at 'left'
 				left++;
 			} else {
-				max += (rightmax - A.get(right));
+				maxResult += (rightmax - A.get(right));
 				right--;
 			}
 		}
-		return max;
+		return maxResult;
 
 	}
 

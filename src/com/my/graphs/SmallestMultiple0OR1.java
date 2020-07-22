@@ -43,7 +43,6 @@ public class SmallestMultiple0OR1 {
 		// a smaller string that resulted in the same mod
 		Set<Integer> visitedSet = new HashSet<>(); 
 		
-		
 		while(!queue.isEmpty()) {
 			String t = queue.removeFirst();
 			

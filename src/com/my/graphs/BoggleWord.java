@@ -28,7 +28,7 @@ public class BoggleWord {
 		
 		word = word + boggle[r][c];
 		
-		if(isValidWord(word, dict)) {
+		if(dict.contains(word)) {
 			result.add(word);
 		}
 		
@@ -40,12 +40,8 @@ public class BoggleWord {
 				}
 			}
 		}
-		visited[r][c] = false;
+		visited[r][c] = false;//backtracking
 		word = word.substring(0, word.length()-1); //backtracking
-	}
-	
-	private boolean isValidWord(String word, Set<String> dict) {
-		return dict.contains(word);
 	}
 
 }
